@@ -1,10 +1,28 @@
 .App {
   text-align: center;
+  background-color: rgb(50,50,50);
+  color: white;
+  height: 100%;
+}
+
+body{
+  height: max-content;
+  background-color: green;
+}
+
+#root{
+  height: 100%;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+h2 {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
