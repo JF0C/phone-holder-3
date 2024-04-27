@@ -23,6 +23,21 @@ h2 {
   margin: 0;
   padding-top: 20px;
   padding-bottom: 20px;
+  font-size: xx-large;
+}
+
+.menu-button{
+  padding: 20px;
+  font-size: x-large;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-button:hover{
+  background-color: rgb(159, 190, 193);
 }
 
 @media (prefers-reduced-motion: no-preference) {

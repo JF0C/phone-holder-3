@@ -1,8 +1,9 @@
-import { useEffect, FunctionComponent, useState, Suspense } from 'react'
+import { FunctionComponent, Suspense, useRef } from 'react'
 import * as THREE from 'three'
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls } from '@react-three/drei';
+import { Vector3 } from 'three';
 
 type StlViewProperties = {
     source: string,
@@ -12,20 +13,10 @@ type StlViewProperties = {
 const degToRad = (deg: number) => deg/180 * Math.PI;
 
 export const StlView: FunctionComponent<StlViewProperties> = (props: StlViewProperties) => {
-    const [geometry, setGeometry] = useState<THREE.BufferGeometry>()
-
     const canvasStyle = {
         width: '100%',
         height: props.height
     };
-    const scene = new THREE.Scene();
-    scene.background = new THREE.Color("rgb(50, 50, 50)");
-
-    const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 300);
-    const dirLight = new THREE.DirectionalLight(0xffffff, 0.9);
-    const dirLightPosition = new THREE.Vector3(-100, 100, 0);
-    dirLight.position.set(dirLightPosition.x, dirLightPosition.y, dirLightPosition.z);
-    camera.add(dirLight);
     // camera.translateX(-100);
     // camera.translateY(-100);
     // camera.translateZ(-300);
@@ -33,7 +24,6 @@ export const StlView: FunctionComponent<StlViewProperties> = (props: StlViewProp
     //camera.rotateX(degToRad(0));
     //camera.rotateY(degToRad(270));
 
-    scene.add(camera);
 
     const icoMaterial = new THREE.MeshPhongMaterial({
       color       : new THREE.Color("rgb(255,255,255)"),
@@ -43,32 +33,35 @@ export const StlView: FunctionComponent<StlViewProperties> = (props: StlViewProp
       opacity     : 1
     });
 
-    const posVector = new THREE.Vector3(100, 100, 100);
+    // const controls = new OrbitControls( camera, renderer.domElement );
+    // controls.target.set( 0, 0.5, 0 );
+    // controls.update();
+    // controls.enablePan = true;
+    // controls.enableDamping = true;
+    const geometry = useLoader(STLLoader, props.source);
+    geometry.rotateX(degToRad(40));
+    geometry.rotateY(degToRad(-50));
+    geometry.rotateZ(degToRad(10));
 
-
-    useEffect(() => {
-      const stlLoader = new STLLoader()
-      stlLoader.load(props.source, geo => {
-        setGeometry(geo)
-        // geo.center();
-        geo.rotateZ(degToRad(90))
-        geo.rotateY(degToRad(0))
-        geo.rotateX(degToRad(120))
-        geo.translate(-100, -100, -300)
-        //geo.rotateX(degToRad(-90))
-      })
-    }, [])
+    // const ref = useRef<THREE.Mesh<THREE.BufferGeometry<THREE.NormalBufferAttributes>>>();
+    // <input type="range" min="0" max="360" onChange={e => geometry.rotateX(degToRad(Number(e.target.value)))} />
+    // <input type="range" min="0" max="360" onChange={e => geometry.rotateY(degToRad(Number(e.target.value)))} />
+    // <input type="range" min="0" max="360" onChange={e => geometry.rotateZ(degToRad(Number(e.target.value)))} />
   
     return (
-      <Canvas style={canvasStyle} scene={scene}>
-          <Suspense fallback={null}>
-              <OrbitControls makeDefault></OrbitControls>
-              <mesh geometry={geometry} material={icoMaterial} position={posVector}>
-              
-              </mesh>
-              <ambientLight/>
-          </Suspense>
+      <>
+      <Canvas style={canvasStyle}>
+        <ambientLight/>
+        <directionalLight />
+        <OrbitControls target={new Vector3(0, 0, -150)}></OrbitControls>
+        <group  position={new Vector3(0, 0, -150)}>
+
+          <mesh geometry={geometry} material={icoMaterial}>
+            
+          </mesh>
+        </group>
       </Canvas>
+      </>
     )
   }
   

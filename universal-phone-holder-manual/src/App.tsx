@@ -9,10 +9,10 @@ function App() {
     <div className="App">
       
       <h2>
-        Universal Phone Holder Manual
+        Universal Phone Holder
       </h2>
       <StlView source="/cad/AssemblyPhoneHolderBase.stl" height='80vh'/>
-      <StartMenu height='20vh'></StartMenu>
+      <StartMenu height='15vh'></StartMenu>
     </div>
   );
 }
