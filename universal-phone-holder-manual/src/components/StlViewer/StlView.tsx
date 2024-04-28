@@ -1,13 +1,18 @@
-import { FunctionComponent, Suspense, useRef } from 'react'
+import { FunctionComponent, Suspense, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
 import { Canvas, useLoader } from "@react-three/fiber";
-import { OrbitControls } from '@react-three/drei';
+import { Loader, OrbitControls } from '@react-three/drei';
 import { Vector3 } from 'three';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppState, addLoadedMesh } from '../../store/state';
+import { Dispatch } from '@reduxjs/toolkit';
 
 type StlViewProperties = {
     source: string,
-    height: string
+    height: string,
+    position: Vector3,
+    rotation: Vector3
 };
 
 const degToRad = (deg: number) => deg/180 * Math.PI;
@@ -17,13 +22,7 @@ export const StlView: FunctionComponent<StlViewProperties> = (props: StlViewProp
         width: '100%',
         height: props.height
     };
-    // camera.translateX(-100);
-    // camera.translateY(-100);
-    // camera.translateZ(-300);
-    //camera.rotateZ(degToRad(90));
-    //camera.rotateX(degToRad(0));
-    //camera.rotateY(degToRad(270));
-
+    const [loadedMeshes, setLoadedMeshes] = useState<string[]>([])
 
     const icoMaterial = new THREE.MeshPhongMaterial({
       color       : new THREE.Color("rgb(255,255,255)"),
@@ -33,34 +32,31 @@ export const StlView: FunctionComponent<StlViewProperties> = (props: StlViewProp
       opacity     : 1
     });
 
-    // const controls = new OrbitControls( camera, renderer.domElement );
-    // controls.target.set( 0, 0.5, 0 );
-    // controls.update();
-    // controls.enablePan = true;
-    // controls.enableDamping = true;
     const geometry = useLoader(STLLoader, props.source);
-    geometry.rotateX(degToRad(40));
-    geometry.rotateY(degToRad(-50));
-    geometry.rotateZ(degToRad(10));
 
-    // const ref = useRef<THREE.Mesh<THREE.BufferGeometry<THREE.NormalBufferAttributes>>>();
-    // <input type="range" min="0" max="360" onChange={e => geometry.rotateX(degToRad(Number(e.target.value)))} />
-    // <input type="range" min="0" max="360" onChange={e => geometry.rotateY(degToRad(Number(e.target.value)))} />
-    // <input type="range" min="0" max="360" onChange={e => geometry.rotateZ(degToRad(Number(e.target.value)))} />
-  
+    if (!loadedMeshes.includes(props.source)){
+      geometry.rotateX(degToRad(props.rotation.x));
+      geometry.rotateY(degToRad(props.rotation.y));
+      geometry.rotateZ(degToRad(props.rotation.z));
+      loadedMeshes.push(props.source);
+      setLoadedMeshes(loadedMeshes);
+    }
+
     return (
       <>
-      <Canvas style={canvasStyle}>
-        <ambientLight/>
-        <directionalLight />
-        <OrbitControls target={new Vector3(0, 0, -150)}></OrbitControls>
-        <group  position={new Vector3(0, 0, -150)}>
+      <Suspense fallback={<Loader/>}>
+        <Canvas style={canvasStyle}>
+          <ambientLight/>
+          <directionalLight />
+          <OrbitControls target={props.position}></OrbitControls>
+          <group  position={props.position}>
 
-          <mesh geometry={geometry} material={icoMaterial}>
-            
-          </mesh>
-        </group>
-      </Canvas>
+            <mesh geometry={geometry} material={icoMaterial}>
+              
+            </mesh>
+          </group>
+        </Canvas>
+      </Suspense>
       </>
     )
   }
