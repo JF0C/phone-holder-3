@@ -1,6 +1,5 @@
 import { Reducer } from "@reduxjs/toolkit";
 
-
 export type AppState = {
     currentLocation: string,
     loadedMeshes: string[]

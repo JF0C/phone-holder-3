@@ -12,8 +12,11 @@ export const Assemble: FunctionComponent<AssembleProperties> = (props: AssembleP
 
             <StlView height="80vh" 
                     source="/cad/AssemblyFootInsert.stl" 
-                    position={new Vector3(0, 250, 0)}
-                    rotation={new Vector3(0, 0, 0)}
+                    position={new Vector3(-30, 70, -50)}
+                    rotation={new Vector3(0, 0, 90)}
+                    showAxes={false}
+                    cameraPosition={new Vector3(-50, 50, 50)}
+                    lightOrigin={new Vector3(-100, 0, 0)}
                 />
         </Suspense>
     </>
