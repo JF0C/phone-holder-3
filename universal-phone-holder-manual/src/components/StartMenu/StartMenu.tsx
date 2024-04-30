@@ -1,15 +1,10 @@
 import { FunctionComponent } from "react"
 import { StlView } from "../StlViewer/StlView"
-import { Link } from "react-router-dom"
-import { Assemble } from "../Assemble/Assemble"
 import { Vector3 } from "three"
-import { Dispatch } from "@reduxjs/toolkit"
-import { useDispatch } from "react-redux"
-import { setCurrentLocation } from "../../store/state"
+import { LinkWithSaveState } from "../Link/LinkWithSaveState"
+import { Constants } from "../../constants/Constants"
 
 export const StartMenu: FunctionComponent = () => {
-
-    const dispatch : Dispatch<any> = useDispatch();
     return <>
         <StlView 
             source="/cad/AssemblyPhoneHolderBase.stl" 
@@ -20,16 +15,15 @@ export const StartMenu: FunctionComponent = () => {
             lightOrigin={new Vector3(100, 100, 0)}
             showAxes={false}
         />
-            <div className="start-menu-container">
+        <div className="start-menu-container">
             <div className="menu-button">
-                <Link to="assemble" onClick={() => dispatch(setCurrentLocation('/assemble'))}>
-                    Assemble
-                </Link>
+                <LinkWithSaveState path={Constants.AssemblePath} />
             </div>
             <div className="menu-button">
-                <Link to="adjust" onClick={() => dispatch(setCurrentLocation('/adjust'))}>
-                    Adjust
-                </Link>
+                <LinkWithSaveState path={Constants.AdjustPath} />
+            </div>
+            <div className="menu-button">
+                <LinkWithSaveState path={Constants.MountPath} />
             </div>
         </div>
     </>

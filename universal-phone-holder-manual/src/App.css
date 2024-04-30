@@ -113,3 +113,7 @@ h2 {
 .main-content{
   overflow:hidden; 
 }
+
+.main-container{
+  height: 90vh;
+}

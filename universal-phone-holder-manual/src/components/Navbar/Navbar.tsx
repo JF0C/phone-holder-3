@@ -1,44 +1,43 @@
-import { FunctionComponent, useState } from "react"
-import { Link } from 'react-router-dom'
-import { Dispatch } from "redux"
-import { useDispatch, useSelector } from "react-redux"
-import { setCurrentLocation, AppState } from "../../store/state";
+import { FunctionComponent } from "react"
+import { useSelector } from "react-redux"
+import { AppState } from "../../store/state";
+import { LinkWithSaveState } from "../Link/LinkWithSaveState";
+import { Constants } from "../../constants/Constants";
 
-const capitalizeFirst = (str: string) => str.charAt(0).toUpperCase() + str.substring(1).toLowerCase();
+type LocationAndDisplayName = {
+    location: string;
+    displayName: string;
+}
 
-const formatNavigationText = (str: string) => str.split('-').map(s => capitalizeFirst(s)).reduce((a, b) => a + ' ' + b, '')
-
-const getEntries = (location: string): string[] => {
-    switch(location){
-        case '/assemble':
-            return ['insert-foot', 'screw-foot'];
-
-        default: return []
+const getEntries = (location: string): LocationAndDisplayName[] => {
+    if (location.includes('assemble')){
+        return [
+            {
+                location: Constants.AssemblePath,
+                displayName: 'Assemble'
+            }, 
+            {
+                location: Constants.AssembleInsertFootPath,
+                displayName: 'Insert Foot'
+            },
+            {
+                location: Constants.AssembleScrewFootPath,
+                displayName: 'Screw Foot'
+            }];
     }
+    return [] 
 }
 
 export const Navbar: FunctionComponent = () => {
-    const dispatch : Dispatch<any> = useDispatch();
     const currentLocation = useSelector((state: AppState) => state.currentLocation);
     if (currentLocation === '/'){
         return <></>;
     }
 
     const navigations = [];
-    navigations.push(
-        <Link to={"/"} onClick={() => dispatch(setCurrentLocation('/'))}>
-            <li key="/">
-                Start
-            </li>
-        </Link>);
+    navigations.push(<LinkWithSaveState path={''} useli={true} displayValue="Start" />);
     for(let entry of getEntries(currentLocation)){
-        const path = "/" + entry.toLowerCase();
-        navigations.push(
-            <Link to={path} onClick={() => dispatch(setCurrentLocation(path))}>
-                <li key={path}>
-                    {formatNavigationText(entry)}
-                </li>   
-            </Link>);
+        navigations.push(<LinkWithSaveState path={entry.location.toLowerCase()} useli={true} displayValue={entry.displayName} />);
     }
 
     return <nav className="nav sidebar">

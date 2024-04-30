@@ -6,6 +6,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { reducer } from './store/state';
 import { configureStore } from '@reduxjs/toolkit';
+import { AssembleInsertFoot } from './components/Assemble/AssembleInsertFoot';
+import { Constants } from './constants/Constants';
+import { AssembleScrewFoot } from './components/Assemble/AssembleScrewFoot';
 
 const store = configureStore({
   reducer: reducer,
@@ -24,8 +27,10 @@ function App() {
             <Navbar />
             <div className='main-content'>
               <Routes>
-                <Route path="/" element={<StartMenu />} />
-                <Route path="/assemble" element={<Assemble />} />
+                <Route path={Constants.StartMenuPath} element={<StartMenu />} />
+                <Route path={Constants.AssemblePath} element={<Assemble />} />
+                <Route path={Constants.AssembleInsertFootPath} element={<AssembleInsertFoot />} />
+                <Route path={Constants.AssembleScrewFootPath} element={<AssembleScrewFoot />} />
               </Routes>
             </div>
           </div>
