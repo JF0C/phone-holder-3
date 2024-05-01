@@ -11,7 +11,7 @@ return <>
             position={new Vector3(-30, 70, -50)}
             rotation={new Vector3(0, 0, 90)}
             showAxes={false}
-            cameraPosition={new Vector3(-50, 50, 50)}
+            cameraPosition={new Vector3(10, 50, 50)}
             lightOrigin={new Vector3(-100, 0, 0)}
         />
 </Suspense>
