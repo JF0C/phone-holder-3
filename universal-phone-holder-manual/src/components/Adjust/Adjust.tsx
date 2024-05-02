@@ -4,6 +4,7 @@ import { Constants } from "../../constants/Constants"
 import { Tooltip } from "../Tooltip/Tooltip"
 
 export const Adjust: FunctionComponent = () => {
-    return <>
-    </>
+    return <div className="text-container">
+
+        </div>
 }

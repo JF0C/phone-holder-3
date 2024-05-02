@@ -29,8 +29,8 @@ export const LinkWithSaveState: FunctionComponent<LinkWithSaveStateProps> = (pro
         content = <><CIcon icon={props.icon} height={20} style={{marginRight: '5px'}}/>{content}</>
     }
     if (props.useli !== undefined && props.useli){
-        const liStyle = currentLocation === '/' + props.path ? {background: 'rgb(124, 148, 150)'} : {};
-        content = <li style={liStyle} key={itemKey}>{content}</li>;
+        const activeClass = currentLocation === '/' + props.path ? 'active' : ''
+        content = <li className={activeClass} key={itemKey}>{content}</li>;
     }
     const dispatch : Dispatch<any> = useDispatch();
     return <NavLink

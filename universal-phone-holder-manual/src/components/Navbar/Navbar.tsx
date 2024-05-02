@@ -1,9 +1,10 @@
-import { FunctionComponent } from "react"
+import { FunctionComponent, useState } from "react"
 import { useSelector } from "react-redux"
 import { AppState } from "../../store/state";
 import { LinkWithSaveState } from "../Link/LinkWithSaveState";
 import { Constants } from "../../constants/Constants";
 import * as icon from '@coreui/icons';
+import CIcon from "@coreui/icons-react";
 
 type LocationAndDisplayName = {
     location: string;
@@ -45,9 +46,16 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
 }
 
 export const Navbar: FunctionComponent = () => {
+    const [navOpen, navOpenSet] = useState(false);
+    const [path, setPath] = useState('/');
+
     const currentLocation = useSelector((state: AppState) => state.currentLocation);
     if (currentLocation === '/'){
         return <></>;
+    }
+    if (currentLocation != path){
+        setPath(currentLocation);
+        navOpenSet(false);
     }
 
     const navigations = [];
@@ -59,7 +67,10 @@ export const Navbar: FunctionComponent = () => {
     }
 
     return <nav className="nav sidebar">
-        <ul>
+        <div className="nav-toggle">
+            <CIcon icon={icon.cilMenu} height={30} onClick={() => navOpenSet(!navOpen)}></CIcon>
+        </div>
+        <ul className="nav-list" style={{left: navOpen ? '0px': '-210px'}}>
             {navigations}
         </ul>
     </nav>

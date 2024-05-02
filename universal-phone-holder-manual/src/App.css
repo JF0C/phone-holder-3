@@ -48,17 +48,6 @@ h2 {
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
@@ -88,6 +77,10 @@ a {
 }
 
 .nav ul{
+  padding:0;
+}
+
+.nav ul{
   list-style: none;
 }
 
@@ -103,15 +96,17 @@ a {
   padding: 10px;
   margin-bottom: 10px;
   transition: all 0.5s ease-in-out;
+  background-color: rgba(50, 50, 50, 0.8);
 }
 
 .nav li:hover{
-  background-color: rgb(159, 190, 193);
+  background-color: rgba(159, 190, 193, 0.8);
 }
 
 .sidebar{
   float: left;
   width: 20vw;
+  padding: 10px;
 }
 
 .main-content{
@@ -125,6 +120,10 @@ a {
 .text-container{
   text-align: left;
   padding: 20px;
+}
+
+.nav-list li.active{
+  background: rgba(124, 148, 150, 0.8);
 }
 
 .tooltip-text{
@@ -157,6 +156,10 @@ a {
   align-items: stretch;
 }
 
+.main-menu-canvas{
+  height: 80vh;
+}
+
 .model-view{
   min-width: 400px;
   max-width: 1200px;
@@ -165,7 +168,32 @@ a {
 }
 
 .text-view{
-  min-width: 300px;
+  min-width: 200px;
   height: 80vh;
   flex-grow: 1;
+}
+
+@media (max-width: 1000px){
+  .nav-list{
+    position: relative;
+    transition: left .5s ease-in-out;
+  }
+  .sidebar{
+    position: absolute;
+    z-index: 1000;
+    width: 200px;
+  }
+  .nav-toggle{
+    cursor: pointer;
+    text-align: left;
+  }
+  .model-view{
+    height: 50vh;
+  }
+}
+
+@media (min-width: 1000px){
+  .nav-toggle{
+    display: none;
+  }
 }
