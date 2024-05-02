@@ -63,7 +63,7 @@ export const StlView: FunctionComponent<StlViewProperties> = (props: StlViewProp
     }
 
     return (
-      <Suspense fallback={<Loader/>} >
+      <Suspense fallback={<Loader />} >
         <Canvas className='stl-view' camera={{position: props.cameraPosition}}>
           <ambientLight/>
           <directionalLight position={props.lightOrigin}/>

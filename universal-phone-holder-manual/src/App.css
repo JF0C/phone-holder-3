@@ -107,6 +107,7 @@ a {
   float: left;
   width: 20vw;
   padding: 10px;
+  transition: left .5s ease-in-out;
 }
 
 .main-content{
@@ -177,11 +178,15 @@ a {
   .nav-list{
     position: relative;
     transition: left .5s ease-in-out;
+    width: 30px;
+  }
+  .nav li{
+    width: 170px;
   }
   .sidebar{
     position: absolute;
     z-index: 1000;
-    width: 200px;
+    width: fit-content;
   }
   .nav-toggle{
     cursor: pointer;
@@ -189,6 +194,12 @@ a {
   }
   .model-view{
     height: 50vh;
+  }
+  .main-menu-canvas{
+    height: 65vh;
+  }
+  .menu-button{
+    padding: 15px;
   }
 }
 

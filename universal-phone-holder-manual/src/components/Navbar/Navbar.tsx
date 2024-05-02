@@ -66,7 +66,7 @@ export const Navbar: FunctionComponent = () => {
                 useli={true} displayValue={entry.displayName} icon={entry.icon}/>);
     }
 
-    return <nav className="nav sidebar">
+    return <nav className="nav sidebar" style={{}}>
         <div className="nav-toggle">
             <CIcon icon={icon.cilMenu} height={30} onClick={() => navOpenSet(!navOpen)}></CIcon>
         </div>
