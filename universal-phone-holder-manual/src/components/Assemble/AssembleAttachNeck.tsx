@@ -6,7 +6,7 @@ export const AssembleAttachNeck : FunctionComponent = () => {
 
 
     return <Suspense>
-        <StlView height="80vh" 
+        <StlView
                 source="/cad/AssemblyNeck.stl" 
                 position={new Vector3(40, 70, 20)}
                 rotation={new Vector3(0, 0, 90)}

@@ -3,10 +3,12 @@ import { useSelector } from "react-redux"
 import { AppState } from "../../store/state";
 import { LinkWithSaveState } from "../Link/LinkWithSaveState";
 import { Constants } from "../../constants/Constants";
+import * as icon from '@coreui/icons';
 
 type LocationAndDisplayName = {
     location: string;
     displayName: string;
+    icon?: string[];
 }
 
 const getEntries = (location: string): LocationAndDisplayName[] => {
@@ -14,7 +16,7 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
         return [
             {
                 location: Constants.AssemblePath,
-                displayName: '<i class="cil-home"></i> Assemble'
+                displayName: 'Assemble'
             }, 
             {
                 location: Constants.AssembleInsertFootPath,
@@ -22,7 +24,7 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
             },
             {
                 location: Constants.AssembleScrewFootPath,
-                displayName: 'Screw Foot'
+                displayName: 'Fasten Foot'
             },
             {
                 location: Constants.AssembleNeckPath,
@@ -30,8 +32,14 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
             },
             {
                 location: Constants.AdjustPath,
-                displayName: 'Adjust'
+                displayName: 'Adjust',
+                icon: icon.cilMediaStepForward
             }];
+    }
+    if (location.includes('adjust')){
+        return [
+
+        ]
     }
     return [] 
 }
@@ -43,9 +51,11 @@ export const Navbar: FunctionComponent = () => {
     }
 
     const navigations = [];
-    navigations.push(<LinkWithSaveState path={''} useli={true} displayValue="Start" />);
+    navigations.push(<LinkWithSaveState path={''} useli={true} displayValue="Start" icon={icon.cilHome} />);
     for(let entry of getEntries(currentLocation)){
-        navigations.push(<LinkWithSaveState path={entry.location.toLowerCase()} useli={true} displayValue={entry.displayName} />);
+        navigations.push(
+            <LinkWithSaveState path={entry.location.toLowerCase()} 
+                useli={true} displayValue={entry.displayName} icon={entry.icon}/>);
     }
 
     return <nav className="nav sidebar">

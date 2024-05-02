@@ -6,7 +6,7 @@ import { StlView } from "../StlViewer/StlView"
 export const AssembleScrewFoot: FunctionComponent = () => {
 return <>
 <Suspense>
-    <StlView height="80vh" 
+    <StlView
             source="/cad/AssemblyFootScrew.stl" 
             position={new Vector3(-30, 70, -50)}
             rotation={new Vector3(0, 0, 90)}

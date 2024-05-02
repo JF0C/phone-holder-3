@@ -10,7 +10,6 @@ import { Dispatch } from '@reduxjs/toolkit';
 
 type StlViewProperties = {
     source: string,
-    height: string,
     position: Vector3,
     rotation: Vector3,
     cameraPosition: Vector3,
@@ -21,10 +20,6 @@ type StlViewProperties = {
 const degToRad = (deg: number) => deg/360 * Math.PI;
 
 export const StlView: FunctionComponent<StlViewProperties> = (props: StlViewProperties) => {
-    const canvasStyle = {
-        width: '100%',
-        height: props.height
-    };
     const loadedMeshes = useSelector((state: AppState) => state.loadedMeshes);
     const dispatch : Dispatch<any> = useDispatch();
 
@@ -68,8 +63,8 @@ export const StlView: FunctionComponent<StlViewProperties> = (props: StlViewProp
     }
 
     return (
-      <Suspense fallback={<Loader/>}>
-        <Canvas style={canvasStyle} camera={{position: props.cameraPosition}}>
+      <Suspense fallback={<Loader/>} >
+        <Canvas className='stl-view' camera={{position: props.cameraPosition}}>
           <ambientLight/>
           <directionalLight position={props.lightOrigin}/>
           <OrbitControls />
