@@ -14,7 +14,7 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
         return [
             {
                 location: Constants.AssemblePath,
-                displayName: 'Assemble'
+                displayName: '<i class="cil-home"></i> Assemble'
             }, 
             {
                 location: Constants.AssembleInsertFootPath,
@@ -23,6 +23,14 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
             {
                 location: Constants.AssembleScrewFootPath,
                 displayName: 'Screw Foot'
+            },
+            {
+                location: Constants.AssembleNeckPath,
+                displayName: 'Attach Neck'
+            },
+            {
+                location: Constants.AdjustPath,
+                displayName: 'Adjust'
             }];
     }
     return [] 

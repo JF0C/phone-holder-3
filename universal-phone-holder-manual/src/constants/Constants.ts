@@ -1,5 +1,3 @@
-
-
 export class Constants{
     public static StartMenuPath: string = ''
     public static AssemblePath: string = 'assemble'

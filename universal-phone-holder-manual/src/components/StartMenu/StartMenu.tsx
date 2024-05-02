@@ -9,7 +9,7 @@ export const StartMenu: FunctionComponent = () => {
     return <>
         <Suspense fallback={<Loader/>}>
             <StlView 
-                source="/cad/AssemblyPhoneHolderBase.stl" 
+                source="/cad/PhoneHolderBase.stl" 
                 height='80vh'
                 position={new Vector3(0, 0, 0)}
                 rotation={new Vector3(90, 0, 0)}

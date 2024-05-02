@@ -9,6 +9,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { AssembleInsertFoot } from './components/Assemble/AssembleInsertFoot';
 import { Constants } from './constants/Constants';
 import { AssembleScrewFoot } from './components/Assemble/AssembleScrewFoot';
+import { AssembleAttachNeck } from './components/Assemble/AssembleAttachNeck';
 
 const store = configureStore({
   reducer: reducer,
@@ -31,6 +32,7 @@ function App() {
                 <Route path={Constants.AssemblePath} element={<Assemble />} />
                 <Route path={Constants.AssembleInsertFootPath} element={<AssembleInsertFoot />} />
                 <Route path={Constants.AssembleScrewFootPath} element={<AssembleScrewFoot />} />
+                <Route path={Constants.AssembleNeckPath} element={<AssembleAttachNeck />} />
               </Routes>
             </div>
           </div>

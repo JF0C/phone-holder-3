@@ -1,4 +1,4 @@
-import { FunctionComponent, Suspense, useRef, useState } from 'react'
+import { FunctionComponent, Suspense } from 'react'
 import * as THREE from 'three'
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
 import { Canvas, useLoader } from "@react-three/fiber";

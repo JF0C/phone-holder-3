@@ -70,7 +70,10 @@ h2 {
     transform: rotate(360deg);
   }
 }
-
+a {
+  color: darkred;
+  text-decoration: none;
+}
 .start-menu-container{
   height: 10vh;
   display: flex;
