@@ -39,7 +39,30 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
     }
     if (location.includes('adjust')){
         return [
-
+            {
+                location: Constants.AdjustPath,
+                displayName: 'Adjust'
+            },
+            {
+                location: Constants.AdjustExtendAllPath,
+                displayName: 'Extend All'
+            },
+            {
+                location: Constants.AdjustPlacePhonePath,
+                displayName: 'Place Phone'
+            },
+            {
+                location: Constants.AdjustPullFeetInPath,
+                displayName: 'Pull Feet In'
+            },
+            {
+                location: Constants.AdjustTightenNeckPath,
+                displayName: 'Tighten Neck'
+            },
+            {
+                location: Constants.AdjustLowerFeetPath,
+                displayName: 'Lower Feet'
+            }
         ]
     }
     return [] 

@@ -3,11 +3,11 @@ import { Vector3 } from "three"
 import { StlView } from "../StlViewer/StlView"
 import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
 
-export const AdjustExtendAll: FunctionComponent = () => {
+export const AdjustPlacePhone: FunctionComponent = () => {
     return <ModelAndTextLayout
         model={
             <StlView
-                source="/cad/AdjustExtendAll.stl" 
+                source="/cad/AdjustPlacePhone.stl" 
                 position={new Vector3(-30, 70, -50)}
                 rotation={new Vector3(0, 0, 90)}
                 showAxes={true}

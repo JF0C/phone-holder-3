@@ -10,6 +10,12 @@ import { AssembleInsertFoot } from './components/Assemble/AssembleInsertFoot';
 import { Constants } from './constants/Constants';
 import { AssembleScrewFoot } from './components/Assemble/AssembleScrewFoot';
 import { AssembleAttachNeck } from './components/Assemble/AssembleAttachNeck';
+import { Adjust } from './components/Adjust/Adjust';
+import { AdjustExtendAll } from './components/Adjust/AdjustExtendAll';
+import { AdjustPlacePhone } from './components/Adjust/AdjustPlacePhone';
+import { AdjustPullFeetIn } from './components/Adjust/AdjustPullFeetIn';
+import { AdjustTightenNeck } from './components/Adjust/AdjustTightenNeck';
+import { AdjustLowerFeet } from './components/Adjust/AdjustLowerFeet';
 
 const store = configureStore({
   reducer: reducer,
@@ -33,6 +39,12 @@ function App() {
                 <Route path={Constants.AssembleInsertFootPath} element={<AssembleInsertFoot />} />
                 <Route path={Constants.AssembleScrewFootPath} element={<AssembleScrewFoot />} />
                 <Route path={Constants.AssembleNeckPath} element={<AssembleAttachNeck />} />
+                <Route path={Constants.AdjustPath} element={<Adjust />} />
+                <Route path={Constants.AdjustExtendAllPath} element={<AdjustExtendAll />} />
+                <Route path={Constants.AdjustPlacePhonePath} element={<AdjustPlacePhone />} />
+                <Route path={Constants.AdjustPullFeetInPath} element={<AdjustPullFeetIn />} />
+                <Route path={Constants.AdjustTightenNeckPath} element={<AdjustTightenNeck />} />
+                <Route path={Constants.AdjustLowerFeetPath} element={<AdjustLowerFeet />} />
               </Routes>
             </div>
           </div>

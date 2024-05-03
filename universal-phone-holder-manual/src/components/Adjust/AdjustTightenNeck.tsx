@@ -1,13 +1,13 @@
-import { FunctionComponent } from "react"
+import { FunctionComponent, Suspense } from "react"
 import { Vector3 } from "three"
 import { StlView } from "../StlViewer/StlView"
 import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
 
-export const AdjustExtendAll: FunctionComponent = () => {
+export const AdjustTightenNeck: FunctionComponent = () => {
     return <ModelAndTextLayout
         model={
             <StlView
-                source="/cad/AdjustExtendAll.stl" 
+                source="/cad/AdjustTightenNeck.stl" 
                 position={new Vector3(-30, 70, -50)}
                 rotation={new Vector3(0, 0, 90)}
                 showAxes={true}
