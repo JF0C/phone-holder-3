@@ -40,6 +40,11 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
     if (location.includes('adjust')){
         return [
             {
+                location: Constants.AssemblePath,
+                displayName: 'Assemble',
+                icon: icon.cilMediaStepBackward
+            },
+            {
                 location: Constants.AdjustPath,
                 displayName: 'Adjust'
             },
@@ -62,6 +67,24 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
             {
                 location: Constants.AdjustLowerFeetPath,
                 displayName: 'Lower Feet'
+            },
+            {
+                location: Constants.AdjustTestAssemblyPath,
+                displayName: 'Test Assembly'
+            },
+            {
+                location: Constants.MountPath,
+                displayName: 'Mount',
+                icon: icon.cilMediaStepForward
+            }
+        ]
+    }
+    if (location.includes('mount')){
+        return [
+            {
+                location: Constants.AdjustPath,
+                displayName: 'Adjust',
+                icon: icon.cilMediaStepBackward
             }
         ]
     }

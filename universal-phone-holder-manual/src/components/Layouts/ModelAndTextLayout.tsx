@@ -7,18 +7,26 @@ export type ModelAndTextProperties = {
     model: ReactElement,
     text: ReactElement,
     nextStepPath?: string,
-    previousStepPath?: string
+    previousStepPath?: string,
+    customNextButton?: ReactElement,
+    customPreviousButton?: ReactElement
 };
 
 export const ModelAndTextLayout: FunctionComponent<ModelAndTextProperties> = (props: ModelAndTextProperties) => {
-    const nextButton = (props.nextStepPath === null || props.nextStepPath === undefined) ? <></> :
+    let nextButton = (props.nextStepPath === null || props.nextStepPath === undefined) ? <></> :
         <div className="menu-button in-text">
             <LinkWithSaveState path={props.nextStepPath} displayValue="Next" icon={icon.cilChevronRight} iconAtEnd />
         </div>
-    const prevButton = (props.previousStepPath === null || props.previousStepPath === undefined) ? <></> :
+    let prevButton = (props.previousStepPath === null || props.previousStepPath === undefined) ? <></> :
         <div className="menu-button in-text">
             <LinkWithSaveState path={props.previousStepPath} displayValue="Previous" icon={icon.cilChevronLeft} />
         </div>
+    if (props.customNextButton !== undefined && props.customNextButton !== null){
+        nextButton = props.customNextButton;
+    }
+    if (props.customPreviousButton !== undefined && props.customPreviousButton !== null){
+        prevButton = props.customPreviousButton;
+    }
 
     return <div className="model-and-text text-container">
         <Suspense fallback={<Loader />}>

@@ -4,6 +4,8 @@ import { StlView } from "../StlViewer/StlView"
 import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
 import { Tooltip, TooltipPosition } from "../Tooltip/Tooltip"
 import { Constants } from "../../constants/Constants"
+import { LinkWithSaveState } from "../Link/LinkWithSaveState"
+import * as icon from '@coreui/icons';
 
 export const AssembleAttachNeck : FunctionComponent = () => {
     return <ModelAndTextLayout 
@@ -46,6 +48,8 @@ export const AssembleAttachNeck : FunctionComponent = () => {
             </>
         }
         previousStepPath={Constants.AssembleScrewFootPath}
-        nextStepPath={Constants.AdjustPath}
+        customNextButton={<div className="menu-button in-text">
+            <LinkWithSaveState path={Constants.AdjustPath} displayValue="Adjust" icon={icon.cilMediaStepForward} />
+        </div>}
     />
 }
