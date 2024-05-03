@@ -53,7 +53,7 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
             },
             {
                 location: Constants.AdjustPullFeetInPath,
-                displayName: 'Pull Feet In'
+                displayName: 'Push Feet In'
             },
             {
                 location: Constants.AdjustTightenNeckPath,

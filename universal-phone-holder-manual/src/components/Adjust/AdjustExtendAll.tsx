@@ -8,15 +8,20 @@ export const AdjustExtendAll: FunctionComponent = () => {
         model={
             <StlView
                 source="/cad/AdjustExtendAll.stl" 
-                position={new Vector3(-30, 70, -50)}
-                rotation={new Vector3(0, 0, 90)}
-                showAxes={true}
-                cameraPosition={new Vector3(-50, 50, 50)}
-                lightOrigin={new Vector3(-100, 0, 0)}
+                position={new Vector3(35, 10, -70)}
+                rotation={new Vector3(75, 55, 30)}
+                showAxes={false}
+                cameraPosition={new Vector3(170, 0, 0)}
+                lightOrigin={new Vector3(100, 100, 50)}
             />
         }
         text={
-            <div className="text-container"></div>
+            <div className="text-container">
+                Loosen the screws, so that the feet and neck can be moved easily.
+                <br />
+                Extend all of them as far out as possible. 
+                Move the feet up above the body.
+            </div>
         }
     />
 }

@@ -9,7 +9,7 @@ export class Constants{
     public static AdjustPath: string = 'adjust'
     public static AdjustExtendAllPath: string = 'adjust-extend-all'
     public static AdjustPlacePhonePath: string = 'adjust-place-phone'
-    public static AdjustPullFeetInPath: string = 'adjust-pull-feet-in'
+    public static AdjustPullFeetInPath: string = 'adjust-push-feet-in'
     public static AdjustTightenNeckPath: string = 'adjust-tighten-neck'
     public static AdjustLowerFeetPath: string = 'adjust-lower-feet'
     public static MountPath: string = 'mount'

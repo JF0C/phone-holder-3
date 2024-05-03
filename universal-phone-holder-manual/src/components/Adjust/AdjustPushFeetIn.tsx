@@ -3,7 +3,7 @@ import { Vector3 } from "three"
 import { StlView } from "../StlViewer/StlView"
 import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
 
-export const AdjustPullFeetIn: FunctionComponent = () => {
+export const AdjustPushFeetIn: FunctionComponent = () => {
     return <ModelAndTextLayout
         model={
             <StlView
