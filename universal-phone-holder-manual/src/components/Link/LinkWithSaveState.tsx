@@ -26,7 +26,7 @@ export const LinkWithSaveState: FunctionComponent<LinkWithSaveStateProps> = (pro
         content = props.displayValue;
     }
     if (props.icon !== undefined && props.icon !== null && props.icon.length > 0){
-        content = <><CIcon icon={props.icon} height={20} style={{marginRight: '5px'}}/>{content}</>
+        content = <><CIcon icon={props.icon} style={{marginRight: '5px'}}/>{content}</>
     }
     if (props.useli !== undefined && props.useli){
         const activeClass = currentLocation === '/' + props.path ? 'active' : ''

@@ -2,6 +2,7 @@ import { FunctionComponent, Suspense } from "react"
 import { Vector3 } from "three"
 import { StlView } from "../StlViewer/StlView"
 import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
+import { Tooltip, TooltipPosition } from "../Tooltip/Tooltip"
 
 
 export const AssembleInsertFoot: FunctionComponent = () => {
@@ -19,7 +20,16 @@ return <ModelAndTextLayout
             </Suspense>}
         text={
             <div className="text-container">
-                Hold one finger below the 
+                Hold one finger below the foot rails to support the&nbsp;
+                <Tooltip text={<>carriages</>} position={TooltipPosition.bottom} useIcon>
+                    <img height={200} src="/img/sled.png"/>
+                </Tooltip>.
+                <br />
+                Hold them, so that they align with the bottom surface of the body.
+                <br />
+                Then, insert the <Tooltip text={<>foot</>} position={TooltipPosition.bottom} useIcon>
+                    <img height={200} src="/img/foot.png" />
+                </Tooltip>
             </div>
         }
     />

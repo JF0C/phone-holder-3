@@ -5,7 +5,6 @@ import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
 
 export const AssembleAttachNeck : FunctionComponent = () => {
 
-
     return <ModelAndTextLayout 
         model={
             <Suspense>
@@ -18,6 +17,8 @@ export const AssembleAttachNeck : FunctionComponent = () => {
                     lightOrigin={new Vector3(-100, 0, 0)}
                 />
             </Suspense>}
-        text={<>hello</>}
+        text={
+            <div className="text-container">hello</div>
+        }
     />
 }

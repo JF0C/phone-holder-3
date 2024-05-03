@@ -47,7 +47,7 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
 
 export const Navbar: FunctionComponent = () => {
     const [navOpen, navOpenSet] = useState(false);
-    const [path, setPath] = useState('/');
+    const [path, setPath] = useState('initial');
 
     const currentLocation = useSelector((state: AppState) => state.currentLocation);
     if (currentLocation === '/'){
