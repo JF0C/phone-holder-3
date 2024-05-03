@@ -2,6 +2,7 @@ import { FunctionComponent } from "react"
 import { Vector3 } from "three"
 import { StlView } from "../StlViewer/StlView"
 import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
+import { Constants } from "../../constants/Constants"
 
 export const AdjustPlacePhone: FunctionComponent = () => {
     return <ModelAndTextLayout
@@ -16,7 +17,14 @@ export const AdjustPlacePhone: FunctionComponent = () => {
             />
         }
         text={
-            <div className="text-container"></div>
+            <>
+                Put the assembly onto a flat surface and place your phone on top of it.
+                It is highly recommended to use a phone case with this assembly.
+                This increases the stability and reduces the risk of the phone falling out 
+                or being scratched by the holder assembly.
+            </>
         }
+        previousStepPath={Constants.AdjustExtendAllPath}
+        nextStepPath={Constants.AdjustPushFeetInPath}
     />
 }

@@ -1,7 +1,8 @@
 import { FunctionComponent } from "react"
 import { LinkWithSaveState } from "../Link/LinkWithSaveState"
 import { Constants } from "../../constants/Constants"
-import { Tooltip, TooltipPosition } from "../Tooltip/Tooltip"
+import { Tooltip } from "../Tooltip/Tooltip"
+import * as icon from '@coreui/icons';
 
 export const Assemble: FunctionComponent = () => {
     return <div className="text-container">
@@ -41,7 +42,12 @@ export const Assemble: FunctionComponent = () => {
             </li>
         </ul>
         [i] = included in phone holder set. <br />
-        After that, continue with the
-        <LinkWithSaveState path={Constants.AssembleInsertFootPath} displayValue=" next assembly step" />.
+        <br />
+        Now, you are ready for the
+        <br />
+        <br />
+        <div className="menu-button in-text">
+            <LinkWithSaveState path={Constants.AssembleInsertFootPath} displayValue="Next Step" icon={icon.cilChevronRight} iconAtEnd/>
+        </div>
     </div>
 }

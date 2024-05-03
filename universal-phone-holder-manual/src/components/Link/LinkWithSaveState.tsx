@@ -12,6 +12,7 @@ export type LinkWithSaveStateProps = {
     displayValue?: string;
     selected?: boolean;
     icon?: string[];
+    iconAtEnd?: boolean;
 }
 
 const capitalizeFirst = (str: string) => str.charAt(0).toUpperCase() + str.substring(1).toLowerCase();
@@ -26,7 +27,12 @@ export const LinkWithSaveState: FunctionComponent<LinkWithSaveStateProps> = (pro
         content = props.displayValue;
     }
     if (props.icon !== undefined && props.icon !== null && props.icon.length > 0){
-        content = <><CIcon icon={props.icon} style={{marginRight: '5px'}}/>{content}</>
+        if (props.iconAtEnd !== undefined && props.iconAtEnd !== null && props.iconAtEnd === true){
+            content = <>{content}<CIcon icon={props.icon} style={{marginLeft: '5px'}}/></>
+        }
+        else{
+            content = <><CIcon icon={props.icon} style={{marginRight: '5px'}}/>{content}</>
+        }
     }
     if (props.useli !== undefined && props.useli){
         const activeClass = currentLocation === '/' + props.path ? 'active' : ''

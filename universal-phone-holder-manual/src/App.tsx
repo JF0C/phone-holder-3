@@ -16,6 +16,7 @@ import { AdjustPlacePhone } from './components/Adjust/AdjustPlacePhone';
 import { AdjustPushFeetIn } from './components/Adjust/AdjustPushFeetIn';
 import { AdjustTightenNeck } from './components/Adjust/AdjustTightenNeck';
 import { AdjustLowerFeet } from './components/Adjust/AdjustLowerFeet';
+import { AdjustTestAssembly } from './components/Adjust/AdjustTestAssembly';
 
 const store = configureStore({
   reducer: reducer,
@@ -42,9 +43,10 @@ function App() {
                 <Route path={Constants.AdjustPath} element={<Adjust />} />
                 <Route path={Constants.AdjustExtendAllPath} element={<AdjustExtendAll />} />
                 <Route path={Constants.AdjustPlacePhonePath} element={<AdjustPlacePhone />} />
-                <Route path={Constants.AdjustPullFeetInPath} element={<AdjustPushFeetIn />} />
+                <Route path={Constants.AdjustPushFeetInPath} element={<AdjustPushFeetIn />} />
                 <Route path={Constants.AdjustTightenNeckPath} element={<AdjustTightenNeck />} />
                 <Route path={Constants.AdjustLowerFeetPath} element={<AdjustLowerFeet />} />
+                <Route path={Constants.AdjustTestAssemblyPath} element={<AdjustTestAssembly />} />
               </Routes>
             </div>
           </div>

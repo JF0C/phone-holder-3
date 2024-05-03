@@ -38,8 +38,23 @@ h2 {
   transition: all 0.5s ease-in-out;
 }
 
+.menu-button.in-text{
+  display: inline-block;
+  margin: 0;
+}
+
+.menu-button a{
+  color: white;
+}
+
 .menu-button:hover{
   background-color: rgb(159, 190, 193);
+}
+
+.step-navigation{
+  display: flex;
+  padding-top: 10px;
+  justify-content: space-between;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -180,7 +195,9 @@ a {
 
 .text-view{
   min-width: 200px;
-  height: 80vh;
+  max-width: 450px;
+  height: fit-content;
+  text-align: justify;
   flex-grow: 1;
 }
 
@@ -223,10 +240,16 @@ a {
   .menu-button{
     padding: 15px;
   }
+  .main-content{
+    background-color: rgb(50, 50, 50);
+  }
 }
 
 @media (min-width: 1000px){
   .nav-toggle{
     display: none;
+  }
+  .step-navigation{
+    
   }
 }

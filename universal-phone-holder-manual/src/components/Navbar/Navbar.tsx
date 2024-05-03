@@ -52,7 +52,7 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
                 displayName: 'Place Phone'
             },
             {
-                location: Constants.AdjustPullFeetInPath,
+                location: Constants.AdjustPushFeetInPath,
                 displayName: 'Push Feet In'
             },
             {
