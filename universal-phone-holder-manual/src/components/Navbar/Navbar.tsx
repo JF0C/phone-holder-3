@@ -85,6 +85,10 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
                 location: Constants.AdjustPath,
                 displayName: 'Adjust',
                 icon: icon.cilMediaStepBackward
+            },
+            {
+                location: Constants.MountPath,
+                displayName: 'Mount'
             }
         ]
     }

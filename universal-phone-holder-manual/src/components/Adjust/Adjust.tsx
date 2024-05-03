@@ -19,7 +19,7 @@ export const Adjust: FunctionComponent = () => {
         </ul>
         <div className="step-navigation">
             <div className="menu-button in-text">
-                <LinkWithSaveState path={Constants.AssemblePath} displayValue="Back to Assemble" icon={icon.cilMediaStepBackward} />
+                <LinkWithSaveState path={Constants.AssemblePath} displayValue="Assemble" icon={icon.cilMediaStepBackward} />
             </div>
             <div className="menu-button in-text">
                 <LinkWithSaveState path={Constants.AdjustExtendAllPath} displayValue="Next" icon={icon.cilChevronRight} iconAtEnd />
