@@ -11,10 +11,10 @@ export const AdjustTestAssembly: FunctionComponent = () => {
         model={
                 <StlView
                     source="/cad/AdjustLowerFeet.stl" 
-                    position={new Vector3(10, 70, -20)}
+                    position={new Vector3(40, 50, 30)}
                     rotation={new Vector3(25, 45, 90)}
-                    showAxes={false}
-                    cameraPosition={new Vector3(0, -150, 0)}
+                    showAxes={true}
+                    cameraPosition={new Vector3(0, -180, 0)}
                     lightOrigin={new Vector3(-200, -100, 0)}
                 />
             }

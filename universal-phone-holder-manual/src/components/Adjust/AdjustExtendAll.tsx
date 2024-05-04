@@ -9,11 +9,11 @@ export const AdjustExtendAll: FunctionComponent = () => {
         model={
             <StlView
                 source="/cad/AdjustExtendAll.stl" 
-                position={new Vector3(35, 10, -70)}
-                rotation={new Vector3(75, 55, 30)}
+                position={new Vector3(0, 70, 0)}
+                rotation={new Vector3(0, -70, 90)}
                 showAxes={false}
-                cameraPosition={new Vector3(170, 0, 0)}
-                lightOrigin={new Vector3(100, 100, 50)}
+                cameraPosition={new Vector3(-150, 100, 0)}
+                lightOrigin={new Vector3(0, 100, 50)}
             />
         }
         text={

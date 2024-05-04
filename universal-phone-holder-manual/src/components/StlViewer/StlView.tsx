@@ -1,12 +1,11 @@
-import { FunctionComponent, Suspense } from 'react'
+import { FunctionComponent, Suspense, useRef } from 'react'
 import * as THREE from 'three'
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
 import { Canvas, useLoader } from "@react-three/fiber";
 import { Loader, OrbitControls } from '@react-three/drei';
 import { Vector3 } from 'three';
-import { useDispatch, useSelector } from 'react-redux';
-import { AppState, addLoadedMesh } from '../../store/state';
-import { Dispatch } from '@reduxjs/toolkit';
+import CIcon from '@coreui/icons-react';
+import * as icon from '@coreui/icons';
 
 type StlViewProperties = {
     source: string,
@@ -17,12 +16,9 @@ type StlViewProperties = {
     showAxes: boolean
 };
 
-const degToRad = (deg: number) => deg/360 * Math.PI;
+const degToRad = (deg: number) => deg/180 * Math.PI;
 
 export const StlView: FunctionComponent<StlViewProperties> = (props: StlViewProperties) => {
-    const loadedMeshes = useSelector((state: AppState) => state.loadedMeshes);
-    const dispatch : Dispatch<any> = useDispatch();
-
     const icoMaterial = new THREE.MeshPhongMaterial({
       color       : new THREE.Color("rgb(255,255,255)"),
       emissive    : new THREE.Color("rgb(50,50,50)"),
@@ -30,15 +26,10 @@ export const StlView: FunctionComponent<StlViewProperties> = (props: StlViewProp
       shininess   : 4,
       opacity     : 1
     });
-
+    const orbitref = useRef<any>();
     const geometry = useLoader(STLLoader, props.source);
 
-    if (!loadedMeshes.includes(props.source)){
-      geometry.rotateX(degToRad(props.rotation.x));
-      geometry.rotateY(degToRad(props.rotation.y));
-      geometry.rotateZ(degToRad(props.rotation.z));
-      setTimeout(() => dispatch(addLoadedMesh(props.source)), 100);
-    }
+    const eul = new THREE.Euler(degToRad(props.rotation.x), degToRad(props.rotation.y), degToRad(props.rotation.z));
 
     let axes = <></>;
     if (props.showAxes){
@@ -67,10 +58,13 @@ export const StlView: FunctionComponent<StlViewProperties> = (props: StlViewProp
         <Canvas className='stl-view' camera={{position: props.cameraPosition}}>
           <ambientLight/>
           <directionalLight position={props.lightOrigin}/>
-          <OrbitControls />
-          <mesh geometry={geometry} material={icoMaterial} position={props.position} />
+          <OrbitControls ref={orbitref} />
+          <mesh rotation={eul} geometry={geometry} material={icoMaterial} position={props.position} />
           {axes}
         </Canvas>
+        <div className='reset-view-button' onClick={() => orbitref.current.reset()}>
+          <CIcon icon={icon.cilActionUndo} />
+        </div>
       </Suspense>
     )
   }

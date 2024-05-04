@@ -10,7 +10,7 @@ export const AdjustLowerFeet: FunctionComponent = () => {
         model={
             <StlView
                 source="/cad/AdjustLowerFeet.stl" 
-                position={new Vector3(-30, 70, -50)}
+                position={new Vector3(-30, 70, -20)}
                 rotation={new Vector3(0, 0, 90)}
                 showAxes={false}
                 cameraPosition={new Vector3(-70, 25, 20)}

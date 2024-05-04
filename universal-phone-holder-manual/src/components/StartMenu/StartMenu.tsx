@@ -19,7 +19,7 @@ export const StartMenu: FunctionComponent = () => {
         source="/cad/PhoneHolderBase.stl" 
         position={new Vector3(0, 0, 0)}
         rotation={new Vector3(45, -90, 45)}
-        cameraPosition={new Vector3(150, 100, 0)}
+        cameraPosition={new Vector3(150, -50, 0)}
         lightOrigin={new Vector3(150, 0, 50)}
         showAxes={false}
     />
