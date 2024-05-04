@@ -9,11 +9,11 @@ export const AdjustPushFeetIn: FunctionComponent = () => {
         model={
             <StlView
                 source="/cad/low/AdjustPullFeetIn.stl" 
-                position={new Vector3(-40, 70, -40)}
-                rotation={new Vector3(0, 0, 90)}
+                position={new Vector3(35, 0, -50)}
+                rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
-                cameraPosition={new Vector3(-50, 50, 50)}
-                lightOrigin={new Vector3(-100, 100, -50)}
+                cameraPosition={new Vector3(-50, 30, -50)}
+                lightOrigin={new Vector3(0, 100, -100)}
             />
         }
         text={

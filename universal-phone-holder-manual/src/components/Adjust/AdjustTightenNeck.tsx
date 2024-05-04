@@ -9,11 +9,11 @@ export const AdjustTightenNeck: FunctionComponent = () => {
         model={
             <StlView
                 source="/cad/low/AdjustTightenNeck.stl" 
-                position={new Vector3(30, 70, 30)}
-                rotation={new Vector3(0, 0, 90)}
+                position={new Vector3(0, 0, 60)}
+                rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
-                cameraPosition={new Vector3(-120, 0, 50)}
-                lightOrigin={new Vector3(-100, 50, 0)}
+                cameraPosition={new Vector3(-100, 15, -50)}
+                lightOrigin={new Vector3(-100, 100, 0)}
             />
         }
         text={

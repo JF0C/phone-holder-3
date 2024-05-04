@@ -12,11 +12,11 @@ export const AssembleAttachNeck : FunctionComponent = () => {
         model={
             <StlView
                 source="/cad/low/AssemblyNeck.stl" 
-                position={new Vector3(40, 70, 20)}
-                rotation={new Vector3(0, 0, 90)}
+                position={new Vector3(0, 0, 40)}
+                rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
-                cameraPosition={new Vector3(-25, 50, 50)}
-                lightOrigin={new Vector3(-100, 0, 0)}
+                cameraPosition={new Vector3(-70, 50, 0)}
+                lightOrigin={new Vector3(-100, 100, 0)}
             />
         }
         text={

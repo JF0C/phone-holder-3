@@ -9,11 +9,11 @@ export const AdjustPlacePhone: FunctionComponent = () => {
         model={
             <StlView
                 source="/cad/low/AdjustPlacePhone.stl" 
-                position={new Vector3(10, 55, 30)}
-                rotation={new Vector3(0, 0, 90)}
+                position={new Vector3(0, 0, 15)}
+                rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
-                cameraPosition={new Vector3(-55, 50, 150)}
-                lightOrigin={new Vector3(-100, 0, 0)}
+                cameraPosition={new Vector3(-120, 150, 0)}
+                lightOrigin={new Vector3(0, 100, 0)}
             />
         }
         text={
