@@ -7,7 +7,7 @@ import { Loader } from "@react-three/drei"
 
 export const StartMenu: FunctionComponent = () => {
     let view = <StlView 
-        source="/cad/PhoneHolderBase.stl" 
+        source="/cad/low/PhoneHolderBase.stl" 
         position={new Vector3(0, 0, 0)}
         rotation={new Vector3(90, 0, 0)}
         cameraPosition={new Vector3(100, 50, 0)}
@@ -16,7 +16,7 @@ export const StartMenu: FunctionComponent = () => {
     />;
     if(window.innerWidth < 1000){
         view = <StlView 
-        source="/cad/PhoneHolderBase.stl" 
+        source="/cad/low/PhoneHolderBase.stl" 
         position={new Vector3(0, 0, 0)}
         rotation={new Vector3(45, -90, 45)}
         cameraPosition={new Vector3(150, -50, 0)}

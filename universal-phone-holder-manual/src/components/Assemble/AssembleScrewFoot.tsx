@@ -8,7 +8,7 @@ export const AssembleScrewFoot: FunctionComponent = () => {
 return <ModelAndTextLayout 
     model={
         <StlView
-            source="/cad/AssemblyFootScrew.stl" 
+            source="/cad/low/AssemblyFootScrew.stl" 
             position={new Vector3(-30, 70, -50)}
             rotation={new Vector3(0, 0, 90)}
             showAxes={false}

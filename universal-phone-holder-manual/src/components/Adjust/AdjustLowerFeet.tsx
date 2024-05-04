@@ -9,7 +9,7 @@ export const AdjustLowerFeet: FunctionComponent = () => {
     return <ModelAndTextLayout
         model={
             <StlView
-                source="/cad/AdjustLowerFeet.stl" 
+                source="/cad/low/AdjustLowerFeet.stl" 
                 position={new Vector3(-30, 70, -20)}
                 rotation={new Vector3(0, 0, 90)}
                 showAxes={false}

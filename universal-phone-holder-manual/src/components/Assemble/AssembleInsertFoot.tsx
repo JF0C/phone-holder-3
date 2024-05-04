@@ -9,7 +9,7 @@ export const AssembleInsertFoot: FunctionComponent = () => {
 return <ModelAndTextLayout 
         model={
                 <StlView
-                    source="/cad/AssemblyFootInsert.stl" 
+                    source="/cad/low/AssemblyFootInsert.stl" 
                     position={new Vector3(-30, 70, -50)}
                     rotation={new Vector3(0, 0, 90)}
                     showAxes={false}

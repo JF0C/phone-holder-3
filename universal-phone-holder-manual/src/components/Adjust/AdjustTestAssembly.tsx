@@ -10,7 +10,7 @@ export const AdjustTestAssembly: FunctionComponent = () => {
     return <ModelAndTextLayout 
         model={
                 <StlView
-                    source="/cad/AdjustLowerFeet.stl" 
+                    source="/cad/low/AdjustLowerFeet.stl" 
                     position={new Vector3(40, 50, 30)}
                     rotation={new Vector3(25, 45, 90)}
                     showAxes={true}

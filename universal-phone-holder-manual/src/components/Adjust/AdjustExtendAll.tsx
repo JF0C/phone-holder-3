@@ -8,7 +8,7 @@ export const AdjustExtendAll: FunctionComponent = () => {
     return <ModelAndTextLayout
         model={
             <StlView
-                source="/cad/AdjustExtendAll.stl" 
+                source="/cad/low/AdjustExtendAll.stl" 
                 position={new Vector3(0, 70, 0)}
                 rotation={new Vector3(0, -70, 90)}
                 showAxes={false}

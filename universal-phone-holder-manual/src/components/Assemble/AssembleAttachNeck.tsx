@@ -11,7 +11,7 @@ export const AssembleAttachNeck : FunctionComponent = () => {
     return <ModelAndTextLayout 
         model={
             <StlView
-                source="/cad/AssemblyNeck.stl" 
+                source="/cad/low/AssemblyNeck.stl" 
                 position={new Vector3(40, 70, 20)}
                 rotation={new Vector3(0, 0, 90)}
                 showAxes={false}

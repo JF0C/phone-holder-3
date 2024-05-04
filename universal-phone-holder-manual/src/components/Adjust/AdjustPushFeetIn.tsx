@@ -8,7 +8,7 @@ export const AdjustPushFeetIn: FunctionComponent = () => {
     return <ModelAndTextLayout
         model={
             <StlView
-                source="/cad/AdjustPullFeetIn.stl" 
+                source="/cad/low/AdjustPullFeetIn.stl" 
                 position={new Vector3(-40, 70, -40)}
                 rotation={new Vector3(0, 0, 90)}
                 showAxes={false}

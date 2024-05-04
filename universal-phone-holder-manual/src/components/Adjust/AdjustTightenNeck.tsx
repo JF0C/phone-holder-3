@@ -8,7 +8,7 @@ export const AdjustTightenNeck: FunctionComponent = () => {
     return <ModelAndTextLayout
         model={
             <StlView
-                source="/cad/AdjustTightenNeck.stl" 
+                source="/cad/low/AdjustTightenNeck.stl" 
                 position={new Vector3(30, 70, 30)}
                 rotation={new Vector3(0, 0, 90)}
                 showAxes={false}

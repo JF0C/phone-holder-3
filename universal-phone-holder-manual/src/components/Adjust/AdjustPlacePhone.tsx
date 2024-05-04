@@ -8,7 +8,7 @@ export const AdjustPlacePhone: FunctionComponent = () => {
     return <ModelAndTextLayout
         model={
             <StlView
-                source="/cad/AdjustPlacePhone.stl" 
+                source="/cad/low/AdjustPlacePhone.stl" 
                 position={new Vector3(10, 55, 30)}
                 rotation={new Vector3(0, 0, 90)}
                 showAxes={false}
