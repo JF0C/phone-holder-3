@@ -32,7 +32,7 @@ export const AdjustExtendAll: FunctionComponent = () => {
                 <br />
                 <br />
                 Extend all of them as far out as possible. 
-                Move the feet up above the body.
+                Move the feet up, away from the body.
             </>
         }
         previousStepPath={Constants.AdjustPath}

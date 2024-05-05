@@ -18,6 +18,9 @@ import { AdjustTightenNeck } from './components/Adjust/AdjustTightenNeck';
 import { AdjustLowerFeet } from './components/Adjust/AdjustLowerFeet';
 import { AdjustTestAssembly } from './components/Adjust/AdjustTestAssembly';
 import { Mount } from './components/Mount/Mount';
+import { MountHandlebar } from './components/Mount/MountHandlebar';
+import { MountCenterRing } from './components/Mount/MountCenterRing';
+import { MountCenterHolder } from './components/Mount/MountCenterHolder';
 
 const store = configureStore({
   reducer: reducer,
@@ -49,6 +52,9 @@ function App() {
                 <Route path={Constants.AdjustLowerFeetPath} element={<AdjustLowerFeet />} />
                 <Route path={Constants.AdjustTestAssemblyPath} element={<AdjustTestAssembly />} />
                 <Route path={Constants.MountPath} element={<Mount />} />
+                <Route path={Constants.MountHandlebarPath} element={<MountHandlebar />} />
+                <Route path={Constants.MountCenterRingPath} element={<MountCenterRing />} />
+                <Route path={Constants.MountCenterHolderPath} element={<MountCenterHolder />} />
               </Routes>
             </div>
           </div>

@@ -89,6 +89,18 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
             {
                 location: Constants.MountPath,
                 displayName: 'Mount'
+            },
+            {
+                location: Constants.MountHandlebarPath,
+                displayName: 'Mount to Handlebar'
+            },
+            {
+                location: Constants.MountCenterRingPath,
+                displayName: 'Mount Base Ring to Stem'
+            },
+            {
+                location: Constants.MountCenterHolderPath,
+                displayName: 'Mount Holder to Stem'
             }
         ]
     }

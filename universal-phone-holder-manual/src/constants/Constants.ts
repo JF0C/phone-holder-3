@@ -14,4 +14,7 @@ export class Constants{
     public static AdjustLowerFeetPath: string = 'adjust-lower-feet'
     public static AdjustTestAssemblyPath: string = 'adjust-test-assembly'
     public static MountPath: string = 'mount'
+    public static MountHandlebarPath: string = 'mount-handlebar'
+    public static MountCenterRingPath: string = 'mount-center-ring'
+    public static MountCenterHolderPath: string = 'mount-center-holder'
 }
