@@ -112,7 +112,10 @@ export const Navbar: FunctionComponent = () => {
     const [path, setPath] = useState('initial');
 
     const currentLocation = useSelector((state: AppState) => state.currentLocation);
-    if (currentLocation === '/'){
+    if (currentLocation === '/' ||
+        currentLocation.includes(Constants.HtmlIndexFilePath) ||
+        currentLocation.includes(Constants.HtmlPhoneholderFilePath))
+    {
         return <></>;
     }
     if (currentLocation != path){

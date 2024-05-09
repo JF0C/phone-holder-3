@@ -1,4 +1,6 @@
 export class Constants{
+    public static HtmlIndexFilePath: string = 'index.html'
+    public static HtmlPhoneholderFilePath: string = 'phoneholder.html'
     public static StartMenuPath: string = ''
     public static AssemblePath: string = 'assemble'
     public static AssembleInsertFootPath: string = 'assemble-insert-foot'

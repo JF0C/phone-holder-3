@@ -39,6 +39,8 @@ function App() {
             <Navbar />
             <div className='main-content'>
               <Routes>
+                <Route path={Constants.HtmlIndexFilePath} element={<StartMenu />} />
+                <Route path={Constants.HtmlPhoneholderFilePath} element={<StartMenu />} />
                 <Route path={Constants.StartMenuPath} element={<StartMenu />} />
                 <Route path={Constants.AssemblePath} element={<Assemble />} />
                 <Route path={Constants.AssembleInsertFootPath} element={<AssembleInsertFoot />} />
