@@ -12,10 +12,10 @@ export const MountAeroComplete : FunctionComponent = () => {
         model={
             <StlView
                 source="/cad/low/MountAeroComplete.stl" 
-                position={new Vector3(0, 0, 40)}
+                position={new Vector3(0, 0, 0)}
                 rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
-                cameraPosition={new Vector3(-70, 50, 0)}
+                cameraPosition={new Vector3(-150, 40, -40)}
                 lightOrigin={new Vector3(-100, 100, 0)}
             />
         }
