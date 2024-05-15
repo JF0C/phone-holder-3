@@ -138,7 +138,7 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
             },
             {
                 location: Constants.MountCenterCompletePath,
-                displayName: 'Center Complete'
+                displayName: 'Stem Mount Complete'
             }
         ]
     }

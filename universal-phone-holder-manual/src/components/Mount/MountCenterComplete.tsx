@@ -21,7 +21,7 @@ export const MountCenterComplete : FunctionComponent = () => {
         }
         text={
             <>
-            
+                TODO: add text
             </>
         }
         previousStepPath={Constants.MountCenterHolderPath}
