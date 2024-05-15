@@ -7,11 +7,11 @@ import { Constants } from "../../constants/Constants"
 import { LinkWithSaveState } from "../Link/LinkWithSaveState"
 import * as icon from '@coreui/icons';
 
-export const MountHandlebar : FunctionComponent = () => {
+export const MountHandlebarComplete : FunctionComponent = () => {
     return <ModelAndTextLayout 
         model={
             <StlView
-                source="/cad/low/MountBarHolder.stl" 
+                source="/cad/low/MountBarComplete.stl" 
                 position={new Vector3(0, 0, 40)}
                 rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
@@ -24,7 +24,6 @@ export const MountHandlebar : FunctionComponent = () => {
             
             </>
         }
-        previousStepPath={Constants.MountPath}
-        nextStepPath={Constants.MountHandlebarCompletePath}
+        previousStepPath={Constants.MountHandlebarPath}
     />
 }

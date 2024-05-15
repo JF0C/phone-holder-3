@@ -25,5 +25,6 @@ export const MountCenterHolder : FunctionComponent = () => {
             </>
         }
         previousStepPath={Constants.MountCenterRingPath}
+        nextStepPath={Constants.MountCenterCompletePath}
     />
 }

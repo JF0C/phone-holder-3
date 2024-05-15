@@ -79,7 +79,7 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
             }
         ]
     }
-    if (location.includes('mount')){
+    if (location === '/mount'){
         return [
             {
                 location: Constants.AdjustPath,
@@ -92,15 +92,78 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
             },
             {
                 location: Constants.MountHandlebarPath,
-                displayName: 'Mount to Handlebar'
+                displayName: 'Handlebar'
             },
             {
                 location: Constants.MountCenterRingPath,
-                displayName: 'Mount Base Ring to Stem'
+                displayName: 'Stem'
+            },
+            {
+                location: Constants.MountAeroHolderPath,
+                displayName: 'Aero'
+            }
+        ]
+    }
+    if (location.includes('mount-handlebar')){
+        return [
+            {
+                location: Constants.MountPath,
+                displayName: 'Mount',
+                icon: icon.cilMediaStepBackward
+            },
+            {
+                location: Constants.MountHandlebarPath,
+                displayName: 'Ring to Handlebar'
+            },
+            {
+                location: Constants.MountHandlebarCompletePath,
+                displayName: 'Handlebar Complete'
+            }
+        ]
+    }
+    if (location.includes('mount-center')){
+        return [
+            {
+                location: Constants.MountPath,
+                displayName: 'Mount',
+                icon: icon.cilMediaStepBackward
+            },
+            {
+                location: Constants.MountCenterRingPath,
+                displayName: 'Ring to Stem'
             },
             {
                 location: Constants.MountCenterHolderPath,
-                displayName: 'Mount Holder to Stem'
+                displayName: 'Holder to Stem'
+            },
+            {
+                location: Constants.MountCenterCompletePath,
+                displayName: 'Center Complete'
+            }
+        ]
+    }
+    if (location.includes('mount-aero')){
+        return [
+            {
+                location: Constants.MountPath,
+                displayName: 'Mount',
+                icon: icon.cilMediaStepBackward
+            },
+            {
+                location: Constants.MountAeroHolderPath,
+                displayName: 'Holder to Aerobar'
+            },
+            {
+                location: Constants.MountAeroRingPath,
+                displayName: 'Ring to Aerobar'
+            },
+            {
+                location: Constants.MountAeroHandlebarPath,
+                displayName: 'Aerobar to Handlebar'
+            },
+            {
+                location: Constants.MountAeroCompletePath,
+                displayName: 'Aerobar Complete'
             }
         ]
     }

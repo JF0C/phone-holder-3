@@ -21,6 +21,12 @@ import { Mount } from './components/Mount/Mount';
 import { MountHandlebar } from './components/Mount/MountHandlebar';
 import { MountCenterRing } from './components/Mount/MountCenterRing';
 import { MountCenterHolder } from './components/Mount/MountCenterHolder';
+import { MountHandlebarComplete } from './components/Mount/MountHandlebarComplete';
+import { MountCenterComplete } from './components/Mount/MountCenterComplete';
+import { MountAeroHolder } from './components/Mount/MountAeroHolder';
+import { MountAeroRing } from './components/Mount/MountAeroRing';
+import { MountAeroHandlebar } from './components/Mount/MountAeroHandlebar';
+import { MountAeroComplete } from './components/Mount/MountAeroComplete';
 
 const store = configureStore({
   reducer: reducer,
@@ -41,11 +47,14 @@ function App() {
               <Routes>
                 <Route path={Constants.HtmlIndexFilePath} element={<StartMenu />} />
                 <Route path={Constants.HtmlPhoneholderFilePath} element={<StartMenu />} />
+
                 <Route path={Constants.StartMenuPath} element={<StartMenu />} />
+                
                 <Route path={Constants.AssemblePath} element={<Assemble />} />
                 <Route path={Constants.AssembleInsertFootPath} element={<AssembleInsertFoot />} />
                 <Route path={Constants.AssembleScrewFootPath} element={<AssembleScrewFoot />} />
                 <Route path={Constants.AssembleNeckPath} element={<AssembleAttachNeck />} />
+
                 <Route path={Constants.AdjustPath} element={<Adjust />} />
                 <Route path={Constants.AdjustExtendAllPath} element={<AdjustExtendAll />} />
                 <Route path={Constants.AdjustPlacePhonePath} element={<AdjustPlacePhone />} />
@@ -53,10 +62,20 @@ function App() {
                 <Route path={Constants.AdjustTightenNeckPath} element={<AdjustTightenNeck />} />
                 <Route path={Constants.AdjustLowerFeetPath} element={<AdjustLowerFeet />} />
                 <Route path={Constants.AdjustTestAssemblyPath} element={<AdjustTestAssembly />} />
+
                 <Route path={Constants.MountPath} element={<Mount />} />
+
                 <Route path={Constants.MountHandlebarPath} element={<MountHandlebar />} />
+                <Route path={Constants.MountHandlebarCompletePath} element={<MountHandlebarComplete />} />
+
                 <Route path={Constants.MountCenterRingPath} element={<MountCenterRing />} />
                 <Route path={Constants.MountCenterHolderPath} element={<MountCenterHolder />} />
+                <Route path={Constants.MountCenterCompletePath} element={<MountCenterComplete />} />
+
+                <Route path={Constants.MountAeroHolderPath} element={<MountAeroHolder />} />
+                <Route path={Constants.MountAeroRingPath} element={<MountAeroRing />} />
+                <Route path={Constants.MountAeroHandlebarPath} element={<MountAeroHandlebar />} />
+                <Route path={Constants.MountAeroCompletePath} element={<MountAeroComplete />} />
               </Routes>
             </div>
           </div>
