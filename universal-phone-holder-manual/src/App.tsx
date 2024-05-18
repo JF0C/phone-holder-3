@@ -27,6 +27,10 @@ import { MountAeroHolder } from './components/Mount/MountAeroHolder';
 import { MountAeroRing } from './components/Mount/MountAeroRing';
 import { MountAeroHandlebar } from './components/Mount/MountAeroHandlebar';
 import { MountAeroComplete } from './components/Mount/MountAeroComplete';
+import { Accessories } from './components/Accessories/Accessories';
+import { AccessoryLampMirrorAssembly } from './components/Accessories/AccessoryLampMirrorAssembly';
+import { AccessoryLampMirrorComplete } from './components/Accessories/AccessoryLampMirrorComplete';
+import { AccessoryLampMirrorPhone } from './components/Accessories/AccessoryLampMirrorPhone';
 
 const store = configureStore({
   reducer: reducer,
@@ -76,6 +80,11 @@ function App() {
                 <Route path={Constants.MountAeroRingPath} element={<MountAeroRing />} />
                 <Route path={Constants.MountAeroHandlebarPath} element={<MountAeroHandlebar />} />
                 <Route path={Constants.MountAeroCompletePath} element={<MountAeroComplete />} />
+
+                <Route path={Constants.AccessoriesPath} element={<Accessories />} />
+                <Route path={Constants.AccessoryLampMirrorAssemblyPath} element={<AccessoryLampMirrorAssembly />} />
+                <Route path={Constants.AccessoryLampMirrorCompletePath} element={<AccessoryLampMirrorComplete />} />
+                <Route path={Constants.AccessoryLampMirrorPhonePath} element={<AccessoryLampMirrorPhone />} />
               </Routes>
             </div>
           </div>

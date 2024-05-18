@@ -32,4 +32,9 @@ export class Constants{
     public static MountAeroRingPath: string = 'mount-aero-ring'
     public static MountAeroHandlebarPath: string = 'mount-aero-handlebar'
     public static MountAeroCompletePath: string = 'mount-aero-complete'
+
+    public static AccessoriesPath: string = 'accessories'
+    public static AccessoryLampMirrorAssemblyPath: string = 'accessory-lamp-mirror-assembly'
+    public static AccessoryLampMirrorCompletePath: string = 'accessory-lamp-mirror-complete'
+    public static AccessoryLampMirrorPhonePath: string = 'accessory-lamp-mirror-phone'
 }
