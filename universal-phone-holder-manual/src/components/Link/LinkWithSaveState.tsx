@@ -13,6 +13,7 @@ export type LinkWithSaveStateProps = {
     selected?: boolean;
     icon?: string[];
     iconAtEnd?: boolean;
+    className?: string;
 }
 
 const capitalizeFirst = (str: string) => str.charAt(0).toUpperCase() + str.substring(1).toLowerCase();
@@ -40,6 +41,7 @@ export const LinkWithSaveState: FunctionComponent<LinkWithSaveStateProps> = (pro
     }
     const dispatch : Dispatch<any> = useDispatch();
     return <NavLink
+        className={props.className}
         key={itemKey}
         to={'/' + props.path} 
         onClick={() => dispatch(setCurrentLocation('/' + props.path))}

@@ -9,7 +9,7 @@ export const Accessories: FunctionComponent = () => {
     return <div className="text-container">
         <br />
         <br />
-        Accessories for the Phone Holder
-
+        Accessories for the Phone Holder &nbsp;
+        <LinkWithSaveState path={Constants.AccessoryLampMirrorAssemblyPath} displayValue="Lamp Mirror" />
     </div>
 }

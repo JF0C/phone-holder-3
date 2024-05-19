@@ -14,13 +14,9 @@ export type ModelAndTextProperties = {
 
 export const ModelAndTextLayout: FunctionComponent<ModelAndTextProperties> = (props: ModelAndTextProperties) => {
     let nextButton = (props.nextStepPath === null || props.nextStepPath === undefined) ? <></> :
-        <div className="menu-button in-text">
-            <LinkWithSaveState path={props.nextStepPath} displayValue="Next" icon={icon.cilChevronRight} iconAtEnd />
-        </div>
+            <LinkWithSaveState className="menu-button in-text" path={props.nextStepPath} displayValue="Next" icon={icon.cilChevronRight} iconAtEnd />
     let prevButton = (props.previousStepPath === null || props.previousStepPath === undefined) ? <></> :
-        <div className="menu-button in-text">
-            <LinkWithSaveState path={props.previousStepPath} displayValue="Previous" icon={icon.cilChevronLeft} />
-        </div>
+            <LinkWithSaveState className="menu-button in-text" path={props.previousStepPath} displayValue="Previous" icon={icon.cilChevronLeft} />
     if (props.customNextButton !== undefined && props.customNextButton !== null){
         nextButton = props.customNextButton;
     }

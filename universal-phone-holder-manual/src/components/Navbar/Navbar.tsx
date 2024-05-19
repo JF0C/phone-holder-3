@@ -167,6 +167,38 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
             }
         ]
     }
+    if (location.includes(Constants.AccessoriesPath)){
+        return [
+            {
+                location: Constants.AccessoriesPath,
+                displayName: 'Accessories'
+            },
+            {
+                location: Constants.AccessoryLampMirrorAssemblyPath,
+                displayName: 'Lamp Mirror'
+            }
+        ]
+    }
+    if (location.includes('accessory-lamp-mirror')){
+        return [
+            {
+                location: Constants.AccessoriesPath,
+                displayName: 'Accessories'
+            },
+            {
+                location: Constants.AccessoryLampMirrorAssemblyPath,
+                displayName: 'Mirror Assembly'
+            },
+            {
+                location: Constants.AccessoryLampMirrorCompletePath,
+                displayName: 'Mirror Complete'
+            },
+            {
+                location: Constants.AccessoryLampMirrorPhonePath,
+                displayName: 'Mirror w/ Phone'
+            }
+        ]
+    }
     return [] 
 }
 
@@ -181,7 +213,7 @@ export const Navbar: FunctionComponent = () => {
     {
         return <></>;
     }
-    if (currentLocation != path){
+    if (currentLocation !== path){
         setPath(currentLocation);
         navOpenSet(false);
     }

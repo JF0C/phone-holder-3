@@ -32,15 +32,10 @@ export const StartMenu: FunctionComponent = () => {
         </div>
         
         <div className="start-menu-container">
-            <div className="menu-button">
-                <LinkWithSaveState path={Constants.AssemblePath} />
-            </div>
-            <div className="menu-button">
-                <LinkWithSaveState path={Constants.AdjustPath} />
-            </div>
-            <div className="menu-button">
-                <LinkWithSaveState path={Constants.MountPath} />
-            </div>
+            <LinkWithSaveState className="menu-button" path={Constants.AssemblePath} />
+            <LinkWithSaveState className="menu-button" path={Constants.AdjustPath} />
+            <LinkWithSaveState className="menu-button" path={Constants.MountPath} />
+            <LinkWithSaveState className="menu-button" path={Constants.AccessoriesPath} />
         </div>
     </>
 }
