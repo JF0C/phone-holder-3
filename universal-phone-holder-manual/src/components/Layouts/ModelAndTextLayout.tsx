@@ -2,6 +2,7 @@ import { Loader } from "@react-three/drei";
 import { FunctionComponent, ReactElement, Suspense } from "react"
 import { LinkWithSaveState } from "../Link/LinkWithSaveState";
 import * as icon from '@coreui/icons';
+import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 
 export type ModelAndTextProperties = {
     model: ReactElement,
@@ -25,7 +26,7 @@ export const ModelAndTextLayout: FunctionComponent<ModelAndTextProperties> = (pr
     }
 
     return <div className="model-and-text text-container">
-        <Suspense fallback={<Loader />}>
+        <Suspense fallback={<LoadingSpinner />}>
             <div className="model-view">
                 {props.model}
             </div>

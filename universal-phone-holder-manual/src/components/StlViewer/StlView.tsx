@@ -6,6 +6,7 @@ import { Loader, OrbitControls } from '@react-three/drei';
 import { Vector3 } from 'three';
 import CIcon from '@coreui/icons-react';
 import * as icon from '@coreui/icons';
+import { LoadingSpinner } from '../LoadingSpinner/LoadingSpinner';
 
 type StlViewProperties = {
     source: string,
@@ -54,7 +55,7 @@ export const StlView: FunctionComponent<StlViewProperties> = (props: StlViewProp
     }
 
     return (
-      <Suspense fallback={<Loader />} >
+      <Suspense fallback={<LoadingSpinner />} >
         <Canvas className='stl-view' camera={{position: props.cameraPosition}}>
           <ambientLight/>
           <directionalLight position={props.lightOrigin}/>

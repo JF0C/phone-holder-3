@@ -1,4 +1,5 @@
 import './App.css';
+import './components/LoadingSpinner/LoadingSpinner.css'
 import { Assemble } from './components/Assemble/Assemble';
 import { Navbar } from './components/Navbar/Navbar';
 import { StartMenu } from './components/StartMenu/StartMenu';
@@ -31,6 +32,7 @@ import { Accessories } from './components/Accessories/Accessories';
 import { AccessoryLampMirrorAssembly } from './components/Accessories/AccessoryLampMirrorAssembly';
 import { AccessoryLampMirrorComplete } from './components/Accessories/AccessoryLampMirrorComplete';
 import { AccessoryLampMirrorPhone } from './components/Accessories/AccessoryLampMirrorPhone';
+import { LoadingSpinner } from './components/LoadingSpinner/LoadingSpinner';
 
 const store = configureStore({
   reducer: reducer,
@@ -49,6 +51,8 @@ function App() {
             <Navbar />
             <div className='main-content'>
               <Routes>
+                <Route path={Constants.LoadingSpinnerPath} element={<LoadingSpinner />} />
+
                 <Route path={Constants.HtmlIndexFilePath} element={<StartMenu />} />
                 <Route path={Constants.HtmlPhoneholderFilePath} element={<StartMenu />} />
 

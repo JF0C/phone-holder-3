@@ -1,4 +1,6 @@
 export class Constants{
+    public static LoadingSpinnerPath: string = 'loading-spinner'
+
     public static HtmlIndexFilePath: string = 'index.html'
     public static HtmlPhoneholderFilePath: string = 'phoneholder.html'
 
