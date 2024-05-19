@@ -132,7 +132,8 @@ h2 {
 }
 
 .main-content{
-  overflow:hidden; 
+  overflow:hidden;
+  height: 100%;
 }
 
 .main-container{
