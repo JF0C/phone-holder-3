@@ -132,8 +132,9 @@ h2 {
 }
 
 .main-content{
-  overflow:hidden;
-  height: 100%;
+  overflow-y: scroll;
+  height: 90vh;
+  overflow-x: hidden;
 }
 
 .main-container{
@@ -231,7 +232,8 @@ h2 {
   .nav-list{
     position: relative;
     transition: left .5s ease-in-out;
-    width: 30px;
+    height: 70vh;
+    overflow-y: scroll;
   }
   .nav li{
     width: 170px;
@@ -245,6 +247,14 @@ h2 {
     font-size: xx-large;
     cursor: pointer;
     text-align: left;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 33px;
+    background-color: rgba(50, 50, 50, 0.8);
+    box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.8);
+    transition: background-color .5s ease-in-out;
   }
   .model-view{
     height: 50vh;

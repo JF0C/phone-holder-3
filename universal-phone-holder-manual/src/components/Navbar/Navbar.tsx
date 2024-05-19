@@ -226,11 +226,11 @@ export const Navbar: FunctionComponent = () => {
                 useli={true} displayValue={entry.displayName} icon={entry.icon}/>);
     }
 
-    return <nav className="nav sidebar" style={{}}>
-        <div className="nav-toggle">
+    return <nav className="nav sidebar" style={{height: navOpen ? '100%' : '35px' }}>
+        <div className="nav-toggle" style={ {backgroundColor: navOpen ? 'rgba(124, 148, 150, 0.8)' : ''}}>
             <CIcon icon={icon.cilMenu} height={30} onClick={() => navOpenSet(!navOpen)}></CIcon>
         </div>
-        <ul className="nav-list" style={{left: navOpen ? '0px': '-210px'}}>
+        <ul className="nav-list" style={{left: navOpen ? '0px': '-210px' }}>
             {navigations}
         </ul>
     </nav>

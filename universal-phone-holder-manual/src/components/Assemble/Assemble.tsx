@@ -46,8 +46,11 @@ export const Assemble: FunctionComponent = () => {
         Now, you are ready for the
         <br />
         <br />
-        <div className="menu-button in-text">
-            <LinkWithSaveState path={Constants.AssembleInsertFootPath} displayValue="Next Step" icon={icon.cilChevronRight} iconAtEnd/>
-        </div>
+        <LinkWithSaveState
+            className="menu-button in-text"
+            path={Constants.AssembleInsertFootPath}
+            displayValue="Next Step"
+            icon={icon.cilChevronRight}
+            iconAtEnd/>
     </div>
 }
