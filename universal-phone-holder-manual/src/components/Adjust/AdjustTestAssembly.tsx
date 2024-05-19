@@ -34,8 +34,12 @@ export const AdjustTestAssembly: FunctionComponent = () => {
             </>
         }
         previousStepPath={Constants.AdjustLowerFeetPath}
-        customNextButton={<div className="menu-button in-text">
-            <LinkWithSaveState path={Constants.MountPath} displayValue="Mount" icon={icon.cilMediaStepForward} />
-        </div>}
+        customNextButton={
+            <LinkWithSaveState
+                className="menu-button in-text"
+                path={Constants.MountPath}
+                displayValue="Mount"
+                icon={icon.cilMediaStepForward} />
+        }
     />
 }

@@ -18,12 +18,17 @@ export const Adjust: FunctionComponent = () => {
             <li>The preassembled phone holder</li>
         </ul>
         <div className="step-navigation">
-            <div className="menu-button in-text">
-                <LinkWithSaveState path={Constants.AssemblePath} displayValue="Assemble" icon={icon.cilMediaStepBackward} />
-            </div>
-            <div className="menu-button in-text">
-                <LinkWithSaveState path={Constants.AdjustExtendAllPath} displayValue="Next" icon={icon.cilChevronRight} iconAtEnd />
-            </div>
+            <LinkWithSaveState
+                className="menu-button in-text"
+                path={Constants.AssemblePath} 
+                displayValue="Assemble" 
+                icon={icon.cilMediaStepBackward} />
+            <LinkWithSaveState
+                className="menu-button in-text"
+                path={Constants.AdjustExtendAllPath}
+                displayValue="Next"
+                icon={icon.cilChevronRight}
+                iconAtEnd />
         </div>
     </div>
 }

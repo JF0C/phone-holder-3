@@ -48,8 +48,12 @@ export const AssembleAttachNeck : FunctionComponent = () => {
             </>
         }
         previousStepPath={Constants.AssembleScrewFootPath}
-        customNextButton={<div className="menu-button in-text">
-            <LinkWithSaveState path={Constants.AdjustPath} displayValue="Adjust" icon={icon.cilMediaStepForward} />
-        </div>}
+        customNextButton={
+            <LinkWithSaveState 
+                className="menu-button in-text" 
+                path={Constants.AdjustPath} 
+                displayValue="Adjust" 
+                icon={icon.cilMediaStepForward} />
+        }
     />
 }
