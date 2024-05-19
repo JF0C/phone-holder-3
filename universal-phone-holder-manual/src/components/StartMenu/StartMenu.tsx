@@ -4,6 +4,7 @@ import { Vector3 } from "three"
 import { LinkWithSaveState } from "../Link/LinkWithSaveState"
 import { Constants } from "../../constants/Constants"
 import { Loader } from "@react-three/drei"
+import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner"
 
 export const StartMenu: FunctionComponent = () => {
     let view = <StlView 
@@ -26,7 +27,7 @@ export const StartMenu: FunctionComponent = () => {
     }
     return <>
         <div className="main-menu-canvas">
-            <Suspense fallback={<Loader/>}>
+            <Suspense fallback={<LoadingSpinner />}>
                 {view}
             </Suspense>
         </div>
