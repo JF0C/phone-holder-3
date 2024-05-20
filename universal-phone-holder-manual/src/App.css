@@ -266,6 +266,7 @@ h2 {
     padding: 15px;
   }
   .main-content{
+    height: 80vh;
     background-color: rgb(50, 50, 50);
   }
 }
