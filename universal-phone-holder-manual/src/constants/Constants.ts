@@ -35,6 +35,23 @@ export class Constants{
     public static MountAeroHandlebarPath: string = 'mount-aero-handlebar'
     public static MountAeroCompletePath: string = 'mount-aero-complete'
 
+    public static MountCenterV2RingPath: string = 'mount-center-v2-ring'
+    public static MountCenterV2HolderPath: string = 'mount-center-v2-holder'
+    public static MountCenterV2TightenPath: string = 'mount-center-v2-tighten'
+    public static MountCenterV2CompletePath: string = 'mount-center-v2-complete'
+    public static MountCenterV2PhonePath: string = 'mount-center-v2-phone'
+
+    public static MountHandlebarV2RingPath: string = 'mount-handlebar-v2-ring'
+    public static MountHandlebarV2HolderPath: string = 'mount-handlebar-v2-holder'
+    public static MountHandlebarV2TightenPath: string = 'mount-handlebar-v2-tighten'
+    public static MountHandlebarV2CompletePath: string = 'mount-handlebar-v2-complete'
+    public static MountHandlebarV2PhonePath: string = 'mount-handlebar-v2-phone'
+
+    public static MountAeroV2HolderPath: string = 'mount-aero-v2-holder'
+    public static MountAeroV2HandlebarPath: string = 'mount-aero-v2-handlebar'
+    public static MountAeroV2CompletePath: string = 'mount-aero-v2-complete'
+    public static MountAeroV2PhonePath: string = 'mount-aero-v2-phone'
+
     public static AccessoriesPath: string = 'accessories'
     public static AccessoryLampMirrorAssemblyPath: string = 'accessory-lamp-mirror-assembly'
     public static AccessoryLampMirrorCompletePath: string = 'accessory-lamp-mirror-complete'

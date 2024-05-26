@@ -33,6 +33,20 @@ import { AccessoryLampMirrorAssembly } from './components/Accessories/AccessoryL
 import { AccessoryLampMirrorComplete } from './components/Accessories/AccessoryLampMirrorComplete';
 import { AccessoryLampMirrorPhone } from './components/Accessories/AccessoryLampMirrorPhone';
 import { LoadingSpinner } from './components/LoadingSpinner/LoadingSpinner';
+import { MountHandlebarV2Ring } from './components/Mount/MountHandlebarV2Ring';
+import { MountHandlebarV2Phone } from './components/Mount/MountHandlebarV2Phone';
+import { MountHandlebarV2Tighten } from './components/Mount/MountHandlebarV2Tighten';
+import { MountHandlebarV2Complete } from './components/Mount/MountHandlebarV2Complete';
+import { MountHandlebarV2Holder } from './components/Mount/MountHandlebarV2Holder';
+import { MountCenterV2Ring } from './components/Mount/MountCenterV2Ring';
+import { MountCenterV2Holder } from './components/Mount/MountCenterV2Holder';
+import { MountCenterV2Tighten } from './components/Mount/MountCenterV2Tighten';
+import { MountCenterV2Complete } from './components/Mount/MountCenterV2Complete';
+import { MountCenterV2Phone } from './components/Mount/MountCenterV2Phone';
+import { MountAeroV2Holder } from './components/Mount/MountAeroV2Holder';
+import { MountAeroV2Handlebar } from './components/Mount/MountAeroV2Handlebar';
+import { MountAeroV2Complete } from './components/Mount/MountAeroV2Complete';
+import { MountAeroV2Phone } from './components/Mount/MountAeroV2Phone';
 
 const store = configureStore({
   reducer: reducer,
@@ -84,6 +98,23 @@ function App() {
                 <Route path={Constants.MountAeroRingPath} element={<MountAeroRing />} />
                 <Route path={Constants.MountAeroHandlebarPath} element={<MountAeroHandlebar />} />
                 <Route path={Constants.MountAeroCompletePath} element={<MountAeroComplete />} />
+
+                <Route path={Constants.MountHandlebarV2RingPath} element={<MountHandlebarV2Ring />} />
+                <Route path={Constants.MountHandlebarV2HolderPath} element={<MountHandlebarV2Holder />} />
+                <Route path={Constants.MountHandlebarV2TightenPath} element={<MountHandlebarV2Tighten />} />
+                <Route path={Constants.MountHandlebarV2CompletePath} element={<MountHandlebarV2Complete />} />
+                <Route path={Constants.MountHandlebarV2PhonePath} element={<MountHandlebarV2Phone />} />
+
+                <Route path={Constants.MountCenterV2RingPath} element={<MountCenterV2Ring />} />
+                <Route path={Constants.MountCenterV2HolderPath} element={<MountCenterV2Holder />} />
+                <Route path={Constants.MountCenterV2TightenPath} element={<MountCenterV2Tighten />} />
+                <Route path={Constants.MountCenterV2CompletePath} element={<MountCenterV2Complete />} />
+                <Route path={Constants.MountCenterV2PhonePath} element={<MountCenterV2Phone />} />
+
+                <Route path={Constants.MountAeroV2HolderPath} element={<MountAeroV2Holder />} />
+                <Route path={Constants.MountAeroV2HandlebarPath} element={<MountAeroV2Handlebar />} />
+                <Route path={Constants.MountAeroV2CompletePath} element={<MountAeroV2Complete />} />
+                <Route path={Constants.MountAeroV2PhonePath} element={<MountAeroV2Phone />} />
 
                 <Route path={Constants.AccessoriesPath} element={<Accessories />} />
                 <Route path={Constants.AccessoryLampMirrorAssemblyPath} element={<AccessoryLampMirrorAssembly />} />

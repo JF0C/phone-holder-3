@@ -101,6 +101,101 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
             {
                 location: Constants.MountAeroHolderPath,
                 displayName: 'Aero'
+            },
+            {
+                location: Constants.MountHandlebarV2RingPath,
+                displayName: 'Handlebar V2'
+            },
+            {
+                location: Constants.MountCenterV2RingPath,
+                displayName: 'Stem V2'
+            },
+            {
+                location: Constants.MountAeroV2HolderPath,
+                displayName: 'Aero V2'
+            }
+        ]
+    }
+    if (location.includes('mount-handlebar-v2')){
+        return [
+            {
+                location: Constants.MountPath,
+                displayName: 'Mount',
+                icon: icon.cilMediaStepBackward
+            },
+            {
+                location: Constants.MountHandlebarV2RingPath,
+                displayName: 'Ring to Handlebar'
+            },
+            {
+                location: Constants.MountHandlebarV2HolderPath,
+                displayName: 'Holder to Ring'
+            },
+            {
+                location: Constants.MountHandlebarV2TightenPath,
+                displayName: 'Tighten Ring'
+            },
+            {
+                location: Constants.MountHandlebarV2CompletePath,
+                displayName: 'Holder Complete'
+            },
+            {
+                location: Constants.MountHandlebarV2PhonePath,
+                displayName: 'Phone to Holder'
+            }
+        ]
+    }
+    if (location.includes('mount-center-v2')){
+        return [
+            {
+                location: Constants.MountPath,
+                displayName: 'Mount',
+                icon: icon.cilMediaStepBackward
+            },
+            {
+                location: Constants.MountCenterV2RingPath,
+                displayName: 'Ring to Stem'
+            },
+            {
+                location: Constants.MountCenterV2HolderPath,
+                displayName: 'Holder to Ring'
+            },
+            {
+                location: Constants.MountCenterV2TightenPath,
+                displayName: 'Tighten Ring'
+            },
+            {
+                location: Constants.MountCenterV2CompletePath,
+                displayName: 'Holder Complete'
+            },
+            {
+                location: Constants.MountCenterV2PhonePath,
+                displayName: 'Phone to Holder'
+            }
+        ]
+    }
+    if (location.includes('mount-aero-v2')){
+        return [
+            {
+                location: Constants.MountPath,
+                displayName: 'Mount',
+                icon: icon.cilMediaStepBackward
+            },
+            {
+                location: Constants.MountAeroV2HolderPath,
+                displayName: 'Holder to Aerobar'
+            },
+            {
+                location: Constants.MountAeroV2HandlebarPath,
+                displayName: 'Aerobar to Handlebar'
+            },
+            {
+                location: Constants.MountAeroV2CompletePath,
+                displayName: 'Holder Complete'
+            },
+            {
+                location: Constants.MountAeroV2PhonePath,
+                displayName: 'Phone to Holder'
             }
         ]
     }
