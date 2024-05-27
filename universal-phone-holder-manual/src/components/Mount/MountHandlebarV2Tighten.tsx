@@ -12,11 +12,11 @@ export const MountHandlebarV2Tighten : FunctionComponent = () => {
         model={
             <StlView
                 source="/cad/v2/MountHandlebarTighten.stl" 
-                position={new Vector3(0, 0, -100)}
+                position={new Vector3(0, 30, 0)}
                 rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
-                cameraPosition={new Vector3(-90, -30, 20)}
-                lightOrigin={new Vector3(-100, 100, 0)}
+                cameraPosition={new Vector3(-90, -70, -60)}
+                lightOrigin={new Vector3(-100, -100, 0)}
             />
         }
         text={

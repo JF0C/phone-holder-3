@@ -12,10 +12,10 @@ export const MountCenterV2Phone : FunctionComponent = () => {
         model={
             <StlView
                 source="/cad/v2/MountStemPhone.stl" 
-                position={new Vector3(0, 0, -100)}
+                position={new Vector3(0, 0, 10)}
                 rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
-                cameraPosition={new Vector3(-90, -30, 20)}
+                cameraPosition={new Vector3(-150, 40, 0)}
                 lightOrigin={new Vector3(-100, 100, 0)}
             />
         }

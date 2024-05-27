@@ -15,8 +15,8 @@ export const MountAeroV2Handlebar : FunctionComponent = () => {
                 position={new Vector3(0, 0, -100)}
                 rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
-                cameraPosition={new Vector3(-90, -30, 20)}
-                lightOrigin={new Vector3(-100, 100, 0)}
+                cameraPosition={new Vector3(-120, -50, -20)}
+                lightOrigin={new Vector3(-100, -100, 0)}
             />
         }
         text={
