@@ -1,23 +1,25 @@
 import { FunctionComponent, Suspense } from "react"
-import { StlView } from "../StlViewer/StlView"
+import { StlView } from "../Layouts/StlView"
 import { Vector3 } from "three"
 import { LinkWithSaveState } from "../Link/LinkWithSaveState"
-import { Constants } from "../../constants/Constants"
+import { Paths } from "../../constants/Paths"
 import { Loader } from "@react-three/drei"
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner"
 
 export const StartMenu: FunctionComponent = () => {
     let view = <StlView 
-        source="/cad/low/PhoneHolderBase.stl" 
+        folder={Paths.ModelsV1Path}
+        file="PhoneHolderBase"
         position={new Vector3(0, 0, 0)}
         rotation={new Vector3(-90, 0, 0)}
         cameraPosition={new Vector3(-100, 50, 0)}
         lightOrigin={new Vector3(-50, 100, 0)}
         showAxes={false}
     />;
-    if(window.innerWidth < 1000){
+    if (window.innerWidth < 1000){
         view = <StlView 
-        source="/cad/low/PhoneHolderBase.stl" 
+        folder={Paths.ModelsV1Path}
+        file="PhoneHolderBase"
         position={new Vector3(0, 0, 0)}
         rotation={new Vector3(-30, 0, 0)}
         cameraPosition={new Vector3(-100, 0, 100)}
@@ -33,10 +35,10 @@ export const StartMenu: FunctionComponent = () => {
         </div>
         
         <div className="start-menu-container">
-            <LinkWithSaveState className="menu-button" path={Constants.AssemblePath} />
-            <LinkWithSaveState className="menu-button" path={Constants.AdjustPath} />
-            <LinkWithSaveState className="menu-button" path={Constants.MountPath} />
-            <LinkWithSaveState className="menu-button" path={Constants.AccessoriesPath} />
+            <LinkWithSaveState className="menu-button" path={Paths.AssemblePath} />
+            <LinkWithSaveState className="menu-button" path={Paths.AdjustPath} />
+            <LinkWithSaveState className="menu-button" path={Paths.MountPath} />
+            <LinkWithSaveState className="menu-button" path={Paths.AccessoriesPath} />
         </div>
     </>
 }

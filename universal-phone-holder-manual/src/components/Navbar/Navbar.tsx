@@ -2,7 +2,7 @@ import { FunctionComponent, useState } from "react"
 import { useSelector } from "react-redux"
 import { AppState } from "../../store/state";
 import { LinkWithSaveState } from "../Link/LinkWithSaveState";
-import { Constants } from "../../constants/Constants";
+import { Paths } from "../../constants/Paths";
 import * as icon from '@coreui/icons';
 import CIcon from "@coreui/icons-react";
 
@@ -16,23 +16,23 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
     if (location.includes('assemble')){
         return [
             {
-                location: Constants.AssemblePath,
+                location: Paths.AssemblePath,
                 displayName: 'Assemble'
             }, 
             {
-                location: Constants.AssembleInsertFootPath,
+                location: Paths.AssembleInsertFootPath,
                 displayName: 'Insert Foot'
             },
             {
-                location: Constants.AssembleScrewFootPath,
+                location: Paths.AssembleScrewFootPath,
                 displayName: 'Fasten Foot'
             },
             {
-                location: Constants.AssembleNeckPath,
+                location: Paths.AssembleNeckPath,
                 displayName: 'Attach Neck'
             },
             {
-                location: Constants.AdjustPath,
+                location: Paths.AdjustPath,
                 displayName: 'Adjust',
                 icon: icon.cilMediaStepForward
             }];
@@ -40,40 +40,40 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
     if (location.includes('adjust')){
         return [
             {
-                location: Constants.AssemblePath,
+                location: Paths.AssemblePath,
                 displayName: 'Assemble',
                 icon: icon.cilMediaStepBackward
             },
             {
-                location: Constants.AdjustPath,
+                location: Paths.AdjustPath,
                 displayName: 'Adjust'
             },
             {
-                location: Constants.AdjustExtendAllPath,
+                location: Paths.AdjustExtendAllPath,
                 displayName: 'Extend All'
             },
             {
-                location: Constants.AdjustPlacePhonePath,
+                location: Paths.AdjustPlacePhonePath,
                 displayName: 'Place Phone'
             },
             {
-                location: Constants.AdjustPushFeetInPath,
+                location: Paths.AdjustPushFeetInPath,
                 displayName: 'Push Feet In'
             },
             {
-                location: Constants.AdjustTightenNeckPath,
+                location: Paths.AdjustTightenNeckPath,
                 displayName: 'Tighten Neck'
             },
             {
-                location: Constants.AdjustLowerFeetPath,
+                location: Paths.AdjustLowerFeetPath,
                 displayName: 'Lower Feet'
             },
             {
-                location: Constants.AdjustTestAssemblyPath,
+                location: Paths.AdjustTestAssemblyPath,
                 displayName: 'Test Assembly'
             },
             {
-                location: Constants.MountPath,
+                location: Paths.MountPath,
                 displayName: 'Mount',
                 icon: icon.cilMediaStepForward
             }
@@ -82,36 +82,36 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
     if (location === '/mount'){
         return [
             {
-                location: Constants.AdjustPath,
+                location: Paths.AdjustPath,
                 displayName: 'Adjust',
                 icon: icon.cilMediaStepBackward
             },
             {
-                location: Constants.MountPath,
+                location: Paths.MountPath,
                 displayName: 'Mount'
             },
             {
-                location: Constants.MountHandlebarPath,
+                location: Paths.MountHandlebarPath,
                 displayName: 'Handlebar'
             },
             {
-                location: Constants.MountCenterRingPath,
+                location: Paths.MountCenterRingPath,
                 displayName: 'Stem'
             },
             {
-                location: Constants.MountAeroHolderPath,
+                location: Paths.MountAeroHolderPath,
                 displayName: 'Aero'
             },
             {
-                location: Constants.MountHandlebarV2RingPath,
+                location: Paths.MountHandlebarV2RingPath,
                 displayName: 'Handlebar V2'
             },
             {
-                location: Constants.MountCenterV2RingPath,
+                location: Paths.MountCenterV2RingPath,
                 displayName: 'Stem V2'
             },
             {
-                location: Constants.MountAeroV2HolderPath,
+                location: Paths.MountAeroV2HolderPath,
                 displayName: 'Aero V2'
             }
         ]
@@ -119,28 +119,28 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
     if (location.includes('mount-handlebar-v2')){
         return [
             {
-                location: Constants.MountPath,
+                location: Paths.MountPath,
                 displayName: 'Mount',
                 icon: icon.cilMediaStepBackward
             },
             {
-                location: Constants.MountHandlebarV2RingPath,
+                location: Paths.MountHandlebarV2RingPath,
                 displayName: 'Ring to Handlebar'
             },
             {
-                location: Constants.MountHandlebarV2HolderPath,
+                location: Paths.MountHandlebarV2HolderPath,
                 displayName: 'Holder to Ring'
             },
             {
-                location: Constants.MountHandlebarV2TightenPath,
+                location: Paths.MountHandlebarV2TightenPath,
                 displayName: 'Tighten Ring'
             },
             {
-                location: Constants.MountHandlebarV2CompletePath,
+                location: Paths.MountHandlebarV2CompletePath,
                 displayName: 'Holder Complete'
             },
             {
-                location: Constants.MountHandlebarV2PhonePath,
+                location: Paths.MountHandlebarV2PhonePath,
                 displayName: 'Phone to Holder'
             }
         ]
@@ -148,28 +148,28 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
     if (location.includes('mount-center-v2')){
         return [
             {
-                location: Constants.MountPath,
+                location: Paths.MountPath,
                 displayName: 'Mount',
                 icon: icon.cilMediaStepBackward
             },
             {
-                location: Constants.MountCenterV2RingPath,
+                location: Paths.MountCenterV2RingPath,
                 displayName: 'Ring to Stem'
             },
             {
-                location: Constants.MountCenterV2HolderPath,
+                location: Paths.MountCenterV2HolderPath,
                 displayName: 'Holder to Ring'
             },
             {
-                location: Constants.MountCenterV2TightenPath,
+                location: Paths.MountCenterV2TightenPath,
                 displayName: 'Tighten Ring'
             },
             {
-                location: Constants.MountCenterV2CompletePath,
+                location: Paths.MountCenterV2CompletePath,
                 displayName: 'Holder Complete'
             },
             {
-                location: Constants.MountCenterV2PhonePath,
+                location: Paths.MountCenterV2PhonePath,
                 displayName: 'Phone to Holder'
             }
         ]
@@ -177,24 +177,24 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
     if (location.includes('mount-aero-v2')){
         return [
             {
-                location: Constants.MountPath,
+                location: Paths.MountPath,
                 displayName: 'Mount',
                 icon: icon.cilMediaStepBackward
             },
             {
-                location: Constants.MountAeroV2HolderPath,
+                location: Paths.MountAeroV2HolderPath,
                 displayName: 'Holder to Aerobar'
             },
             {
-                location: Constants.MountAeroV2HandlebarPath,
+                location: Paths.MountAeroV2HandlebarPath,
                 displayName: 'Aerobar to Handlebar'
             },
             {
-                location: Constants.MountAeroV2CompletePath,
+                location: Paths.MountAeroV2CompletePath,
                 displayName: 'Holder Complete'
             },
             {
-                location: Constants.MountAeroV2PhonePath,
+                location: Paths.MountAeroV2PhonePath,
                 displayName: 'Phone to Holder'
             }
         ]
@@ -202,16 +202,16 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
     if (location.includes('mount-handlebar')){
         return [
             {
-                location: Constants.MountPath,
+                location: Paths.MountPath,
                 displayName: 'Mount',
                 icon: icon.cilMediaStepBackward
             },
             {
-                location: Constants.MountHandlebarPath,
+                location: Paths.MountHandlebarPath,
                 displayName: 'Ring to Handlebar'
             },
             {
-                location: Constants.MountHandlebarCompletePath,
+                location: Paths.MountHandlebarCompletePath,
                 displayName: 'Handlebar Complete'
             }
         ]
@@ -219,20 +219,20 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
     if (location.includes('mount-center')){
         return [
             {
-                location: Constants.MountPath,
+                location: Paths.MountPath,
                 displayName: 'Mount',
                 icon: icon.cilMediaStepBackward
             },
             {
-                location: Constants.MountCenterRingPath,
+                location: Paths.MountCenterRingPath,
                 displayName: 'Ring to Stem'
             },
             {
-                location: Constants.MountCenterHolderPath,
+                location: Paths.MountCenterHolderPath,
                 displayName: 'Holder to Stem'
             },
             {
-                location: Constants.MountCenterCompletePath,
+                location: Paths.MountCenterCompletePath,
                 displayName: 'Stem Mount Complete'
             }
         ]
@@ -240,56 +240,80 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
     if (location.includes('mount-aero')){
         return [
             {
-                location: Constants.MountPath,
+                location: Paths.MountPath,
                 displayName: 'Mount',
                 icon: icon.cilMediaStepBackward
             },
             {
-                location: Constants.MountAeroHolderPath,
+                location: Paths.MountAeroHolderPath,
                 displayName: 'Holder to Aerobar'
             },
             {
-                location: Constants.MountAeroRingPath,
+                location: Paths.MountAeroRingPath,
                 displayName: 'Ring to Aerobar'
             },
             {
-                location: Constants.MountAeroHandlebarPath,
+                location: Paths.MountAeroHandlebarPath,
                 displayName: 'Aerobar to Handlebar'
             },
             {
-                location: Constants.MountAeroCompletePath,
+                location: Paths.MountAeroCompletePath,
                 displayName: 'Aerobar Complete'
             }
         ]
     }
-    if (location.includes(Constants.AccessoriesPath)){
+    if (location.includes(Paths.AccessoriesPath)){
         return [
             {
-                location: Constants.AccessoriesPath,
+                location: Paths.AccessoriesPath,
                 displayName: 'Accessories'
             },
             {
-                location: Constants.AccessoryLampMirrorAssemblyPath,
+                location: Paths.AccessoryLampMirrorAssemblyPath,
                 displayName: 'Lamp Mirror'
+            },
+            {
+                location: Paths.AccessoryVideoMirrorAssemblyPath,
+                displayName: 'Video Mirror'
             }
         ]
     }
     if (location.includes('accessory-lamp-mirror')){
         return [
             {
-                location: Constants.AccessoriesPath,
+                location: Paths.AccessoriesPath,
                 displayName: 'Accessories'
             },
             {
-                location: Constants.AccessoryLampMirrorAssemblyPath,
+                location: Paths.AccessoryLampMirrorAssemblyPath,
                 displayName: 'Mirror Assembly'
             },
             {
-                location: Constants.AccessoryLampMirrorCompletePath,
+                location: Paths.AccessoryLampMirrorCompletePath,
                 displayName: 'Mirror Complete'
             },
             {
-                location: Constants.AccessoryLampMirrorPhonePath,
+                location: Paths.AccessoryLampMirrorPhonePath,
+                displayName: 'Mirror w/ Phone'
+            }
+        ]
+    }
+    if (location.includes('accessory-video-mirror')){
+        return [
+            {
+                location: Paths.AccessoriesPath,
+                displayName: 'Accessories'
+            },
+            {
+                location: Paths.AccessoryVideoMirrorAssemblyPath,
+                displayName: 'Mirror Assembly'
+            },
+            {
+                location: Paths.AccessoryVideoMirrorCompletePath,
+                displayName: 'Mirror Complete'
+            },
+            {
+                location: Paths.AccessoryVideoMirrorPhonePath,
                 displayName: 'Mirror w/ Phone'
             }
         ]
@@ -303,8 +327,8 @@ export const Navbar: FunctionComponent = () => {
 
     const currentLocation = useSelector((state: AppState) => state.currentLocation);
     if (currentLocation === '/' ||
-        currentLocation.includes(Constants.HtmlIndexFilePath) ||
-        currentLocation.includes(Constants.HtmlPhoneholderFilePath))
+        currentLocation.includes(Paths.HtmlIndexFilePath) ||
+        currentLocation.includes(Paths.HtmlPhoneholderFilePath))
     {
         return <></>;
     }

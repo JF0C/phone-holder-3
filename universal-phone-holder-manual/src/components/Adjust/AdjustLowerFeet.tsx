@@ -1,15 +1,16 @@
 import { FunctionComponent } from "react"
 import { Vector3 } from "three"
-import { StlView } from "../StlViewer/StlView"
+import { StlView } from "../Layouts/StlView"
 import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
 import { LinkWithSaveState } from "../Link/LinkWithSaveState"
-import { Constants } from "../../constants/Constants"
+import { Paths } from "../../constants/Paths"
 
 export const AdjustLowerFeet: FunctionComponent = () => {
     return <ModelAndTextLayout
         model={
             <StlView
-                source="/cad/low/AdjustLowerFeet.stl" 
+                folder={Paths.ModelsV1Path}
+                file="AdjustLowerFeet"
                 position={new Vector3(35, 0, -50)}
                 rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
@@ -24,11 +25,11 @@ export const AdjustLowerFeet: FunctionComponent = () => {
                 <br />
                 <br />
                 Check again that the feet are aligned with the phone as described in step&nbsp;
-                <LinkWithSaveState path={Constants.AdjustPushFeetInPath} displayValue="Push Feet In" />.
+                <LinkWithSaveState path={Paths.AdjustPushFeetInPath} displayValue="Push Feet In" />.
                 Meaning that the feet should still be at the same distance from the end of the rails and the curvatures match. 
             </>
         }
-        previousStepPath={Constants.AdjustTightenNeckPath}
-        nextStepPath={Constants.AdjustTestAssemblyPath}
+        previousStepPath={Paths.AdjustTightenNeckPath}
+        nextStepPath={Paths.AdjustTestAssemblyPath}
     />
 }

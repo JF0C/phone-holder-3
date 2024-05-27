@@ -7,17 +7,17 @@ import { Paths } from "../../constants/Paths"
 import { LinkWithSaveState } from "../Link/LinkWithSaveState"
 import * as icon from '@coreui/icons';
 
-export const MountHandlebarV2Phone : FunctionComponent = () => {
+export const AccessoryVideoMirrorPhone : FunctionComponent = () => {
     return <ModelAndTextLayout 
         model={
             <StlView
-                folder={Paths.ModelsV2Path}
-                file="MountHandlebarPhone"
-                position={new Vector3(0, 0, 10)}
+                folder={Paths.ModelsV1Path}
+                file="AccessoryVideoMirrorPhone"
+                position={new Vector3(0, 0, 70)}
                 rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
-                cameraPosition={new Vector3(-150, 40, 0)}
-                lightOrigin={new Vector3(-100, 100, 0)}
+                cameraPosition={new Vector3(0, 10, -120)}
+                lightOrigin={new Vector3(50, 100, -100)}
             />
         }
         text={
@@ -25,6 +25,6 @@ export const MountHandlebarV2Phone : FunctionComponent = () => {
             
             </>
         }
-        previousStepPath={Paths.MountHandlebarV2CompletePath}
+        previousStepPath={Paths.AccessoryVideoMirrorCompletePath}
     />
 }

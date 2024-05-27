@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react"
 import { LinkWithSaveState } from "../Link/LinkWithSaveState"
-import { Constants } from "../../constants/Constants"
+import { Paths } from "../../constants/Paths"
 import { Tooltip } from "../Tooltip/Tooltip"
 import * as icon from '@coreui/icons';
 
@@ -20,12 +20,12 @@ export const Adjust: FunctionComponent = () => {
         <div className="step-navigation">
             <LinkWithSaveState
                 className="menu-button in-text"
-                path={Constants.AssemblePath} 
+                path={Paths.AssemblePath} 
                 displayValue="Assemble" 
                 icon={icon.cilMediaStepBackward} />
             <LinkWithSaveState
                 className="menu-button in-text"
-                path={Constants.AdjustExtendAllPath}
+                path={Paths.AdjustExtendAllPath}
                 displayValue="Next"
                 icon={icon.cilChevronRight}
                 iconAtEnd />

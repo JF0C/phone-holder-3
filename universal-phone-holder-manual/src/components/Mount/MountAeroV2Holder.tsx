@@ -1,9 +1,9 @@
 import { FunctionComponent } from "react"
 import { Vector3 } from "three"
-import { StlView } from "../StlViewer/StlView"
+import { StlView } from "../Layouts/StlView"
 import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
 import { Tooltip, TooltipPosition } from "../Tooltip/Tooltip"
-import { Constants } from "../../constants/Constants"
+import { Paths } from "../../constants/Paths"
 import { LinkWithSaveState } from "../Link/LinkWithSaveState"
 import * as icon from '@coreui/icons';
 
@@ -11,7 +11,8 @@ export const MountAeroV2Holder : FunctionComponent = () => {
     return <ModelAndTextLayout 
         model={
             <StlView
-                source="/cad/v2/MountAeroHolder.stl" 
+                folder={Paths.ModelsV2Path}
+                file="MountAeroHolder"
                 position={new Vector3(0, 0, 0)}
                 rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
@@ -24,7 +25,7 @@ export const MountAeroV2Holder : FunctionComponent = () => {
             
             </>
         }
-        previousStepPath={Constants.MountAeroV2HandlebarPath}
-        nextStepPath={Constants.MountAeroV2CompletePath}
+        previousStepPath={Paths.MountAeroV2HandlebarPath}
+        nextStepPath={Paths.MountAeroV2CompletePath}
     />
 }

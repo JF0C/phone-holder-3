@@ -1,13 +1,14 @@
 import { FunctionComponent } from "react"
 import { Vector3 } from "three"
-import { StlView } from "../StlViewer/StlView"
+import { StlView } from "../Layouts/StlView"
 import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
-import { Constants } from "../../constants/Constants"
+import { Paths } from "../../constants/Paths"
 
 export const AdjustExtendAll: FunctionComponent = () => {
     const model = window.innerWidth < 1000 ?
         <StlView
-            source="/cad/low/AdjustExtendAll.stl" 
+            folder={Paths.ModelsV1Path}
+            file="AdjustExtendAll"
             position={new Vector3(0, 0, 0)}
             rotation={new Vector3(-30, -30, 0)}
             showAxes={false}
@@ -16,7 +17,8 @@ export const AdjustExtendAll: FunctionComponent = () => {
         />
         :
         <StlView
-            source="/cad/low/AdjustExtendAll.stl" 
+            folder={Paths.ModelsV1Path}
+            file="AdjustExtendAll"
             position={new Vector3(0, 0, 30)}
             rotation={new Vector3(-90, 0, 0)}
             showAxes={false}
@@ -35,7 +37,7 @@ export const AdjustExtendAll: FunctionComponent = () => {
                 Move the feet up, away from the body.
             </>
         }
-        previousStepPath={Constants.AdjustPath}
-        nextStepPath={Constants.AdjustPlacePhonePath}
+        previousStepPath={Paths.AdjustPath}
+        nextStepPath={Paths.AdjustPlacePhonePath}
     />
 }

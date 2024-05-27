@@ -1,14 +1,15 @@
 import { FunctionComponent } from "react"
 import { Vector3 } from "three"
-import { StlView } from "../StlViewer/StlView"
+import { StlView } from "../Layouts/StlView"
 import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
-import { Constants } from "../../constants/Constants"
+import { Paths } from "../../constants/Paths"
 
 export const AdjustPlacePhone: FunctionComponent = () => {
     return <ModelAndTextLayout
         model={
             <StlView
-                source="/cad/low/AdjustPlacePhone.stl" 
+                folder={Paths.ModelsV1Path}
+                file="AdjustPlacePhone"
                 position={new Vector3(0, 0, 15)}
                 rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
@@ -24,7 +25,7 @@ export const AdjustPlacePhone: FunctionComponent = () => {
                 or being scratched by the holder assembly.
             </>
         }
-        previousStepPath={Constants.AdjustExtendAllPath}
-        nextStepPath={Constants.AdjustPushFeetInPath}
+        previousStepPath={Paths.AdjustExtendAllPath}
+        nextStepPath={Paths.AdjustPushFeetInPath}
     />
 }

@@ -1,10 +1,13 @@
-export class Constants{
+export class Paths{
     public static LoadingSpinnerPath: string = 'loading-spinner'
 
     public static HtmlIndexFilePath: string = 'index.html'
     public static HtmlPhoneholderFilePath: string = 'phoneholder.html'
 
     public static StartMenuPath: string = ''
+
+    public static ModelsV1Path = '/cad/v1'
+    public static ModelsV2Path = '/cad/v2'
 
     public static AssemblePath: string = 'assemble'
     public static AssembleInsertFootPath: string = 'assemble-insert-foot'
@@ -56,4 +59,8 @@ export class Constants{
     public static AccessoryLampMirrorAssemblyPath: string = 'accessory-lamp-mirror-assembly'
     public static AccessoryLampMirrorCompletePath: string = 'accessory-lamp-mirror-complete'
     public static AccessoryLampMirrorPhonePath: string = 'accessory-lamp-mirror-phone'
+
+    public static AccessoryVideoMirrorAssemblyPath: string = 'accessory-video-mirror-assembly'
+    public static AccessoryVideoMirrorCompletePath: string = 'accessory-video-mirror-complete'
+    public static AccessoryVideoMirrorPhonePath: string = 'accessory-video-mirror-phone'
 }

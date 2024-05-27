@@ -1,15 +1,16 @@
 import { FunctionComponent } from "react"
 import { Vector3 } from "three"
-import { StlView } from "../StlViewer/StlView"
+import { StlView } from "../Layouts/StlView"
 import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
 import { Tooltip, TooltipPosition } from "../Tooltip/Tooltip"
-import { Constants } from "../../constants/Constants"
+import { Paths } from "../../constants/Paths"
 
 export const AssembleInsertFoot: FunctionComponent = () => {
 return <ModelAndTextLayout 
         model={
                 <StlView
-                    source="/cad/low/AssemblyFootInsert.stl" 
+                    folder={Paths.ModelsV1Path}
+                    file="AssemblyFootInsert"
                     position={new Vector3(35, -20, -50)}
                     rotation={new Vector3(-90, 0, 0)}
                     showAxes={false}
@@ -41,7 +42,7 @@ return <ModelAndTextLayout
                 Repeat this for the second foot.
             </>
         }
-        previousStepPath={Constants.AssemblePath}
-        nextStepPath={Constants.AssembleScrewFootPath}
+        previousStepPath={Paths.AssemblePath}
+        nextStepPath={Paths.AssembleScrewFootPath}
     />
 }

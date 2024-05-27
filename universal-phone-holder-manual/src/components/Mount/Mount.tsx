@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react"
 import { LinkWithSaveState } from "../Link/LinkWithSaveState"
-import { Constants } from "../../constants/Constants"
+import { Paths } from "../../constants/Paths"
 import { Tooltip } from "../Tooltip/Tooltip"
 import * as icon from '@coreui/icons';
 

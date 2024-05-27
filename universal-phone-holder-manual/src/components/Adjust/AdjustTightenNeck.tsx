@@ -1,14 +1,15 @@
 import { FunctionComponent, Suspense } from "react"
 import { Vector3 } from "three"
-import { StlView } from "../StlViewer/StlView"
+import { StlView } from "../Layouts/StlView"
 import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
-import { Constants } from "../../constants/Constants"
+import { Paths } from "../../constants/Paths"
 
 export const AdjustTightenNeck: FunctionComponent = () => {
     return <ModelAndTextLayout
         model={
             <StlView
-                source="/cad/low/AdjustTightenNeck.stl" 
+                folder={Paths.ModelsV1Path}
+                file="AdjustTightenNeck"
                 position={new Vector3(0, 0, 60)}
                 rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
@@ -25,7 +26,7 @@ export const AdjustTightenNeck: FunctionComponent = () => {
                 The hook on the neck is deliberately not in the center of the phone to avoid colliding with its camera. 
             </>
         }
-        previousStepPath={Constants.AdjustPushFeetInPath}
-        nextStepPath={Constants.AdjustLowerFeetPath}
+        previousStepPath={Paths.AdjustPushFeetInPath}
+        nextStepPath={Paths.AdjustLowerFeetPath}
     />
 }

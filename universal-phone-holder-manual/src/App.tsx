@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import { reducer } from './store/state';
 import { configureStore } from '@reduxjs/toolkit';
 import { AssembleInsertFoot } from './components/Assemble/AssembleInsertFoot';
-import { Constants } from './constants/Constants';
+import { Paths } from './constants/Paths';
 import { AssembleScrewFoot } from './components/Assemble/AssembleScrewFoot';
 import { AssembleAttachNeck } from './components/Assemble/AssembleAttachNeck';
 import { Adjust } from './components/Adjust/Adjust';
@@ -47,6 +47,9 @@ import { MountAeroV2Holder } from './components/Mount/MountAeroV2Holder';
 import { MountAeroV2Handlebar } from './components/Mount/MountAeroV2Handlebar';
 import { MountAeroV2Complete } from './components/Mount/MountAeroV2Complete';
 import { MountAeroV2Phone } from './components/Mount/MountAeroV2Phone';
+import { AccessoryVideoMirrorAssembly } from './components/Accessories/AccessoryVideoMirrorAssembly';
+import { AccessoryVideoMirrorComplete } from './components/Accessories/AccessoryVideoMirrorComplete';
+import { AccessoryVideoMirrorPhone } from './components/Accessories/AccessoryVideoMirrorPhone';
 
 const store = configureStore({
   reducer: reducer,
@@ -65,61 +68,66 @@ function App() {
             <Navbar />
             <div className='main-content'>
               <Routes>
-                <Route path={Constants.LoadingSpinnerPath} element={<LoadingSpinner />} />
+                <Route path={Paths.LoadingSpinnerPath} element={<LoadingSpinner />} />
 
-                <Route path={Constants.HtmlIndexFilePath} element={<StartMenu />} />
-                <Route path={Constants.HtmlPhoneholderFilePath} element={<StartMenu />} />
+                <Route path={Paths.HtmlIndexFilePath} element={<StartMenu />} />
+                <Route path={Paths.HtmlPhoneholderFilePath} element={<StartMenu />} />
 
-                <Route path={Constants.StartMenuPath} element={<StartMenu />} />
+                <Route path={Paths.StartMenuPath} element={<StartMenu />} />
                 
-                <Route path={Constants.AssemblePath} element={<Assemble />} />
-                <Route path={Constants.AssembleInsertFootPath} element={<AssembleInsertFoot />} />
-                <Route path={Constants.AssembleScrewFootPath} element={<AssembleScrewFoot />} />
-                <Route path={Constants.AssembleNeckPath} element={<AssembleAttachNeck />} />
+                <Route path={Paths.AssemblePath} element={<Assemble />} />
+                <Route path={Paths.AssembleInsertFootPath} element={<AssembleInsertFoot />} />
+                <Route path={Paths.AssembleScrewFootPath} element={<AssembleScrewFoot />} />
+                <Route path={Paths.AssembleNeckPath} element={<AssembleAttachNeck />} />
 
-                <Route path={Constants.AdjustPath} element={<Adjust />} />
-                <Route path={Constants.AdjustExtendAllPath} element={<AdjustExtendAll />} />
-                <Route path={Constants.AdjustPlacePhonePath} element={<AdjustPlacePhone />} />
-                <Route path={Constants.AdjustPushFeetInPath} element={<AdjustPushFeetIn />} />
-                <Route path={Constants.AdjustTightenNeckPath} element={<AdjustTightenNeck />} />
-                <Route path={Constants.AdjustLowerFeetPath} element={<AdjustLowerFeet />} />
-                <Route path={Constants.AdjustTestAssemblyPath} element={<AdjustTestAssembly />} />
+                <Route path={Paths.AdjustPath} element={<Adjust />} />
+                <Route path={Paths.AdjustExtendAllPath} element={<AdjustExtendAll />} />
+                <Route path={Paths.AdjustPlacePhonePath} element={<AdjustPlacePhone />} />
+                <Route path={Paths.AdjustPushFeetInPath} element={<AdjustPushFeetIn />} />
+                <Route path={Paths.AdjustTightenNeckPath} element={<AdjustTightenNeck />} />
+                <Route path={Paths.AdjustLowerFeetPath} element={<AdjustLowerFeet />} />
+                <Route path={Paths.AdjustTestAssemblyPath} element={<AdjustTestAssembly />} />
 
-                <Route path={Constants.MountPath} element={<Mount />} />
+                <Route path={Paths.MountPath} element={<Mount />} />
 
-                <Route path={Constants.MountHandlebarPath} element={<MountHandlebar />} />
-                <Route path={Constants.MountHandlebarCompletePath} element={<MountHandlebarComplete />} />
+                <Route path={Paths.MountHandlebarPath} element={<MountHandlebar />} />
+                <Route path={Paths.MountHandlebarCompletePath} element={<MountHandlebarComplete />} />
 
-                <Route path={Constants.MountCenterRingPath} element={<MountCenterRing />} />
-                <Route path={Constants.MountCenterHolderPath} element={<MountCenterHolder />} />
-                <Route path={Constants.MountCenterCompletePath} element={<MountCenterComplete />} />
+                <Route path={Paths.MountCenterRingPath} element={<MountCenterRing />} />
+                <Route path={Paths.MountCenterHolderPath} element={<MountCenterHolder />} />
+                <Route path={Paths.MountCenterCompletePath} element={<MountCenterComplete />} />
 
-                <Route path={Constants.MountAeroHolderPath} element={<MountAeroHolder />} />
-                <Route path={Constants.MountAeroRingPath} element={<MountAeroRing />} />
-                <Route path={Constants.MountAeroHandlebarPath} element={<MountAeroHandlebar />} />
-                <Route path={Constants.MountAeroCompletePath} element={<MountAeroComplete />} />
+                <Route path={Paths.MountAeroHolderPath} element={<MountAeroHolder />} />
+                <Route path={Paths.MountAeroRingPath} element={<MountAeroRing />} />
+                <Route path={Paths.MountAeroHandlebarPath} element={<MountAeroHandlebar />} />
+                <Route path={Paths.MountAeroCompletePath} element={<MountAeroComplete />} />
 
-                <Route path={Constants.MountHandlebarV2RingPath} element={<MountHandlebarV2Ring />} />
-                <Route path={Constants.MountHandlebarV2HolderPath} element={<MountHandlebarV2Holder />} />
-                <Route path={Constants.MountHandlebarV2TightenPath} element={<MountHandlebarV2Tighten />} />
-                <Route path={Constants.MountHandlebarV2CompletePath} element={<MountHandlebarV2Complete />} />
-                <Route path={Constants.MountHandlebarV2PhonePath} element={<MountHandlebarV2Phone />} />
+                <Route path={Paths.MountHandlebarV2RingPath} element={<MountHandlebarV2Ring />} />
+                <Route path={Paths.MountHandlebarV2HolderPath} element={<MountHandlebarV2Holder />} />
+                <Route path={Paths.MountHandlebarV2TightenPath} element={<MountHandlebarV2Tighten />} />
+                <Route path={Paths.MountHandlebarV2CompletePath} element={<MountHandlebarV2Complete />} />
+                <Route path={Paths.MountHandlebarV2PhonePath} element={<MountHandlebarV2Phone />} />
 
-                <Route path={Constants.MountCenterV2RingPath} element={<MountCenterV2Ring />} />
-                <Route path={Constants.MountCenterV2HolderPath} element={<MountCenterV2Holder />} />
-                <Route path={Constants.MountCenterV2TightenPath} element={<MountCenterV2Tighten />} />
-                <Route path={Constants.MountCenterV2CompletePath} element={<MountCenterV2Complete />} />
-                <Route path={Constants.MountCenterV2PhonePath} element={<MountCenterV2Phone />} />
+                <Route path={Paths.MountCenterV2RingPath} element={<MountCenterV2Ring />} />
+                <Route path={Paths.MountCenterV2HolderPath} element={<MountCenterV2Holder />} />
+                <Route path={Paths.MountCenterV2TightenPath} element={<MountCenterV2Tighten />} />
+                <Route path={Paths.MountCenterV2CompletePath} element={<MountCenterV2Complete />} />
+                <Route path={Paths.MountCenterV2PhonePath} element={<MountCenterV2Phone />} />
 
-                <Route path={Constants.MountAeroV2HolderPath} element={<MountAeroV2Holder />} />
-                <Route path={Constants.MountAeroV2HandlebarPath} element={<MountAeroV2Handlebar />} />
-                <Route path={Constants.MountAeroV2CompletePath} element={<MountAeroV2Complete />} />
-                <Route path={Constants.MountAeroV2PhonePath} element={<MountAeroV2Phone />} />
+                <Route path={Paths.MountAeroV2HolderPath} element={<MountAeroV2Holder />} />
+                <Route path={Paths.MountAeroV2HandlebarPath} element={<MountAeroV2Handlebar />} />
+                <Route path={Paths.MountAeroV2CompletePath} element={<MountAeroV2Complete />} />
+                <Route path={Paths.MountAeroV2PhonePath} element={<MountAeroV2Phone />} />
 
-                <Route path={Constants.AccessoriesPath} element={<Accessories />} />
-                <Route path={Constants.AccessoryLampMirrorAssemblyPath} element={<AccessoryLampMirrorAssembly />} />
-                <Route path={Constants.AccessoryLampMirrorCompletePath} element={<AccessoryLampMirrorComplete />} />
-                <Route path={Constants.AccessoryLampMirrorPhonePath} element={<AccessoryLampMirrorPhone />} />
+                <Route path={Paths.AccessoriesPath} element={<Accessories />} />
+
+                <Route path={Paths.AccessoryLampMirrorAssemblyPath} element={<AccessoryLampMirrorAssembly />} />
+                <Route path={Paths.AccessoryLampMirrorCompletePath} element={<AccessoryLampMirrorComplete />} />
+                <Route path={Paths.AccessoryLampMirrorPhonePath} element={<AccessoryLampMirrorPhone />} />
+
+                <Route path={Paths.AccessoryVideoMirrorAssemblyPath} element={<AccessoryVideoMirrorAssembly />} />
+                <Route path={Paths.AccessoryVideoMirrorCompletePath} element={<AccessoryVideoMirrorComplete />} />
+                <Route path={Paths.AccessoryVideoMirrorPhonePath} element={<AccessoryVideoMirrorPhone />} />
               </Routes>
             </div>
           </div>

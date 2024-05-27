@@ -2,14 +2,15 @@ import { FunctionComponent, Suspense, useRef } from 'react'
 import * as THREE from 'three'
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
 import { Canvas, useLoader } from "@react-three/fiber";
-import { Loader, OrbitControls } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import { Vector3 } from 'three';
 import CIcon from '@coreui/icons-react';
 import * as icon from '@coreui/icons';
 import { LoadingSpinner } from '../LoadingSpinner/LoadingSpinner';
 
 type StlViewProperties = {
-    source: string,
+    file: string,
+    folder: string,
     position: Vector3,
     rotation: Vector3,
     cameraPosition: Vector3,
@@ -19,16 +20,25 @@ type StlViewProperties = {
 
 const degToRad = (deg: number) => deg/180 * Math.PI;
 
+const buildFileSource = (folder: string, file: string): string => {
+  if (!file.toLowerCase().endsWith('.stl')){
+    file = file + '.stl';
+  }
+  if (folder.endsWith('/')) return folder + file;
+  else return folder + '/' + file;
+}
+
 export const StlView: FunctionComponent<StlViewProperties> = (props: StlViewProperties) => {
     const icoMaterial = new THREE.MeshPhongMaterial({
-      color       : new THREE.Color("rgb(255,255,255)"),
-      emissive    : new THREE.Color("rgb(50,50,50)"),
-      specular    : new THREE.Color("rgb(123,123,200)"),
+      color       : new THREE.Color("rgb(255, 255, 255)"),
+      emissive    : new THREE.Color("rgb(50, 50, 50)"),
+      specular    : new THREE.Color("rgb(123, 123, 200)"),
       shininess   : 4,
       opacity     : 1
     });
     const orbitref = useRef<any>();
-    const geometry = useLoader(STLLoader, props.source);
+    
+    const geometry = useLoader(STLLoader, buildFileSource(props.folder, props.file));
 
     const eul = new THREE.Euler(degToRad(props.rotation.x), degToRad(props.rotation.y), degToRad(props.rotation.z));
 

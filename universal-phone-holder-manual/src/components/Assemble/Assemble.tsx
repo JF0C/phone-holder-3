@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react"
 import { LinkWithSaveState } from "../Link/LinkWithSaveState"
-import { Constants } from "../../constants/Constants"
+import { Paths } from "../../constants/Paths"
 import { Tooltip } from "../Tooltip/Tooltip"
 import * as icon from '@coreui/icons';
 
@@ -9,7 +9,7 @@ export const Assemble: FunctionComponent = () => {
         <br />
         <br />
         Here, we will walk through the assembly of phone holder from its constituent parts. <br />
-        Usually, your phone holder arrives pre-assembled. In this case, you can skip over to <LinkWithSaveState path={Constants.AdjustPath} />. <br />
+        Usually, your phone holder arrives pre-assembled. In this case, you can skip over to <LinkWithSaveState path={Paths.AdjustPath} />. <br />
         If you want to make changes your phone holder or it is for some reason not assembled already, check if you have all the follwing parts and tools:
         <ul>
             <li>3mm Allen wrench</li>
@@ -48,7 +48,7 @@ export const Assemble: FunctionComponent = () => {
         <br />
         <LinkWithSaveState
             className="menu-button in-text"
-            path={Constants.AssembleInsertFootPath}
+            path={Paths.AssembleInsertFootPath}
             displayValue="Next Step"
             icon={icon.cilChevronRight}
             iconAtEnd/>

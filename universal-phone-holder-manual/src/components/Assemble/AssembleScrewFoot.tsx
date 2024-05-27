@@ -1,14 +1,15 @@
 import { FunctionComponent } from "react"
 import { Vector3 } from "three"
-import { StlView } from "../StlViewer/StlView"
+import { StlView } from "../Layouts/StlView"
 import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
-import { Constants } from "../../constants/Constants"
+import { Paths } from "../../constants/Paths"
 
 export const AssembleScrewFoot: FunctionComponent = () => {
 return <ModelAndTextLayout 
     model={
         <StlView
-            source="/cad/low/AssemblyFootScrew.stl" 
+            folder={Paths.ModelsV1Path}
+            file="AssemblyFootScrew"
             position={new Vector3(35, 0, -50)}
             rotation={new Vector3(-90, 0, 0)}
             showAxes={false}
@@ -28,7 +29,7 @@ return <ModelAndTextLayout
             We will need to move the foot again to adjust it to the phone later.
         </>
     }
-    previousStepPath={Constants.AssembleInsertFootPath}
-    nextStepPath={Constants.AssembleNeckPath}
+    previousStepPath={Paths.AssembleInsertFootPath}
+    nextStepPath={Paths.AssembleNeckPath}
 />
 }
