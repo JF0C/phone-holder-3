@@ -73,6 +73,11 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
                 displayName: 'Test Assembly'
             },
             {
+                location: Paths.AccessoriesPath,
+                displayName: 'Accessories',
+                icon: icon.cilMediaStepForward
+            },
+            {
                 location: Paths.MountPath,
                 displayName: 'Mount',
                 icon: icon.cilMediaStepForward

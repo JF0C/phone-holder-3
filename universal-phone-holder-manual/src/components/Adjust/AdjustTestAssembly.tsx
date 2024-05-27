@@ -32,15 +32,12 @@ export const AdjustTestAssembly: FunctionComponent = () => {
                 <br />
                 If it does, check all screw connections again and pull the feet and neck closer inwards.
                 If it holds, continue with mounting the phone holder.
+                <br />
+                <br />
+                If you have an accessory for the phone holder, go over to <LinkWithSaveState path={Paths.AccessoriesPath} displayValue="Accessories" />
+                Otherwise go to <LinkWithSaveState path={Paths.MountPath} displayValue="Mount" />
             </>
         }
         previousStepPath={Paths.AdjustLowerFeetPath}
-        customNextButton={
-            <LinkWithSaveState
-                className="menu-button in-text"
-                path={Paths.MountPath}
-                displayValue="Mount"
-                icon={icon.cilMediaStepForward} />
-        }
     />
 }
