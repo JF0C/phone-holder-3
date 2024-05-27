@@ -22,7 +22,9 @@ export const AccessoryLampMirrorPhone : FunctionComponent = () => {
         }
         text={
             <>
-            
+                Click the phone into the holder and activate its lamp.
+                Adjust the mirror such that the light is reflected forward.
+                Finally, screw the lamp mirror tight.
             </>
         }
         previousStepPath={Paths.AccessoryLampMirrorCompletePath}

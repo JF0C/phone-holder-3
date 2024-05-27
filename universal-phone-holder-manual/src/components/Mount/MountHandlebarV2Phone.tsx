@@ -22,7 +22,7 @@ export const MountHandlebarV2Phone : FunctionComponent = () => {
         }
         text={
             <>
-            
+                Attach the phone to the holder and check that everything is tight.
             </>
         }
         previousStepPath={Paths.MountHandlebarV2CompletePath}

@@ -22,7 +22,7 @@ export const AccessoryLampMirrorComplete : FunctionComponent = () => {
         }
         text={
             <>
-            
+                This is how the assembly with lamp mirror should look like now.
             </>
         }
         previousStepPath={Paths.AccessoryLampMirrorAssemblyPath}

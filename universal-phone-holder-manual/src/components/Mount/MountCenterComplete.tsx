@@ -22,7 +22,7 @@ export const MountCenterComplete : FunctionComponent = () => {
         }
         text={
             <>
-                TODO: add text
+                This is how the assembly on the stem should look like now.
             </>
         }
         previousStepPath={Paths.MountCenterHolderPath}

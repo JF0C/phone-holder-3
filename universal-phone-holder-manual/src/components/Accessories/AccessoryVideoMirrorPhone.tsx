@@ -22,7 +22,9 @@ export const AccessoryVideoMirrorPhone : FunctionComponent = () => {
         }
         text={
             <>
-            
+                Click the phone into the holder and activate its camera.
+                Adjust the mirror such that the image reflected by the mirror fills the camera field.
+                Finally, screw the video mirror tight.
             </>
         }
         previousStepPath={Paths.AccessoryVideoMirrorCompletePath}

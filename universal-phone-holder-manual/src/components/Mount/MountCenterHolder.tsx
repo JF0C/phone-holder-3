@@ -22,7 +22,7 @@ export const MountCenterHolder : FunctionComponent = () => {
         }
         text={
             <>
-            
+                Screw the phone holder assembly onto the ring.
             </>
         }
         previousStepPath={Paths.MountCenterRingPath}

@@ -23,6 +23,7 @@ export const MountHandlebarV2Tighten : FunctionComponent = () => {
         text={
             <>
                 Screw the cheeks of the ring together so that they clamp around the handlebar.
+                Insert a washer between the screw head and the ring.
                 If they do not grip tightly or the screw doesn't reach the threading, 
                 remove the phone holder assembly and adjust the hole band to change the distance between the cheeks.
             </>

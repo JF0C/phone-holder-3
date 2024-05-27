@@ -22,7 +22,9 @@ export const AccessoryLampMirrorAssembly : FunctionComponent = () => {
         }
         text={
             <>
-            
+                Use a screw to connect the <Tooltip text={<>mirror</>}><img /></Tooltip> to the neck of the <Tooltip text={<>phone holder</>}><img /></Tooltip>. 
+                Insert washers between all parts including the nut.
+                Tighten the screw just enough that everything stays in place, but still can be moved for adjustment.
             </>
         }
         previousStepPath={Paths.AccessoriesPath}

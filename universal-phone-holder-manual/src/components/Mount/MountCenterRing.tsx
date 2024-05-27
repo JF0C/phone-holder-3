@@ -22,7 +22,9 @@ export const MountCenterRing : FunctionComponent = () => {
         }
         text={
             <>
-            
+                Snap the <Tooltip text={<>mount adapter</>}><img /></Tooltip> onto the stem.
+                Rotate it so that the phone holder adapter part points upwards.
+                Screw the ring tight using a washer.
             </>
         }
         previousStepPath={Paths.MountPath}

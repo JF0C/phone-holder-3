@@ -22,7 +22,8 @@ export const MountHandlebarV2Complete : FunctionComponent = () => {
         }
         text={
             <>
-            
+                By tightening or untightening the screw, the assembly can be turned around the handlebar more or less easily.
+                This allows to turn the phone to point in the direction of travel to film or take photos during the ride.
             </>
         }
         previousStepPath={Paths.MountHandlebarV2TightenPath}
