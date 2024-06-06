@@ -1,15 +1,15 @@
-import { FunctionComponent } from "react"
-import { Vector3 } from "three"
-import { StlView } from "../Layouts/StlView"
-import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
-import { Paths } from "../../constants/Paths"
+import { FunctionComponent } from 'react'
+import { Vector3 } from 'three'
+import { StlView } from '../Layouts/StlView'
+import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
+import { Paths } from '../../constants/Paths'
 
 export const AssembleScrewFoot: FunctionComponent = () => {
 return <ModelAndTextLayout 
     model={
         <StlView
             folder={Paths.ModelsV1Path}
-            file="AssemblyFootScrew"
+            file='AssemblyFootScrew'
             position={new Vector3(35, 0, -50)}
             rotation={new Vector3(-90, 0, 0)}
             showAxes={false}

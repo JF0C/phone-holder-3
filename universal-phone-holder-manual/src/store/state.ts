@@ -1,4 +1,4 @@
-import { Reducer } from "@reduxjs/toolkit";
+import { Reducer } from '@reduxjs/toolkit';
 
 export type AppState = {
     currentLocation: string,
@@ -36,7 +36,7 @@ export const reducer: Reducer<AppState, StateAction, AppState> = (state: AppStat
                 resultState.currentLocation = action.value as string;
             }
             else {
-                throw "invalid state assignment. value \"" + action.value + "\" is not of type string";
+                throw new Error('invalid state assignment. value \'' + action.value + '\' is not of type string');
             }
             break;
         case ADD_LOADED_MESH:
@@ -47,7 +47,7 @@ export const reducer: Reducer<AppState, StateAction, AppState> = (state: AppStat
                 }
             }
             else {
-                throw "invalid state assignment. value \"" + action.value + "\" is not of type string"; 
+                throw new Error('invalid state assignment. value \'' + action.value + '\' is not of type string'); 
             }
             break;
     }

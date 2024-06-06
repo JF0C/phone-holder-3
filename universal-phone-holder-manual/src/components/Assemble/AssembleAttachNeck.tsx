@@ -1,10 +1,10 @@
-import { FunctionComponent } from "react"
-import { Vector3 } from "three"
-import { StlView } from "../Layouts/StlView"
-import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
-import { Tooltip, TooltipPosition } from "../Tooltip/Tooltip"
-import { Paths } from "../../constants/Paths"
-import { LinkWithSaveState } from "../Link/LinkWithSaveState"
+import { FunctionComponent } from 'react'
+import { Vector3 } from 'three'
+import { StlView } from '../Layouts/StlView'
+import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
+import { Tooltip, TooltipPosition } from '../Tooltip/Tooltip'
+import { Paths } from '../../constants/Paths'
+import { LinkWithSaveState } from '../Link/LinkWithSaveState'
 import * as icon from '@coreui/icons';
 
 export const AssembleAttachNeck : FunctionComponent = () => {
@@ -12,7 +12,7 @@ export const AssembleAttachNeck : FunctionComponent = () => {
         model={
             <StlView
                 folder={Paths.ModelsV1Path}
-                file="AssemblyNeck"
+                file='AssemblyNeck'
                 position={new Vector3(0, 0, 40)}
                 rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
@@ -24,9 +24,9 @@ export const AssembleAttachNeck : FunctionComponent = () => {
             <>
                 Insert the front part of the&nbsp;
                 <Tooltip text={<>body</>} position={TooltipPosition.bottom} useIcon>
-                    <img height={200} src="/img/body.png" />
+                    <img height={200} src='/img/body.png' alt='body part'/>
                 </Tooltip> into the groove in the <Tooltip text={<>neck</>} position={TooltipPosition.bottom} useIcon>
-                    <img height={200} src="/img/neck.png" />
+                    <img height={200} src='/img/neck.png' alt='neck part' />
                 </Tooltip>.
                 Depending on the size of the phone to be attached,
                 different holes in the body can be used to screw the neck onto.
@@ -51,9 +51,9 @@ export const AssembleAttachNeck : FunctionComponent = () => {
         previousStepPath={Paths.AssembleScrewFootPath}
         customNextButton={
             <LinkWithSaveState 
-                className="menu-button in-text" 
+                className='menu-button in-text' 
                 path={Paths.AdjustPath} 
-                displayValue="Adjust" 
+                displayValue='Adjust' 
                 icon={icon.cilMediaStepForward} />
         }
     />

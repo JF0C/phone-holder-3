@@ -1,9 +1,8 @@
 import { FunctionComponent, Suspense } from "react"
-import { StlView } from "../Layouts/StlView"
 import { Vector3 } from "three"
-import { LinkWithSaveState } from "../Link/LinkWithSaveState"
 import { Paths } from "../../constants/Paths"
-import { Loader } from "@react-three/drei"
+import { StlView } from "../Layouts/StlView"
+import { LinkWithSaveState } from "../Link/LinkWithSaveState"
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner"
 
 export const StartMenu: FunctionComponent = () => {

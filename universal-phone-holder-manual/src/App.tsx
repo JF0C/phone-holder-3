@@ -60,11 +60,11 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <div className="App">
+        <div className='App'>
           <h2 className='title'>
             Universal Phone Holder
           </h2>
-          <div className="main-container">
+          <div className='main-container'>
             <Navbar />
             <div className='main-content'>
               <Routes>

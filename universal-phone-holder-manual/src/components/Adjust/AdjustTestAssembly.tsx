@@ -1,17 +1,16 @@
-import { FunctionComponent } from "react"
-import { Vector3 } from "three"
-import { StlView } from "../Layouts/StlView"
-import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
-import { Paths } from "../../constants/Paths"
-import { LinkWithSaveState } from "../Link/LinkWithSaveState"
-import * as icon from '@coreui/icons';
+import { FunctionComponent } from 'react'
+import { Vector3 } from 'three'
+import { Paths } from '../../constants/Paths'
+import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
+import { StlView } from '../Layouts/StlView'
+import { LinkWithSaveState } from '../Link/LinkWithSaveState'
 
 export const AdjustTestAssembly: FunctionComponent = () => {
     return <ModelAndTextLayout 
         model={
                 <StlView
                     folder={Paths.ModelsV1Path}
-                    file="AdjustLowerFeet"
+                    file='AdjustLowerFeet'
                     position={new Vector3(0, 0, 0)}
                     rotation={new Vector3(0, 0, 0)}
                     showAxes={false}
@@ -34,8 +33,8 @@ export const AdjustTestAssembly: FunctionComponent = () => {
                 If it holds, continue with mounting the phone holder.
                 <br />
                 <br />
-                If you have an accessory for the phone holder, go over to <LinkWithSaveState path={Paths.AccessoriesPath} displayValue="Accessories" />
-                Otherwise go to <LinkWithSaveState path={Paths.MountPath} displayValue="Mount" />
+                If you have an accessory for the phone holder, go over to <LinkWithSaveState path={Paths.AccessoriesPath} displayValue='Accessories' />
+                Otherwise go to <LinkWithSaveState path={Paths.MountPath} displayValue='Mount' />
             </>
         }
         previousStepPath={Paths.AdjustLowerFeetPath}

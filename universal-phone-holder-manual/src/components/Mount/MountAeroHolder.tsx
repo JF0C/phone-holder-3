@@ -1,11 +1,8 @@
 import { FunctionComponent } from "react"
 import { Vector3 } from "three"
-import { StlView } from "../Layouts/StlView"
-import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
-import { Tooltip, TooltipPosition } from "../Tooltip/Tooltip"
 import { Paths } from "../../constants/Paths"
-import { LinkWithSaveState } from "../Link/LinkWithSaveState"
-import * as icon from '@coreui/icons';
+import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
+import { StlView } from "../Layouts/StlView"
 
 export const MountAeroHolder : FunctionComponent = () => {
     return <ModelAndTextLayout 

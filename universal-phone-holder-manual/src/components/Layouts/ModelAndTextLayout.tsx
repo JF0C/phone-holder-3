@@ -1,8 +1,7 @@
-import { Loader } from "@react-three/drei";
-import { FunctionComponent, ReactElement, Suspense } from "react"
-import { LinkWithSaveState } from "../Link/LinkWithSaveState";
 import * as icon from '@coreui/icons';
-import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
+import { FunctionComponent, ReactElement, Suspense } from 'react';
+import { LinkWithSaveState } from '../Link/LinkWithSaveState';
+import { LoadingSpinner } from '../LoadingSpinner/LoadingSpinner';
 
 export type ModelAndTextProperties = {
     model: ReactElement,
@@ -15,9 +14,9 @@ export type ModelAndTextProperties = {
 
 export const ModelAndTextLayout: FunctionComponent<ModelAndTextProperties> = (props: ModelAndTextProperties) => {
     let nextButton = (props.nextStepPath === null || props.nextStepPath === undefined) ? <></> :
-            <LinkWithSaveState className="menu-button in-text" path={props.nextStepPath} displayValue="Next" icon={icon.cilChevronRight} iconAtEnd />
+            <LinkWithSaveState className='menu-button in-text' path={props.nextStepPath} displayValue='Next' icon={icon.cilChevronRight} iconAtEnd />
     let prevButton = (props.previousStepPath === null || props.previousStepPath === undefined) ? <></> :
-            <LinkWithSaveState className="menu-button in-text" path={props.previousStepPath} displayValue="Previous" icon={icon.cilChevronLeft} />
+            <LinkWithSaveState className='menu-button in-text' path={props.previousStepPath} displayValue='Previous' icon={icon.cilChevronLeft} />
     if (props.customNextButton !== undefined && props.customNextButton !== null){
         nextButton = props.customNextButton;
     }
@@ -25,14 +24,14 @@ export const ModelAndTextLayout: FunctionComponent<ModelAndTextProperties> = (pr
         prevButton = props.customPreviousButton;
     }
 
-    return <div className="model-and-text text-container">
+    return <div className='model-and-text text-container'>
         <Suspense fallback={<LoadingSpinner />}>
-            <div className="model-view">
+            <div className='model-view'>
                 {props.model}
             </div>
-            <div className="text-view">
+            <div className='text-view'>
                 {props.text}
-                <div className="step-navigation">
+                <div className='step-navigation'>
                     {prevButton}
                     {nextButton}
                 </div>

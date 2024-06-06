@@ -1,10 +1,10 @@
-import { FunctionComponent, useState } from "react"
-import { useSelector } from "react-redux"
-import { AppState } from "../../store/state";
-import { LinkWithSaveState } from "../Link/LinkWithSaveState";
-import { Paths } from "../../constants/Paths";
+import { FunctionComponent, useState } from 'react'
+import { useSelector } from 'react-redux'
+import { AppState } from '../../store/state';
+import { LinkWithSaveState } from '../Link/LinkWithSaveState';
+import { Paths } from '../../constants/Paths';
 import * as icon from '@coreui/icons';
-import CIcon from "@coreui/icons-react";
+import CIcon from '@coreui/icons-react';
 
 type LocationAndDisplayName = {
     location: string;
@@ -343,18 +343,18 @@ export const Navbar: FunctionComponent = () => {
     }
 
     const navigations = [];
-    navigations.push(<LinkWithSaveState path={''} useli={true} displayValue="Start" icon={icon.cilHome} />);
+    navigations.push(<LinkWithSaveState path={''} useli={true} displayValue='Start' icon={icon.cilHome} />);
     for(let entry of getEntries(currentLocation)){
         navigations.push(
             <LinkWithSaveState path={entry.location.toLowerCase()} 
                 useli={true} displayValue={entry.displayName} icon={entry.icon}/>);
     }
 
-    return <nav className="nav sidebar" style={{height: navOpen ? '100%' : '35px' }}>
-        <div className="nav-toggle" style={ {backgroundColor: navOpen ? 'rgba(124, 148, 150, 0.8)' : ''}}>
+    return <nav className='nav sidebar' style={{height: navOpen ? '100%' : '35px' }}>
+        <div className='nav-toggle' style={ {backgroundColor: navOpen ? 'rgba(124, 148, 150, 0.8)' : ''}}>
             <CIcon icon={icon.cilMenu} height={30} onClick={() => navOpenSet(!navOpen)}></CIcon>
         </div>
-        <ul className="nav-list" style={{left: navOpen ? '0px': '-210px' }}>
+        <ul className='nav-list' style={{left: navOpen ? '0px': '-210px' }}>
             {navigations}
         </ul>
     </nav>

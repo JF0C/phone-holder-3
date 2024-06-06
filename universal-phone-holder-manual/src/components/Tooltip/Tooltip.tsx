@@ -1,5 +1,5 @@
-import CIcon from "@coreui/icons-react";
-import {FunctionComponent, ReactElement, useState} from "react";
+import CIcon from '@coreui/icons-react';
+import {FunctionComponent, ReactElement, useState} from 'react';
 import * as icons from '@coreui/icons';
 
 export enum TooltipPosition{
@@ -33,17 +33,17 @@ export const Tooltip: FunctionComponent<TooltipProps> = (props: TooltipProps) =>
     }
     let icon = <></>;
     if (props.useIcon) {
-        icon = <span className="icon-arrange"><CIcon icon={icons.cilImagePlus} />&nbsp;</span>;
+        icon = <span className='icon-arrange'><CIcon icon={icons.cilImagePlus} />&nbsp;</span>;
     }
     return (
         <>
         <div
-            className="tooltip-text"
+            className='tooltip-text'
             onMouseEnter={() => setShow(true)}
             onMouseLeave={() => setShow(false)}
             onTouchEnd={() => setShow(!show)}
         >
-            <div className={"tooltip" + TooltipPositionToClassName(position)} style={show ? { visibility: "visible" } : {}}>
+            <div className={'tooltip' + TooltipPositionToClassName(position)} style={show ? { visibility: 'visible' } : {}}>
                 {props.children}
             </div>
             {icon}

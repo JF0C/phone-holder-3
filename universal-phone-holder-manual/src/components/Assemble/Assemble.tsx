@@ -1,11 +1,11 @@
-import { FunctionComponent } from "react"
-import { LinkWithSaveState } from "../Link/LinkWithSaveState"
-import { Paths } from "../../constants/Paths"
-import { Tooltip } from "../Tooltip/Tooltip"
+import { FunctionComponent } from 'react'
+import { LinkWithSaveState } from '../Link/LinkWithSaveState'
+import { Paths } from '../../constants/Paths'
+import { Tooltip } from '../Tooltip/Tooltip'
 import * as icon from '@coreui/icons';
 
 export const Assemble: FunctionComponent = () => {
-    return <div className="text-container">
+    return <div className='text-container'>
         <br />
         <br />
         Here, we will walk through the assembly of phone holder from its constituent parts. <br />
@@ -19,24 +19,24 @@ export const Assemble: FunctionComponent = () => {
             <li>1 M4 screw of around 10mm shaft length [i]</li>
             <li>
                 <Tooltip text={<>2 phone holder feet</>} useIcon>
-                    <img height={200} src='/img/foot.png' />
+                    <img height={200} src='/img/foot.png' alt='foot part' />
                 </Tooltip>
                 &nbsp;[i]
             </li>
             <li>
                 <Tooltip text={<>4 foot carriage</>} useIcon>
-                    <img height={200} src="/img/sled.png"/>
+                    <img height={200} src='/img/sled.png'/>
                 </Tooltip>
                 &nbsp;[i]
             </li>
             <li>
                 <Tooltip text={<>The phone holder body</>} useIcon>
-                    <img height={200} src="/img/body.png" />
+                    <img height={200} src='/img/body.png' />
                 </Tooltip>&nbsp;[i]
             </li>
             <li>
                 <Tooltip text={<>The phone holder neck</>} useIcon>
-                    <img height={200} src="/img/neck.png" />
+                    <img height={200} src='/img/neck.png' />
                 </Tooltip>
                 &nbsp;[i]
             </li>
@@ -47,9 +47,9 @@ export const Assemble: FunctionComponent = () => {
         <br />
         <br />
         <LinkWithSaveState
-            className="menu-button in-text"
+            className='menu-button in-text'
             path={Paths.AssembleInsertFootPath}
-            displayValue="Next Step"
+            displayValue='Next Step'
             icon={icon.cilChevronRight}
             iconAtEnd/>
     </div>

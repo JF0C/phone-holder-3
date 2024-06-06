@@ -1,10 +1,10 @@
-import { Dispatch } from "@reduxjs/toolkit";
-import { FunctionComponent, ReactNode } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
-import { AppState, setCurrentLocation } from "../../store/state";
-import CIcon from "@coreui/icons-react";
-import React from "react";
+import { Dispatch } from '@reduxjs/toolkit';
+import { FunctionComponent, ReactNode } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { AppState, setCurrentLocation } from '../../store/state';
+import CIcon from '@coreui/icons-react';
+import React from 'react';
 
 export type LinkWithSaveStateProps = {
     path: string;

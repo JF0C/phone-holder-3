@@ -1,16 +1,16 @@
-import { FunctionComponent } from "react"
-import { Vector3 } from "three"
-import { StlView } from "../Layouts/StlView"
-import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
-import { Tooltip, TooltipPosition } from "../Tooltip/Tooltip"
-import { Paths } from "../../constants/Paths"
+import { FunctionComponent } from 'react'
+import { Vector3 } from 'three'
+import { StlView } from '../Layouts/StlView'
+import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
+import { Tooltip, TooltipPosition } from '../Tooltip/Tooltip'
+import { Paths } from '../../constants/Paths'
 
 export const AssembleInsertFoot: FunctionComponent = () => {
 return <ModelAndTextLayout 
         model={
                 <StlView
                     folder={Paths.ModelsV1Path}
-                    file="AssemblyFootInsert"
+                    file='AssemblyFootInsert'
                     position={new Vector3(35, -20, -50)}
                     rotation={new Vector3(-90, 0, 0)}
                     showAxes={false}
@@ -22,7 +22,7 @@ return <ModelAndTextLayout
             <>
                 Hold one finger below the foot rails to support the&nbsp;
                 <Tooltip text={<>carriages</>} position={TooltipPosition.bottom} useIcon>
-                    <img height={200} src="/img/sled.png"/>
+                    <img height={200} src='/img/sled.png'/>
                 </Tooltip>.
                 <br />
                 <br />
@@ -30,7 +30,7 @@ return <ModelAndTextLayout
                 <br />
                 <br />
                 Then, insert the <Tooltip text={<>foot</>} position={TooltipPosition.bottom} useIcon>
-                    <img height={200} src="/img/foot.png" />
+                    <img height={200} src='/img/foot.png' />
                 </Tooltip> into the v-shaped opening, formed by the carriages.
                 <br />
                 <br />

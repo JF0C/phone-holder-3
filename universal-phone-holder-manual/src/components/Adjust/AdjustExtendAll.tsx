@@ -1,14 +1,14 @@
-import { FunctionComponent } from "react"
-import { Vector3 } from "three"
-import { StlView } from "../Layouts/StlView"
-import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
-import { Paths } from "../../constants/Paths"
+import { FunctionComponent } from 'react'
+import { Vector3 } from 'three'
+import { Paths } from '../../constants/Paths'
+import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
+import { StlView } from '../Layouts/StlView'
 
 export const AdjustExtendAll: FunctionComponent = () => {
     const model = window.innerWidth < 1000 ?
         <StlView
             folder={Paths.ModelsV1Path}
-            file="AdjustExtendAll"
+            file='AdjustExtendAll'
             position={new Vector3(0, 0, 0)}
             rotation={new Vector3(-30, -30, 0)}
             showAxes={false}
@@ -18,7 +18,7 @@ export const AdjustExtendAll: FunctionComponent = () => {
         :
         <StlView
             folder={Paths.ModelsV1Path}
-            file="AdjustExtendAll"
+            file='AdjustExtendAll'
             position={new Vector3(0, 0, 30)}
             rotation={new Vector3(-90, 0, 0)}
             showAxes={false}
