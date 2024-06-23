@@ -20,8 +20,10 @@ export const MountHandlebar : FunctionComponent = () => {
         }
         text={
             <>
-                Attach the <Tooltip text={<>ring</>}><img src='' /></Tooltip> to the handlebar.
-                It will snap onto it. Lower the <Tooltip text={<>phone holder assembly</>}><img src='' /></Tooltip> onto the ring and screw it on.
+                Attach the <Tooltip tooltipId='mount-handlebar-ring' reference={<>ring</>}><img src='' alt='ring'/></Tooltip> to the handlebar.
+                It will snap onto it. Lower the <Tooltip tooltipId='mount-handlebar-phoneholder' reference={<>phone holder assembly</>}>
+                    <img height={200} src='/img/phoneholder-base-assembly.png' alt='phoneholder' />
+                </Tooltip> onto the ring and screw it on.
             </>
         }
         previousStepPath={Paths.MountPath}

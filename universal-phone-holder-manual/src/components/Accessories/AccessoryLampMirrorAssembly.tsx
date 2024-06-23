@@ -5,6 +5,7 @@ import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
 import { StlView } from '../Layouts/StlView'
 import { Tooltip } from '../Tooltip/Tooltip'
 
+
 export const AccessoryLampMirrorAssembly : FunctionComponent = () => {
     return <ModelAndTextLayout 
         model={
@@ -20,7 +21,14 @@ export const AccessoryLampMirrorAssembly : FunctionComponent = () => {
         }
         text={
             <>
-                Use a screw to connect the <Tooltip text={<>mirror</>}><img /></Tooltip> to the neck of the <Tooltip text={<>phone holder</>}><img /></Tooltip>. 
+                Use a screw to connect the
+                <Tooltip tooltipId='accessory-mount-lamp-mirror-mirror' reference={<>mirror</>}>
+                    <img alt='lamp mirror'/>
+                </Tooltip> 
+                to the neck of the 
+                <Tooltip tooltipId='accessory-mount-lamp-mirror-phoneholder' reference={<>phone holder</>}>
+                    <img alt='phone holder'/>
+                </Tooltip>. 
                 Insert washers between all parts including the nut.
                 Tighten the screw just enough that everything stays in place, but still can be moved for adjustment.
             </>

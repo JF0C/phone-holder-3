@@ -2,10 +2,10 @@ import { FunctionComponent } from 'react'
 import { Vector3 } from 'three'
 import { StlView } from '../Layouts/StlView'
 import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
-import { Tooltip, TooltipPosition } from '../Tooltip/Tooltip'
 import { Paths } from '../../constants/Paths'
 import { LinkWithSaveState } from '../Link/LinkWithSaveState'
 import * as icon from '@coreui/icons';
+import { Tooltip } from '../Tooltip/Tooltip'
 
 export const AssembleAttachNeck : FunctionComponent = () => {
     return <ModelAndTextLayout 
@@ -23,9 +23,9 @@ export const AssembleAttachNeck : FunctionComponent = () => {
         text={
             <>
                 Insert the front part of the&nbsp;
-                <Tooltip text={<>body</>} position={TooltipPosition.bottom} useIcon>
+                <Tooltip tooltipId='assemble-attach-neck-body' reference={<>body</>} useIcon>
                     <img height={200} src='/img/body.png' alt='body part'/>
-                </Tooltip> into the groove in the <Tooltip text={<>neck</>} position={TooltipPosition.bottom} useIcon>
+                </Tooltip> into the groove in the <Tooltip tooltipId='assemble-attach-neck-neck' reference={<>neck</>} useIcon>
                     <img height={200} src='/img/neck.png' alt='neck part' />
                 </Tooltip>.
                 Depending on the size of the phone to be attached,

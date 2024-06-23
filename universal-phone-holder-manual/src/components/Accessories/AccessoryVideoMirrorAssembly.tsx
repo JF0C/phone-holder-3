@@ -20,7 +20,14 @@ export const AccessoryVideoMirrorAssembly : FunctionComponent = () => {
         }
         text={
             <>
-                Use a screw to connect the <Tooltip text={<>mirror</>}><img /></Tooltip> to the neck of the <Tooltip text={<>phone holder</>}><img /></Tooltip>. 
+                Use a screw to connect the
+                <Tooltip tooltipId='accessory-mount-video-mirror-mirror' reference={<>mirror</>}>
+                    <img alt='video mirror'/>
+                </Tooltip> 
+                to the neck of the 
+                <Tooltip tooltipId='accessory-mount-video-mirror-phoneholder' reference={<>phone holder</>}>
+                    <img alt='phone holder'/>
+                </Tooltip>.
                 Insert washers between all parts including the nut.
                 Tighten the screw just enough that everything stays in place, but still can be moved for adjustment.
             </>

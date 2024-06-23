@@ -5,6 +5,7 @@ import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
 import { StlView } from '../Layouts/StlView'
 import { Tooltip } from '../Tooltip/Tooltip'
 
+
 export const MountHandlebarV2Ring : FunctionComponent = () => {
     return <ModelAndTextLayout 
         model={
@@ -20,13 +21,13 @@ export const MountHandlebarV2Ring : FunctionComponent = () => {
         }
         text={
             <>
-                Combine both <Tooltip text={<>halves</>}><img /></Tooltip> of the ring 
+                Combine both <Tooltip tooltipId='mount-ring-halves' reference={<>halves</>}><img height={200} src='/img/mount-ring.png' alt='clamp halves'/></Tooltip> of the ring 
                 and wrap it around the handlebar.
-                Extend the <Tooltip text={<>band</>}><img /></Tooltip> with the adjustment holes 
+                Extend the <Tooltip tooltipId='mount-ring-band' reference={<>band</>}><img alt='band half'/></Tooltip> with the adjustment holes 
                 so that a gap of around 1 cm is between the two cheeks.
                 A hole in the band should match up with the hole in the &nbsp;
-                <Tooltip text={<>phone holder adapter part</>}>
-                    <img />
+                <Tooltip tooltipId='mount-ring-adapter' reference={<>phone holder adapter part</>}>
+                    <img height={200} src='/img/phone-holder-ring-adapter.png' alt='ring adapter'/>
                 </Tooltip>.
             </>
         }

@@ -20,8 +20,12 @@ export const MountHandlebarV2Holder : FunctionComponent = () => {
         }
         text={
             <>
-                Put the centering pin onto the <Tooltip text={<>ring</>}><img /></Tooltip>.
-                Lay the <Tooltip text={<>phone holder assembly</>}><img /></Tooltip> onto the ring such that the pin fits into the notch of the holder.
+                Put the centering pin onto the <Tooltip tooltipId='mount-handlebar-v2-ring' reference={<>ring</>}>
+                    <img height={200} src='/img/mount-ring.png' alt='ring'/>
+                </Tooltip>.
+                Lay the <Tooltip tooltipId='mount-handlebar-v2-holder' reference={<>phone holder assembly</>}>
+                    <img height={200} src='/img/phoneholder-base-assembly.png' alt='phoneholder' />
+                </Tooltip> onto the ring such that the pin fits into the notch of the holder.
                 If the screw does not fall into the threading right away, wiggle the holed band until it does.
             </>
         }
