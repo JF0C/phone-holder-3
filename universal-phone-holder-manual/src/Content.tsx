@@ -123,6 +123,9 @@ export const Content: FunctionComponent = () => {
                 <Route path={Paths.AccessoryVideoMirrorAssemblyPath} element={<AccessoryVideoMirrorAssembly />} />
                 <Route path={Paths.AccessoryVideoMirrorCompletePath} element={<AccessoryVideoMirrorComplete />} />
                 <Route path={Paths.AccessoryVideoMirrorPhonePath} element={<AccessoryVideoMirrorPhone />} />
+
+
+                <Route path={"*"} element={<StartMenu />} />
               </Routes>
             </div>
           </div>
