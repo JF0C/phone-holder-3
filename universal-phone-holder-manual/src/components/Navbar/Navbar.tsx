@@ -333,7 +333,8 @@ export const Navbar: FunctionComponent = () => {
     const currentLocation = useSelector((state: AppState) => state.currentLocation);
     if (currentLocation === '/' ||
         currentLocation.includes(Paths.HtmlIndexFilePath) ||
-        currentLocation.includes(Paths.HtmlPhoneholderFilePath))
+        currentLocation.includes(Paths.HtmlPhoneholderFilePath) ||
+        currentLocation === Paths.HtmlDeployedBasePath)
     {
         return <></>;
     }

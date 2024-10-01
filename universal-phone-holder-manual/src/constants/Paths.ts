@@ -3,6 +3,7 @@ export class Paths{
 
     public static HtmlIndexFilePath: string = 'index.html'
     public static HtmlPhoneholderFilePath: string = 'phoneholder.html'
+    public static HtmlDeployedBasePath: string = '/phone-holder-3/'
 
     public static StartMenuPath: string = ''
 
