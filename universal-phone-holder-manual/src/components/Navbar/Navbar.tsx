@@ -280,6 +280,10 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
             {
                 location: Paths.AccessoryVideoMirrorAssemblyPath,
                 displayName: 'Video Mirror'
+            },
+            {
+                location: Paths.AccessoryRainShieldSocketPath,
+                displayName: 'Rain Shield'
             }
         ]
     }
@@ -320,6 +324,26 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
             {
                 location: Paths.AccessoryVideoMirrorPhonePath,
                 displayName: 'Mirror w/ Phone'
+            }
+        ]
+    }
+    if (location.includes('accessory-rain-shield')) {
+        return [
+            {
+                location: Paths.AccessoryRainShieldSocketPath,
+                displayName: 'Socket'
+            },
+            {
+                location: Paths.AccessoryRainShieldElbowPath,
+                displayName: 'Shield on Elbow'
+            },
+            {
+                location: Paths.AccessoryRainShieldLidPath,
+                displayName: 'Lid to Shield'
+            },
+            {
+                location: Paths.AccessoryRainShieldCompletePath,
+                displayName: 'Complete Shield'
             }
         ]
     }
