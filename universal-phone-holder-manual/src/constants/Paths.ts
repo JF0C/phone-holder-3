@@ -7,8 +7,10 @@ export class Paths{
 
     public static StartMenuPath: string = ''
 
-    public static ModelsV1Path = '/phone-holder-3/cad/v1'
-    public static ModelsV2Path = '/phone-holder-3/cad/v2'
+    // public static ModelsV1Path = '/phone-holder-3/cad/v1'
+    // public static ModelsV2Path = '/phone-holder-3/cad/v2'
+    public static ModelsV1Path = './cad/v1'
+    public static ModelsV2Path = './cad/v2'
 
     public static AssemblePath: string = 'assemble'
     public static AssembleInsertFootPath: string = 'assemble-insert-foot'
@@ -64,4 +66,9 @@ export class Paths{
     public static AccessoryVideoMirrorAssemblyPath: string = 'accessory-video-mirror-assembly'
     public static AccessoryVideoMirrorCompletePath: string = 'accessory-video-mirror-complete'
     public static AccessoryVideoMirrorPhonePath: string = 'accessory-video-mirror-phone'
+
+    public static AccessoryRainShieldSocketPath: string = 'accessory-rain-shield-socket'
+    public static AccessoryRainShieldElbowPath: string = 'accessory-rain-shield-elbow'
+    public static AccessoryRainShieldLidPath: string = 'accessory-rain-shield-lid'
+    public static AccessoryRainShieldCompletePath: string = 'accessory-rain-shield-complete'
 }

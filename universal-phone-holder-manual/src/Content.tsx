@@ -49,6 +49,10 @@ import { Navbar } from './components/Navbar/Navbar';
 import { StartMenu } from './components/StartMenu/StartMenu';
 import { Paths } from './constants/Paths';
 import { AppState, closePopups } from './store/state';
+import { AccessoryRainShieldSocket } from "./components/Accessories/AccessoryRainShieldSocket";
+import { AccessoryRainShieldElbow } from "./components/Accessories/AccessoryRainShieldElbow";
+import { AccessoryRainShieldLid } from "./components/Accessories/AccessoryRainShieldLid";
+import { AccessoryRainShieldComplete } from "./components/Accessories/AccessoryRainShieldComplete";
 
 export const Content: FunctionComponent = () => {
     const dispatch: Dispatch<any> = useDispatch();
@@ -67,6 +71,7 @@ export const Content: FunctionComponent = () => {
 
                 <Route path={Paths.HtmlIndexFilePath} element={<StartMenu />} />
                 <Route path={Paths.HtmlPhoneholderFilePath} element={<StartMenu />} />
+                <Route path={Paths.HtmlDeployedBasePath} element={<StartMenu />} />
 
                 <Route path={Paths.StartMenuPath} element={<StartMenu />} />
                 
@@ -124,8 +129,10 @@ export const Content: FunctionComponent = () => {
                 <Route path={Paths.AccessoryVideoMirrorCompletePath} element={<AccessoryVideoMirrorComplete />} />
                 <Route path={Paths.AccessoryVideoMirrorPhonePath} element={<AccessoryVideoMirrorPhone />} />
 
-
-                <Route path={"*"} element={<StartMenu />} />
+                <Route path={Paths.AccessoryRainShieldSocketPath} element={<AccessoryRainShieldSocket />} />
+                <Route path={Paths.AccessoryRainShieldElbowPath} element={<AccessoryRainShieldElbow />} />
+                <Route path={Paths.AccessoryRainShieldLidPath} element={<AccessoryRainShieldLid />} />
+                <Route path={Paths.AccessoryRainShieldCompletePath} element={<AccessoryRainShieldComplete />} />
               </Routes>
             </div>
           </div>
