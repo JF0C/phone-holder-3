@@ -330,6 +330,10 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
     if (location.includes('accessory-rain-shield')) {
         return [
             {
+                location: Paths.AccessoriesPath,
+                displayName: 'Accessories'
+            },
+            {
                 location: Paths.AccessoryRainShieldSocketPath,
                 displayName: 'Socket'
             },

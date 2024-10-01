@@ -15,7 +15,7 @@ export const AccessoryRainShieldElbow : FunctionComponent = () => {
                 rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
                 cameraPosition={new Vector3(120, 100, -40)}
-                lightOrigin={new Vector3(-100, 100, 0)}
+                lightOrigin={new Vector3(100, 100, 0)}
             />
         }
         text={

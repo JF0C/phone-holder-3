@@ -14,7 +14,7 @@ export const AccessoryRainShieldComplete : FunctionComponent = () => {
                 rotation={new Vector3(-90, 0, 0)}
                 showAxes={false}
                 cameraPosition={new Vector3(90, 70, -90)}
-                lightOrigin={new Vector3(-100, 100, 0)}
+                lightOrigin={new Vector3(100, 100, 0)}
             />
         }
         text={
