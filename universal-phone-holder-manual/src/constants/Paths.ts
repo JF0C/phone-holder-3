@@ -7,10 +7,10 @@ export class Paths{
 
     public static StartMenuPath: string = ''
 
-    // public static ModelsV1Path = '/phone-holder-3/cad/v1'
-    // public static ModelsV2Path = '/phone-holder-3/cad/v2'
-    public static ModelsV1Path = './cad/v1'
-    public static ModelsV2Path = './cad/v2'
+    public static ModelsV1Path = '/phone-holder-3/cad/v1'
+    public static ModelsV2Path = '/phone-holder-3/cad/v2'
+    // public static ModelsV1Path = './cad/v1'
+    // public static ModelsV2Path = './cad/v2'
 
     public static AssemblePath: string = 'assemble'
     public static AssembleInsertFootPath: string = 'assemble-insert-foot'
