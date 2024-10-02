@@ -84,7 +84,7 @@ const getEntries = (location: string): LocationAndDisplayName[] => {
             }
         ]
     }
-    if (location === '/mount'){
+    if (location === Paths.HtmlDeployedBasePath + 'mount'){
         return [
             {
                 location: Paths.AdjustPath,
@@ -359,10 +359,11 @@ export const Navbar: FunctionComponent = () => {
     const [path, setPath] = useState('initial');
 
     const currentLocation = useSelector((state: AppState) => state.currentLocation);
+    console.log(currentLocation);
     if (currentLocation === '/' ||
-        currentLocation.includes(Paths.HtmlIndexFilePath) ||
-        currentLocation.includes(Paths.HtmlPhoneholderFilePath) ||
-        currentLocation === Paths.HtmlDeployedBasePath)
+        currentLocation === Paths.HtmlDeployedBasePath ||
+        currentLocation === '.' + Paths.HtmlDeployedBasePath
+    )
     {
         return <></>;
     }
@@ -372,7 +373,7 @@ export const Navbar: FunctionComponent = () => {
     }
 
     const navigations = [];
-    navigations.push(<LinkWithSaveState path={''} useli={true} displayValue='Start' icon={icon.cilHome} />);
+    navigations.push(<LinkWithSaveState path={'.' + Paths.HtmlDeployedBasePath} useli={true} displayValue='Start' icon={icon.cilHome} />);
     for(let entry of getEntries(currentLocation)){
         navigations.push(
             <LinkWithSaveState path={entry.location.toLowerCase()} 

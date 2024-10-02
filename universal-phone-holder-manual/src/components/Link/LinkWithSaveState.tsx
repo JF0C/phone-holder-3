@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { AppState, setCurrentLocation } from '../../store/state';
 import CIcon from '@coreui/icons-react';
 import React from 'react';
+import { Paths } from '../../constants/Paths';
 
 export type LinkWithSaveStateProps = {
     path: string;
@@ -18,7 +19,7 @@ export type LinkWithSaveStateProps = {
 
 const capitalizeFirst = (str: string) => str.charAt(0).toUpperCase() + str.substring(1).toLowerCase();
 
-const formatNavigationText = (str: string) => str.split('-').map(s => capitalizeFirst(s)).reduce((a, b) => a + ' ' + b, '')
+const formatNavigationText = (str: string) => str.replace(Paths.HtmlDeployedBasePath, '').split('-').map(s => capitalizeFirst(s)).reduce((a, b) => a + ' ' + b, '')
 
 export const LinkWithSaveState: FunctionComponent<LinkWithSaveStateProps> = (props: LinkWithSaveStateProps) => {
     const currentLocation = useSelector((state: AppState) => state.currentLocation);
@@ -43,8 +44,8 @@ export const LinkWithSaveState: FunctionComponent<LinkWithSaveStateProps> = (pro
     return <NavLink
         className={props.className}
         key={itemKey}
-        to={'/' + props.path} 
-        onClick={() => dispatch(setCurrentLocation('/' + props.path))}
+        to={'' + props.path} 
+        onClick={() => dispatch(setCurrentLocation(props.path))}
     >
         {content}
     </NavLink>

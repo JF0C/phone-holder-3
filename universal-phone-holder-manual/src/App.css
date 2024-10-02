@@ -236,7 +236,7 @@ h2 {
   cursor: pointer;
 }
 
-@media (max-width: 1000px){
+@media (max-width: 736px){
   .nav-list{
     position: relative;
     transition: left .5s ease-in-out;
@@ -279,8 +279,11 @@ h2 {
   }
 }
 
-@media (min-width: 1000px){
+@media (min-width: 737px){
   .nav-toggle{
     display: none;
+  }
+  .text-view {
+    padding-left: 15px;
   }
 }
