@@ -359,7 +359,6 @@ export const Navbar: FunctionComponent = () => {
     const [path, setPath] = useState('initial');
 
     const currentLocation = useSelector((state: AppState) => state.currentLocation);
-    console.log(currentLocation);
     if (currentLocation === '/' ||
         currentLocation === Paths.HtmlDeployedBasePath ||
         currentLocation === '.' + Paths.HtmlDeployedBasePath

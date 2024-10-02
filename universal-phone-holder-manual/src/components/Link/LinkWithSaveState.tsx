@@ -37,7 +37,7 @@ export const LinkWithSaveState: FunctionComponent<LinkWithSaveStateProps> = (pro
         }
     }
     if (props.useli !== undefined && props.useli){
-        const activeClass = currentLocation === '/' + props.path ? 'active' : ''
+        const activeClass = currentLocation === props.path ? 'active' : ''
         content = <li className={activeClass} key={itemKey}>{content}</li>;
     }
     const dispatch : Dispatch<any> = useDispatch();
