@@ -5,6 +5,8 @@ import { Paths } from '../../constants/Paths';
 import { useAppDispatch, useAppSelector } from '../../store/store';
 import { setNavbar } from '../../store/UiReducer';
 import { LinkWithSaveState } from '../Link/LinkWithSaveState';
+import { menuTree } from './ManuTree';
+import { NavSubMenu } from './NavSubmenu';
 
 export type NavbarProps = {
 
@@ -19,7 +21,20 @@ export const Navbar: FunctionComponent<NavbarProps> = (props) => {
         className='flex flex-row navbar-button'
         path={Paths.HtmlDeployedBasePath.substring(0, Paths.HtmlDeployedBasePath.length - 1)}
         displayValue='Start'
-        icon={icon.cilHome} />);
+        icon={icon.cilHome} 
+        onClick={() => toggleDrawer(false)}
+        />);
+    for (let node of menuTree) {
+        navigations.push(
+        // <LinkWithSaveState 
+        //     className='flex flex-row navbar-button'
+        //     path={node.path ?? ''}
+        //     displayValue={node.displayName}
+        //     onClick={() => toggleDrawer(false)}
+        //     />
+            <NavSubMenu data={node} />
+        )
+    }
     // for(let entry of getEntries(currentLocation)){
     //     navigations.push(
     //         <LinkWithSaveState path={entry.location.toLowerCase()} 

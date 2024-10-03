@@ -11,6 +11,7 @@ export type LinkWithSaveStateProps = {
     icon?: string[];
     iconAtEnd?: boolean;
     className?: string;
+    onClick?: () => void
 }
 
 const capitalizeFirst = (str: string) => str.charAt(0).toUpperCase() + str.substring(1).toLowerCase();
@@ -40,6 +41,7 @@ export const LinkWithSaveState: FunctionComponent<LinkWithSaveStateProps> = (pro
         className={props.className + activeClass}
         key={props.path}
         to={props.path}
+        onClick={props.onClick}
     >
         {content}
     </NavLink>
