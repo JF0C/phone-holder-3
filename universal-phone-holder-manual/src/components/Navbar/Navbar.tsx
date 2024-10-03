@@ -32,7 +32,7 @@ export const Navbar: FunctionComponent<NavbarProps> = (props) => {
         //     displayValue={node.displayName}
         //     onClick={() => toggleDrawer(false)}
         //     />
-            <NavSubMenu data={node} />
+            <NavSubMenu data={node} onClick={() => toggleDrawer(false)} />
         )
     }
     // for(let entry of getEntries(currentLocation)){

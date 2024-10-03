@@ -208,18 +208,19 @@ export const menuTree: MenuGroup[] = [
             {
                 displayName: 'Lamp Mirror',
                 groupId: 'accessory-lamp-mirror',
+                path: Paths.AccessoryLampMirrorAssemblyPath,
                 items: [
                     {
                         location: Paths.AccessoryLampMirrorAssemblyPath,
-                        displayName: 'Lamp Mirror'
+                        displayName: 'Assemble'
                     },
                     {
-                        location: Paths.AccessoryVideoMirrorAssemblyPath,
-                        displayName: 'Video Mirror'
+                        location: Paths.AccessoryLampMirrorCompletePath,
+                        displayName: 'Complete'
                     },
                     {
-                        location: Paths.AccessoryRainShieldSocketPath,
-                        displayName: 'Rain Shield'
+                        location: Paths.AccessoryLampMirrorPhonePath,
+                        displayName: 'Phone'
                     }
                 ]
             },
