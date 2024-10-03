@@ -33,23 +33,23 @@ export class Paths{
 
     public static MountPath: string = this.addBasePath('mount')
 
-    public static MountHandlebarPath: string = this.addBasePath('mount-handlebar')
-    public static MountHandlebarCompletePath: string = this.addBasePath('mount-handlebar-complete')
+    public static MountHandlebarPath: string = this.addBasePath('mount-handlebar-v1-start')
+    public static MountHandlebarCompletePath: string = this.addBasePath('mount-handlebar-v1-complete')
 
-    public static MountCenterRingPath: string = this.addBasePath('mount-center-ring')
-    public static MountCenterHolderPath: string = this.addBasePath('mount-center-holder')
-    public static MountCenterCompletePath: string = this.addBasePath('mount-center-complete')
+    public static MountCenterRingPath: string = this.addBasePath('mount-stem-v1-ring')
+    public static MountCenterHolderPath: string = this.addBasePath('mount-stem-v1-holder')
+    public static MountCenterCompletePath: string = this.addBasePath('mount-stem-v1-complete')
 
-    public static MountAeroHolderPath: string = this.addBasePath('mount-aero-holder')
-    public static MountAeroRingPath: string = this.addBasePath('mount-aero-ring')
-    public static MountAeroHandlebarPath: string = this.addBasePath('mount-aero-handlebar')
-    public static MountAeroCompletePath: string = this.addBasePath('mount-aero-complete')
+    public static MountAeroHolderPath: string = this.addBasePath('mount-aero-v1-holder')
+    public static MountAeroRingPath: string = this.addBasePath('mount-aero-v1-ring')
+    public static MountAeroHandlebarPath: string = this.addBasePath('mount-aero-v1-handlebar')
+    public static MountAeroCompletePath: string = this.addBasePath('mount-aero-v1-complete')
 
-    public static MountCenterV2RingPath: string = this.addBasePath('mount-center-v2-ring')
-    public static MountCenterV2HolderPath: string = this.addBasePath('mount-center-v2-holder')
-    public static MountCenterV2TightenPath: string = this.addBasePath('mount-center-v2-tighten')
-    public static MountCenterV2CompletePath: string = this.addBasePath('mount-center-v2-complete')
-    public static MountCenterV2PhonePath: string = this.addBasePath('mount-center-v2-phone')
+    public static MountCenterV2RingPath: string = this.addBasePath('mount-stem-v2-ring')
+    public static MountCenterV2HolderPath: string = this.addBasePath('mount-stem-v2-holder')
+    public static MountCenterV2TightenPath: string = this.addBasePath('mount-stem-v2-tighten')
+    public static MountCenterV2CompletePath: string = this.addBasePath('mount-stem-v2-complete')
+    public static MountCenterV2PhonePath: string = this.addBasePath('mount-stem-v2-phone')
 
     public static MountHandlebarV2RingPath: string = this.addBasePath('mount-handlebar-v2-ring')
     public static MountHandlebarV2HolderPath: string = this.addBasePath('mount-handlebar-v2-holder')

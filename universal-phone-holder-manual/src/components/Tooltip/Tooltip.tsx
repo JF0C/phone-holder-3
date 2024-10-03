@@ -1,10 +1,9 @@
-import { useFloating, offset, flip } from "@floating-ui/react";
-import { FunctionComponent, ReactElement } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { AppState, closePopups, openPopup } from "../../store/state";
-import { Dispatch } from "@reduxjs/toolkit";
-import CIcon from '@coreui/icons-react';
 import * as icons from '@coreui/icons';
+import CIcon from '@coreui/icons-react';
+import { flip, offset, useFloating } from "@floating-ui/react";
+import { FunctionComponent, ReactElement } from "react";
+import { useAppDispatch, useAppSelector } from "../../store/store";
+import { closePopup, openPopup } from "../../store/UiReducer";
 
 export type TooltipProps = {
     tooltipId: string,
@@ -23,18 +22,18 @@ export const Tooltip: FunctionComponent<TooltipProps> = (props: TooltipProps) =>
         ]
     });
     let tooltip = <></>;
-    const isOpen = useSelector((state: AppState) => state.currentOpenPopup) === props.tooltipId;
+    const isOpen = useAppSelector((state) => state.uiState.currentOpenPopup) === props.tooltipId;
+    const dispatch = useAppDispatch();
     if (isOpen){
         tooltip = <div ref={refs.setFloating} className='tooltip-content' style={floatingStyles}>{props.children}</div>;
     }
-    const dispatch : Dispatch<any> = useDispatch();
 
     let icon = <></>;
     if (props.useIcon) {
         icon = <span className='icon-arrange'><CIcon icon={icons.cilImagePlus} />&nbsp;</span>;
     }
     return <>
-        <div className='tooltip-text' ref={refs.setReference} onClick={() => {dispatch(isOpen ? closePopups() : openPopup(props.tooltipId))}}>
+        <div className='tooltip-text' ref={refs.setReference} onClick={() => {dispatch(isOpen ? dispatch(closePopup()) : openPopup(props.tooltipId))}}>
             { icon }
             { props.reference }
         </div>

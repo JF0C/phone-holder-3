@@ -1,24 +1,17 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { FunctionComponent } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import { Content } from './Content';
+import { MainLayout } from './MainLayout';
 import './components/LoadingSpinner/LoadingSpinner.css';
-import { reducer } from './store/state';
+import { store } from './store/store';
 
-const store = configureStore({
-  reducer: reducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware()
-});
-
-function App() {
+export const App: FunctionComponent = () => {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Content />
+        <MainLayout />
       </BrowserRouter>
     </Provider>
   );
 }
-
-export default App;
