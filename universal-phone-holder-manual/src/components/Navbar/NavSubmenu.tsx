@@ -11,8 +11,9 @@ export type NavSubMenuProps = {
 }
 
 export const NavSubMenu: FunctionComponent<NavSubMenuProps> = (props) => {
+    const color = document.location.pathname.includes(props.data.groupId) ? 'rgba(124, 148, 150, 0.8)' : 'rgb(50,50,50)';
     return <Accordion sx={{ bgcolor: 'rgb(50,50,50)', color: 'white' }}>
-        <AccordionSummary expandIcon={<CIcon style={{color: 'white'}} icon={icon.cilChevronBottom}/>}>
+        <AccordionSummary sx={{ bgcolor: color }} expandIcon={<CIcon style={{color: 'white'}} icon={icon.cilChevronBottom}/>}>
             {props.data.displayName}
         </AccordionSummary>
         <AccordionDetails>

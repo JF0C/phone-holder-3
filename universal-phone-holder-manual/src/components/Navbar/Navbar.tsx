@@ -8,11 +8,7 @@ import { LinkWithSaveState } from '../Link/LinkWithSaveState';
 import { menuTree } from './ManuTree';
 import { NavSubMenu } from './NavSubmenu';
 
-export type NavbarProps = {
-
-}
-
-export const Navbar: FunctionComponent<NavbarProps> = (props) => {
+export const Navbar: FunctionComponent = () => {
     const showNavbar = useAppSelector(state => state.uiState.showNavbar)
     const dispatch = useAppDispatch();
 
