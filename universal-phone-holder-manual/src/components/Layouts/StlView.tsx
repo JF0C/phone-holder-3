@@ -73,7 +73,7 @@ export const StlView: FunctionComponent<StlViewProperties> = (props: StlViewProp
           <mesh rotation={eul} geometry={geometry} material={icoMaterial} position={props.position} />
           {axes}
         </Canvas>
-        <div className='reset-view-button' onClick={() => orbitref.current.reset()}>
+        <div className='reset-view-button flex flex-row justify-center text-center' onClick={() => orbitref.current.reset()}>
           <CIcon icon={icon.cilActionUndo} />
         </div>
       </Suspense>

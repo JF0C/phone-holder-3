@@ -38,6 +38,14 @@ h2 {
   text-align: center;
 }
 
+.navbar-button {
+  padding: 10px;
+  font-size: x-large;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  color: white;
+}
+
 .menu-button {
   padding: 20px;
   font-size: x-large;
@@ -148,6 +156,10 @@ h2 {
 }
 
 .nav-list li.active {
+  background: rgba(124, 148, 150, 0.8);
+}
+
+.active-link {
   background: rgba(124, 148, 150, 0.8);
 }
 

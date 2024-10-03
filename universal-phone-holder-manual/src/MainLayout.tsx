@@ -1,13 +1,12 @@
 
+import * as icon from '@coreui/icons';
+import CIcon from "@coreui/icons-react";
+import { AppBar, Button } from "@mui/material";
 import { FunctionComponent } from "react";
 import { Navbar } from './components/Navbar/Navbar';
 import { RouterOutlet } from "./RouterOutlet";
 import { useAppDispatch, useAppSelector } from "./store/store";
 import { closePopup, setNavbar } from "./store/UiReducer";
-import { AppBar, Button } from "@mui/material";
-import CIcon from "@coreui/icons-react";
-import * as icon from '@coreui/icons';
-import zIndex from "@mui/material/styles/zIndex";
 
 export const MainLayout: FunctionComponent = () => {
   const dispatch = useAppDispatch();

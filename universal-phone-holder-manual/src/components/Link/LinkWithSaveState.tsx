@@ -33,8 +33,11 @@ export const LinkWithSaveState: FunctionComponent<LinkWithSaveStateProps> = (pro
     if (props.useli){
         content = <li key={'li/' + props.path}>{content}</li>;
     }
+    console.log(props.path)
+    console.log(document.location.pathname)
+    const activeClass = document.location.pathname === props.path ? ' active-link' : ''
     return <NavLink
-        className={props.className}
+        className={props.className + activeClass}
         key={props.path}
         to={props.path}
     >
