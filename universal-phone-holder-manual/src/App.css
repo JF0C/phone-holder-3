@@ -46,7 +46,7 @@ h2 {
 }
 
 .menu-button {
-  padding: 20px;
+  padding: 16px;
   font-size: x-large;
   cursor: pointer;
   border: 1px solid white;
@@ -54,10 +54,12 @@ h2 {
   margin: 10px;
   transition: all 0.5s ease-in-out;
   color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .menu-button.in-text {
-  display: inline-block;
   margin: 0;
 }
 
@@ -232,8 +234,6 @@ h2 {
 .icon {
   height: 1em;
   width: 1em;
-  position: relative;
-  top: .125em;
 }
 
 .icon-arrange {
@@ -285,10 +285,6 @@ h2 {
 
   .main-menu-canvas {
     height: 65vh;
-  }
-
-  .menu-button {
-    padding: 15px;
   }
 
   .main-content {

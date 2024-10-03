@@ -18,7 +18,7 @@ export const Navbar: FunctionComponent<NavbarProps> = (props) => {
 
     const navigations = [];
     navigations.push(<LinkWithSaveState 
-        className='flex flex-row navbar-button'
+        className='flex flex-row navbar-button items-center'
         path={Paths.HtmlDeployedBasePath.substring(0, Paths.HtmlDeployedBasePath.length - 1)}
         displayValue='Start'
         icon={icon.cilHome} 

@@ -21,7 +21,7 @@ export const NavSubMenu: FunctionComponent<NavSubMenuProps> = (props) => {
             }
             {
                 props.data.items?.map(i => <LinkWithSaveState 
-                className='flex flex-row navbar-button'
+                className='flex flex-row navbar-button items-center'
                 path={i.location ?? ''}
                 displayValue={i.displayName}
                 onClick={() => props.onClick?.()}
