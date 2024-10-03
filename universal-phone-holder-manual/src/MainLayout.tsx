@@ -23,7 +23,7 @@ export const MainLayout: FunctionComponent = () => {
               <CIcon icon={icon.cilMenu} height={30} />
             </Button>
           </div>
-          <div className='text-4xl'>Universal Phone Holder</div>
+          <div className='text-2xl md:text-4xl'>Universal Phone Holder</div>
         </div>
       </AppBar>
       <div className='h-full'>
