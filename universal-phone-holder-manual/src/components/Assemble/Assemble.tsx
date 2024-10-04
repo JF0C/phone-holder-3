@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 import { Paths } from '../../constants/Paths';
-import { LinkWithSaveState } from '../Link/LinkWithSaveState';
+import { LinkWithSaveState } from '../Navigation/LinkWithSaveState';
 import * as icon from '@coreui/icons';
 import { Tooltip } from '../Tooltip/Tooltip';
 import { TextLayout } from '../Layouts/TextLayout';
@@ -24,24 +24,24 @@ export const Assemble: FunctionComponent = () => {
             <li>1 M4 screw of around 10mm shaft length [i]</li>
             <li>
                 <Tooltip reference={<>2 phone holder feet</>} tooltipId='assemble-feet-li' useIcon>
-                    <img height={200} src='/img/foot.png' alt='foot part' />
+                    <img className='w-32' src='./img/foot.png' alt='foot part' />
                 </Tooltip>
                 &nbsp;[i]
             </li>
             <li>
                 <Tooltip reference={<>4 foot carriage</>} tooltipId='assemble-sled-li' useIcon>
-                    <img height={200} src='/img/sled.png' alt='sled part'/>
+                    <img className='w-32' src='./img/sled.png' alt='sled part'/>
                 </Tooltip>
                 &nbsp;[i]
             </li>
             <li>
                 <Tooltip reference={<>The phone holder body</>} tooltipId='assemble-body-li' useIcon>
-                    <img height={200} src='/img/body.png' alt='phone holder body part' />
+                    <img className='w-32' src='./img/body.png' alt='phone holder body part' />
                 </Tooltip>&nbsp;[i]
             </li>
             <li>
                 <Tooltip reference={<>The phone holder neck</>} tooltipId='assemble-neck-li' useIcon>
-                    <img height={200} src='/img/neck.png' alt='neck part' />
+                    <img className='w-32' src='./img/neck.png' alt='neck part' />
                 </Tooltip>
                 &nbsp;[i]
             </li>

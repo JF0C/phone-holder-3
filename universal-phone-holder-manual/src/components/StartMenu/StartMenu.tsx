@@ -2,7 +2,7 @@ import { FunctionComponent, Suspense } from "react"
 import { Vector3 } from "three"
 import { Paths } from "../../constants/Paths"
 import { StlView } from "../Layouts/StlView"
-import { LinkWithSaveState } from "../Link/LinkWithSaveState"
+import { LinkWithSaveState } from "../Navigation/LinkWithSaveState"
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner"
 
 export const StartMenu: FunctionComponent = () => {

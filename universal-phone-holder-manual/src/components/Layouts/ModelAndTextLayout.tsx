@@ -1,6 +1,6 @@
 import * as icon from '@coreui/icons';
 import { FunctionComponent, ReactElement, Suspense } from 'react';
-import { LinkWithSaveState } from '../Link/LinkWithSaveState';
+import { LinkWithSaveState } from '../Navigation/LinkWithSaveState';
 import { LoadingSpinner } from '../LoadingSpinner/LoadingSpinner';
 import { useAppSelector } from '../../store/store';
 
@@ -27,8 +27,8 @@ export const ModelAndTextLayout: FunctionComponent<ModelAndTextProperties> = (pr
     }
 
     return <Suspense fallback={<LoadingSpinner />}>
-        <div className='flex flex-col h-full'>
-            <div className='flex flex-row h-full flex-wrap'>
+        <div className='flex flex-col h-full items-center'>
+            <div className='flex flex-row h-full flex-wrap max-w-4xl'>
                 <div className='w-full md:basis-1/2 h-1/2 md:h-full'>
                     <div className='w-full h-12 md:hidden font-bold'>{title}</div>
                     {props.model}

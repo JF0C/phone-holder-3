@@ -3,7 +3,7 @@ import { Vector3 } from 'three'
 import { Paths } from '../../constants/Paths'
 import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
 import { StlView } from '../Layouts/StlView'
-import { LinkWithSaveState } from '../Link/LinkWithSaveState'
+import { LinkWithSaveState } from '../Navigation/LinkWithSaveState'
 
 export const AdjustTestAssembly: FunctionComponent = () => {
     return <ModelAndTextLayout 

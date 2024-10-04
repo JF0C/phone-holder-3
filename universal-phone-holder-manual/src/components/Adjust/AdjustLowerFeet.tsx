@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react'
 import { Vector3 } from 'three'
 import { StlView } from '../Layouts/StlView'
 import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
-import { LinkWithSaveState } from '../Link/LinkWithSaveState'
+import { LinkWithSaveState } from '../Navigation/LinkWithSaveState'
 import { Paths } from '../../constants/Paths'
 
 export const AdjustLowerFeet: FunctionComponent = () => {

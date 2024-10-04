@@ -3,7 +3,7 @@ import * as icon from '@coreui/icons';
 import CIcon from "@coreui/icons-react";
 import { AppBar, Button } from "@mui/material";
 import { FunctionComponent } from "react";
-import { Navbar } from './components/Navbar/Navbar';
+import { Navbar } from './components/Navigation/Navbar';
 import { RouterOutlet } from "./RouterOutlet";
 import { useAppDispatch, useAppSelector } from "./store/store";
 import { closePopup, setNavbar } from "./store/UiReducer";

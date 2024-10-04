@@ -2,7 +2,7 @@ import * as icon from '@coreui/icons';
 import CIcon from "@coreui/icons-react";
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import { FunctionComponent } from "react";
-import { LinkWithSaveState } from "../Link/LinkWithSaveState";
+import { LinkWithSaveState } from "./LinkWithSaveState";
 import { MenuGroup } from "./MenuTree";
 import { useAppDispatch, useAppSelector } from '../../store/store';
 import { setRadioGroup } from '../../store/UiReducer';

@@ -3,7 +3,7 @@ import { Vector3 } from 'three'
 import { StlView } from '../Layouts/StlView'
 import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
 import { Paths } from '../../constants/Paths'
-import { LinkWithSaveState } from '../Link/LinkWithSaveState'
+import { LinkWithSaveState } from '../Navigation/LinkWithSaveState'
 import * as icon from '@coreui/icons';
 import { Tooltip } from '../Tooltip/Tooltip'
 

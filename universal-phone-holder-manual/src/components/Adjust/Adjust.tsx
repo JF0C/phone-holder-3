@@ -1,7 +1,7 @@
 import * as icon from '@coreui/icons';
 import { FunctionComponent } from 'react';
 import { Paths } from '../../constants/Paths';
-import { LinkWithSaveState } from '../Link/LinkWithSaveState';
+import { LinkWithSaveState } from '../Navigation/LinkWithSaveState';
 import { TextLayout } from '../Layouts/TextLayout';
 
 export const Adjust: FunctionComponent = () => {

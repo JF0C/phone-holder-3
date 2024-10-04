@@ -4,7 +4,7 @@ import { FunctionComponent } from 'react';
 import { Paths } from '../../constants/Paths';
 import { useAppDispatch, useAppSelector } from '../../store/store';
 import { setNavbar } from '../../store/UiReducer';
-import { LinkWithSaveState } from '../Link/LinkWithSaveState';
+import { LinkWithSaveState } from './LinkWithSaveState';
 import { menuTree } from './MenuTree';
 import { NavSubMenu } from './NavSubmenu';
 

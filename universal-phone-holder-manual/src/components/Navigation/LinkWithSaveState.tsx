@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { Paths } from '../../constants/Paths';
 import { useAppDispatch } from '../../store/store';
 import { setNavTitle } from '../../store/UiReducer';
-import { linkTitles } from '../Navbar/MenuTree';
+import { linkTitles } from './MenuTree';
 
 export type LinkWithSaveStateProps = {
     path: string;
