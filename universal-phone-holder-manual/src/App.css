@@ -9,6 +9,12 @@
   background-color: black;
 }
 
+li {
+  list-style-position: inside;
+  list-style-type: circle;
+  padding-left: 16px;
+}
+
 body {
   height: max-content;
   background-color: green;

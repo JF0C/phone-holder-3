@@ -13,7 +13,7 @@ export const MainLayout: FunctionComponent = () => {
   const uiState = useAppSelector((state) => state.uiState)
   const navbarOpen = uiState.showNavbar;
 
-  return <div className='App h-full'>
+  return <div className='App h-svh'>
     <AppBar sx={{ zIndex: 2000 }}>
       <div className='flex flex-row justify-center app-bar p-2 font-bold'>
         <div className='absolute left-0' >
