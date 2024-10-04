@@ -5,7 +5,7 @@ import { Paths } from '../../constants/Paths';
 import { useAppDispatch, useAppSelector } from '../../store/store';
 import { setNavbar } from '../../store/UiReducer';
 import { LinkWithSaveState } from '../Link/LinkWithSaveState';
-import { menuTree } from './ManuTree';
+import { menuTree } from './MenuTree';
 import { NavSubMenu } from './NavSubmenu';
 
 export const Navbar: FunctionComponent = () => {
@@ -21,21 +21,12 @@ export const Navbar: FunctionComponent = () => {
         onClick={() => toggleDrawer(false)}
         />);
     for (let node of menuTree) {
-        navigations.push(
-        // <LinkWithSaveState 
-        //     className='flex flex-row navbar-button'
-        //     path={node.path ?? ''}
-        //     displayValue={node.displayName}
-        //     onClick={() => toggleDrawer(false)}
-        //     />
-            <NavSubMenu data={node} onClick={() => toggleDrawer(false)} />
-        )
+        navigations.push(<NavSubMenu
+            radioGroupId={'toplevel'}
+            data={node}
+            onClick={() => toggleDrawer(false)}
+        />);
     }
-    // for(let entry of getEntries(currentLocation)){
-    //     navigations.push(
-    //         <LinkWithSaveState path={entry.location.toLowerCase()} 
-    //             useli={true} displayValue={entry.displayName} icon={entry.icon}/>);
-    // }
     const toggleDrawer = (open: boolean) => {
         dispatch(setNavbar(open));
     };

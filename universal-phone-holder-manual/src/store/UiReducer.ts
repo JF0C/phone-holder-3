@@ -22,6 +22,17 @@ export const uiStateSlice = createSlice({
         },
         setNavbar(state, action: PayloadAction<boolean>) {
             state.showNavbar = action.payload;
+        },
+        setRadioGroup(state, action: PayloadAction<{groupId: string, activeItem?: string}>) {
+            let entry = state.radioGroups.find(x => x.groupId === action.payload.groupId);
+            if (!entry) {
+                state.radioGroups.push({ groupId: action.payload.groupId, activeItem: action.payload.activeItem });
+                return;
+            }
+            if (entry.activeItem === action.payload.activeItem) {
+                return;
+            }
+            entry.activeItem = action.payload.activeItem;
         }
     }
 });
@@ -31,6 +42,7 @@ export const {
     closePopup,
     addLoadedMesh,
     clearLoadedMeshes,
-    setNavbar
+    setNavbar,
+    setRadioGroup
 } = uiStateSlice.actions;
 

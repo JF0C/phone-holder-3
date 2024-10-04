@@ -1,4 +1,5 @@
 import { Paths } from "../../constants/Paths";
+import * as icon from '@coreui/icons';
 
 export type LocationAndDisplayName = {
     location: string;
@@ -9,6 +10,7 @@ export type LocationAndDisplayName = {
 export type MenuGroup = {
     displayName: string;
     groupId: string;
+    icon?: string[];
     path?: string;
     subGroups?: MenuGroup[];
     items?: LocationAndDisplayName[]
@@ -18,6 +20,7 @@ export const menuTree: MenuGroup[] = [
     {
         displayName: 'Assemble',
         groupId: 'assemble',
+        icon: icon.cilCog,
         path: Paths.AssemblePath,
         items: [
             {
@@ -38,6 +41,7 @@ export const menuTree: MenuGroup[] = [
         displayName: 'Adjust',
         groupId: 'adjust',
         path: Paths.AdjustPath,
+        icon: icon.cilMobile,
         items: [
             {
                 location: Paths.AdjustExtendAllPath,
@@ -69,6 +73,7 @@ export const menuTree: MenuGroup[] = [
         displayName: 'Mount',
         groupId: 'mount',
         path: Paths.MountPath,
+        icon: icon.cilBike,
         subGroups: [
             {
                 displayName: 'Handlebar V1',
@@ -204,11 +209,11 @@ export const menuTree: MenuGroup[] = [
         displayName: 'Accessories',
         groupId: 'accessory',
         path: Paths.AccessoriesPath,
+        icon: icon.cilPlus,
         subGroups: [
             {
                 displayName: 'Lamp Mirror',
                 groupId: 'accessory-lamp-mirror',
-                path: Paths.AccessoryLampMirrorAssemblyPath,
                 items: [
                     {
                         location: Paths.AccessoryLampMirrorAssemblyPath,
