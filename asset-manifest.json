@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/phone-holder-3/static/css/main.e7e9728c.css",
-    "main.js": "/phone-holder-3/static/js/main.19f77360.js",
+    "main.css": "/phone-holder-3/static/css/main.878d9a1e.css",
+    "main.js": "/phone-holder-3/static/js/main.21e47227.js",
     "index.html": "/phone-holder-3/index.html",
-    "main.e7e9728c.css.map": "/phone-holder-3/static/css/main.e7e9728c.css.map",
-    "main.19f77360.js.map": "/phone-holder-3/static/js/main.19f77360.js.map"
+    "main.878d9a1e.css.map": "/phone-holder-3/static/css/main.878d9a1e.css.map",
+    "main.21e47227.js.map": "/phone-holder-3/static/js/main.21e47227.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7e9728c.css",
-    "static/js/main.19f77360.js"
+    "static/css/main.878d9a1e.css",
+    "static/js/main.21e47227.js"
   ]
 }
