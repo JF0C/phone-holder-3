@@ -57,7 +57,6 @@ export const RouterOutlet: FunctionComponent = () => {
         <Route path={Paths.HtmlIndexFilePath} element={<StartMenu />} />
         <Route path={Paths.HtmlPhoneholderFilePath} element={<StartMenu />} />
         <Route path={Paths.HtmlDeployedBasePath} element={<StartMenu />} />
-
         <Route path={Paths.StartMenuPath} element={<StartMenu />} />
 
         <Route path={Paths.AssemblePath} element={<Assemble />} />

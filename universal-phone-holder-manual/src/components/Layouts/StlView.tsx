@@ -66,13 +66,15 @@ export const StlView: FunctionComponent<StlViewProperties> = (props: StlViewProp
 
     return (
       <Suspense fallback={<LoadingSpinner />} >
-        <Canvas className='stl-view' camera={{position: props.cameraPosition}}>
-          <ambientLight/>
-          <directionalLight position={props.lightOrigin}/>
-          <OrbitControls ref={orbitref} />
-          <mesh rotation={eul} geometry={geometry} material={icoMaterial} position={props.position} />
-          {axes}
-        </Canvas>
+        <div className='flex-none stl-view h-full'>
+          <Canvas camera={{position: props.cameraPosition}}>
+            <ambientLight/>
+            <directionalLight position={props.lightOrigin}/>
+            <OrbitControls ref={orbitref} />
+            <mesh rotation={eul} geometry={geometry} material={icoMaterial} position={props.position} />
+            {axes}
+          </Canvas>
+        </div>
         <div className='reset-view-button flex flex-row justify-center text-center' onClick={() => orbitref.current.reset()}>
           <CIcon icon={icon.cilActionUndo} />
         </div>

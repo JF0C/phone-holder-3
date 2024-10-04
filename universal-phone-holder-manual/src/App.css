@@ -67,6 +67,10 @@ h2 {
   align-items: center;
 }
 
+.first-menu-button {
+  margin-left: 220px;
+}
+
 .menu-button.in-text {
   margin: 0;
 }
@@ -107,7 +111,9 @@ h2 {
 
 .start-menu-container {
   height: 10vh;
+  width: auto;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   overflow-x: scroll;
@@ -146,10 +152,6 @@ h2 {
 
 .nav li:hover {
   background-color: rgba(159, 190, 193, 0.8);
-}
-
-.app-bar-space {
-  height: 10vh;
 }
 
 .main-content {
@@ -213,32 +215,6 @@ h2 {
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.7) transparent transparent;
 }
-
-.model-and-text {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-}
-
-.main-menu-canvas {
-  height: 80vh;
-}
-
-.model-view {
-  min-width: 400px;
-  max-width: 1200px;
-  flex-grow: 1;
-  height: 80vh;
-}
-
-.text-view {
-  min-width: 200px;
-  max-width: 450px;
-  height: fit-content;
-  text-align: justify;
-  flex-grow: 1;
-}
-
 .icon {
   height: 1em;
   width: 1em;
@@ -289,15 +265,6 @@ h2 {
 
   .model-view {
     height: 50vh;
-  }
-
-  .main-menu-canvas {
-    height: 65vh;
-  }
-
-  .main-content {
-    height: 80vh;
-    background-color: rgb(50, 50, 50);
   }
 }
 

@@ -52,7 +52,7 @@ export const NavSubMenu: FunctionComponent<NavSubMenuProps> = (props) => {
                 props.data.subGroups?.map(s => <NavSubMenu radioGroupId={props.data.groupId} data={s} onClick={props.onClick} />)
             }
             {
-                props.data.items?.map(i => <LinkWithSaveState 
+                props.data.items?.map(i => <LinkWithSaveState
                 className='flex flex-row navbar-button items-center'
                 path={i.location ?? ''}
                 displayValue={i.displayName}

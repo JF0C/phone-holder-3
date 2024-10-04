@@ -16,6 +16,12 @@ export type MenuGroup = {
     items?: LocationAndDisplayName[]
 }
 
+type pathTitle = {
+    path: string,
+    title?: string
+}
+
+
 export const menuTree: MenuGroup[] = [
     {
         displayName: 'Assemble',
@@ -250,7 +256,7 @@ export const menuTree: MenuGroup[] = [
             {
                 displayName: 'Rain Shield',
                 groupId: 'accessory-rain-shield',
-                items:[
+                items: [
                     {
                         location: Paths.AccessoryRainShieldSocketPath,
                         displayName: 'Socket'
@@ -272,3 +278,40 @@ export const menuTree: MenuGroup[] = [
         ]
     }
 ]
+
+const getLinkTitles = () => {
+    const result: pathTitle[] = [];
+    for (let group of menuTree) {
+        addGroupLinks(result, group);
+    }
+    console.log(result)
+    return result;
+}
+
+const addGroupLinks = (result: pathTitle[], menuGroup: MenuGroup) => {
+    // if (menuGroup.path) {
+    //     if (!result.find(x => x.path === menuGroup.path)) {
+    //         result.push({
+    //             path: menuGroup.path,
+    //             title: menuGroup.displayName
+    //         })
+    //     }
+    // }
+    if (menuGroup.items) {
+        for (let item of menuGroup.items) {
+            if (!result.find(x => x.path === item.location)) {
+                result.push({
+                    path: item.location,
+                    title: item.displayName
+                })
+            }
+        }
+    }
+    if (menuGroup.subGroups) {
+        for (let group of menuGroup.subGroups) {
+            addGroupLinks(result, group);
+        }
+    }
+}
+
+export const linkTitles = getLinkTitles();

@@ -27,14 +27,14 @@ export const StartMenu: FunctionComponent = () => {
     />
     }
     return <>
-        <div className="main-menu-canvas">
+        <div className="h-5/6">
             <Suspense fallback={<LoadingSpinner />}>
                 {view}
             </Suspense>
         </div>
         
         <div className="start-menu-container">
-            <LinkWithSaveState className="menu-button" path={Paths.AssemblePath} />
+            <LinkWithSaveState className="menu-button first-menu-button" path={Paths.AssemblePath} />
             <LinkWithSaveState className="menu-button" path={Paths.AdjustPath} />
             <LinkWithSaveState className="menu-button" path={Paths.AccessoriesPath} />
             <LinkWithSaveState className="menu-button" path={Paths.MountPath} />

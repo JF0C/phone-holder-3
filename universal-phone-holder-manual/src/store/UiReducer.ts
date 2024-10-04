@@ -23,6 +23,9 @@ export const uiStateSlice = createSlice({
         setNavbar(state, action: PayloadAction<boolean>) {
             state.showNavbar = action.payload;
         },
+        setNavTitle(state, action: PayloadAction<string>) {
+            state.navTitle = action.payload;
+        },
         setRadioGroup(state, action: PayloadAction<{groupId: string, activeItem?: string}>) {
             let entry = state.radioGroups.find(x => x.groupId === action.payload.groupId);
             if (!entry) {
@@ -43,6 +46,7 @@ export const {
     addLoadedMesh,
     clearLoadedMeshes,
     setNavbar,
-    setRadioGroup
+    setRadioGroup,
+    setNavTitle
 } = uiStateSlice.actions;
 

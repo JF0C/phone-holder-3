@@ -3,11 +3,13 @@ export interface IUiState {
     loadedMeshes: string[]
     showNavbar: boolean
     radioGroups: { groupId: string, activeItem?: string }[]
+    navTitle: string
 }
 
 export const InitialUiState: IUiState = {
     currentOpenPopup: null,
     loadedMeshes: [],
     showNavbar: false,
-    radioGroups: []
+    radioGroups: [],
+    navTitle: ''
 }

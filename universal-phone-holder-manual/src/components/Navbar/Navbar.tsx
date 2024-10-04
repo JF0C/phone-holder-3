@@ -31,7 +31,6 @@ export const Navbar: FunctionComponent = () => {
         dispatch(setNavbar(open));
     };
 
-
     return <SwipeableDrawer
         anchor='left'
         open={showNavbar}
@@ -39,7 +38,7 @@ export const Navbar: FunctionComponent = () => {
         onOpen={() => toggleDrawer(true)}
     >
         <Box sx={{ width: 250, height: '100%', bgcolor: 'rgb(50,50,50)' }}>
-            <div className="app-bar-space"></div>
+            <div className="h-14"></div>
             <ul className='nav-list'>
                 {navigations}
             </ul>
