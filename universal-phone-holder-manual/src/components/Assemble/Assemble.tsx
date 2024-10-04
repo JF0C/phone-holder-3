@@ -3,11 +3,16 @@ import { Paths } from '../../constants/Paths';
 import { LinkWithSaveState } from '../Link/LinkWithSaveState';
 import * as icon from '@coreui/icons';
 import { Tooltip } from '../Tooltip/Tooltip';
+import { TextLayout } from '../Layouts/TextLayout';
 
 export const Assemble: FunctionComponent = () => {
-    return <div className='text-container'>
-        <br />
-        <br />
+    return <TextLayout footerContent={
+        <LinkWithSaveState
+            className='menu-button in-text'
+            path={Paths.AssembleInsertFootPath}
+            displayValue='Next Step'
+            icon={icon.cilChevronRight}
+            iconAtEnd/>}>
         Here, we will walk through the assembly of phone holder from its constituent parts. <br />
         Usually, your phone holder arrives pre-assembled. In this case, you can skip over to <LinkWithSaveState path={Paths.AdjustPath} />. <br />
         If you want to make changes your phone holder or it is for some reason not assembled already, check if you have all the follwing parts and tools:
@@ -42,15 +47,5 @@ export const Assemble: FunctionComponent = () => {
             </li>
         </ul>
         [i] = included in phone holder set. <br />
-        <br />
-        Now, you are ready for the
-        <br />
-        <br />
-        <LinkWithSaveState
-            className='menu-button in-text'
-            path={Paths.AssembleInsertFootPath}
-            displayValue='Next Step'
-            icon={icon.cilChevronRight}
-            iconAtEnd/>
-    </div>
+    </TextLayout>
 }

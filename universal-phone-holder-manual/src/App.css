@@ -67,10 +67,6 @@ h2 {
   align-items: center;
 }
 
-.first-menu-button {
-  margin-left: 220px;
-}
-
 .menu-button.in-text {
   margin: 0;
 }
@@ -162,7 +158,6 @@ h2 {
 
 .text-container {
   text-align: left;
-  padding: 20px;
   text-align: justify;
 }
 
@@ -265,6 +260,9 @@ h2 {
 
   .model-view {
     height: 50vh;
+  }
+  .first-menu-button {
+    margin-left: 220px;
   }
 }
 

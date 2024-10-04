@@ -39,9 +39,7 @@ export const LinkWithSaveState: FunctionComponent<LinkWithSaveStateProps> = (pro
         content = <li key={'li/' + props.path}>{content}</li>;
     }
     const onNavigation = () => {
-        const navTitle = linkTitles.find(t => t.path === props.path)?.title
-        console.log(props.path)
-        console.log(navTitle);
+        const navTitle = linkTitles.find(t => t.path === props.path)?.title;
         dispatch(setNavTitle(navTitle ?? ''))
         props.onClick?.();
     }

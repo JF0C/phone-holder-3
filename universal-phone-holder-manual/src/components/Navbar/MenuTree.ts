@@ -284,19 +284,18 @@ const getLinkTitles = () => {
     for (let group of menuTree) {
         addGroupLinks(result, group);
     }
-    console.log(result)
     return result;
 }
 
 const addGroupLinks = (result: pathTitle[], menuGroup: MenuGroup) => {
-    // if (menuGroup.path) {
-    //     if (!result.find(x => x.path === menuGroup.path)) {
-    //         result.push({
-    //             path: menuGroup.path,
-    //             title: menuGroup.displayName
-    //         })
-    //     }
-    // }
+    if (menuGroup.path) {
+        if (!result.find(x => x.path === menuGroup.path)) {
+            result.push({
+                path: menuGroup.path,
+                title: menuGroup.displayName
+            })
+        }
+    }
     if (menuGroup.items) {
         for (let item of menuGroup.items) {
             if (!result.find(x => x.path === item.location)) {

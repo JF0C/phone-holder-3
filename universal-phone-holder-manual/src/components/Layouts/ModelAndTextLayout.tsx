@@ -33,7 +33,7 @@ export const ModelAndTextLayout: FunctionComponent<ModelAndTextProperties> = (pr
                     <div className='w-full h-12 md:hidden font-bold'>{title}</div>
                     {props.model}
                 </div>
-                <div className='w-full md:basis-1/2 text-container h-1/2 md:h-full flex flex-col'>
+                <div className='w-full md:basis-1/2 text-container p-4 h-1/2 md:h-full flex flex-col'>
                     <div className='w-full h-12'>
                         <div className='hidden md:block font-bold text-2xl'>{title}</div>
                     </div>
