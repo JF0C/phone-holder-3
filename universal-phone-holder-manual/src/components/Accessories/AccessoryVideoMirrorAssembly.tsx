@@ -3,7 +3,7 @@ import { Vector3 } from 'three'
 import { Paths } from '../../constants/Paths'
 import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
 import { StlView } from '../Layouts/StlView'
-import { Tooltip } from '../Tooltip/Tooltip'
+import { ImagePopover } from '../Tooltip/ImagePopover'
 
 export const AccessoryVideoMirrorAssembly : FunctionComponent = () => {
     return <ModelAndTextLayout 
@@ -21,13 +21,9 @@ export const AccessoryVideoMirrorAssembly : FunctionComponent = () => {
         text={
             <>
                 Use a screw to connect the
-                <Tooltip tooltipId='accessory-mount-video-mirror-mirror' reference={<>mirror</>}>
-                    <img alt='video mirror'/>
-                </Tooltip> 
+                <ImagePopover id='accessory-mount-video-mirror-mirror' text='mirror' imagePath='./img/videoMirror.png'/>
                 to the neck of the 
-                <Tooltip tooltipId='accessory-mount-video-mirror-phoneholder' reference={<>phone holder</>}>
-                    <img alt='phone holder'/>
-                </Tooltip>.
+                <ImagePopover id='accessory-mount-video-mirror-phoneholder' text='phone holder' imagePath='./img/phoneHolder.png' />
                 Insert washers between all parts including the nut.
                 Tighten the screw just enough that everything stays in place, but still can be moved for adjustment.
             </>

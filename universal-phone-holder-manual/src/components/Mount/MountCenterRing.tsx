@@ -3,7 +3,7 @@ import { Vector3 } from 'three'
 import { Paths } from '../../constants/Paths'
 import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
 import { StlView } from '../Layouts/StlView'
-import { Tooltip } from '../Tooltip/Tooltip'
+import { ImagePopover } from '../Tooltip/ImagePopover'
 
 export const MountCenterRing : FunctionComponent = () => {
     return <ModelAndTextLayout 
@@ -20,9 +20,8 @@ export const MountCenterRing : FunctionComponent = () => {
         }
         text={
             <>
-                Snap the <Tooltip tooltipId='mount-center-ring-adapter' reference={<>mount adapter</>}>
-                    <img alt='adapter'/>
-                </Tooltip> onto the stem.
+                Snap the <ImagePopover id='mount-center-ring-adapter' text='mount adapter' imagePath='./img/mountAdapter.png'/>
+                onto the stem.
                 Rotate it so that the phone holder adapter part points upwards.
                 Screw the ring tight using a washer.
             </>

@@ -5,7 +5,7 @@ import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
 import { Paths } from '../../constants/Paths'
 import { LinkWithSaveState } from '../Navigation/LinkWithSaveState'
 import * as icon from '@coreui/icons';
-import { Tooltip } from '../Tooltip/Tooltip'
+import { ImagePopover } from '../Tooltip/ImagePopover'
 
 export const AssembleAttachNeck : FunctionComponent = () => {
     return <ModelAndTextLayout 
@@ -22,12 +22,8 @@ export const AssembleAttachNeck : FunctionComponent = () => {
         }
         text={
             <>
-                Insert the front part of the&nbsp;
-                <Tooltip tooltipId='assemble-attach-neck-body' reference={<>body</>} useIcon>
-                    <img height={200} src='/img/body.png' alt='body part'/>
-                </Tooltip> into the groove in the <Tooltip tooltipId='assemble-attach-neck-neck' reference={<>neck</>} useIcon>
-                    <img height={200} src='/img/neck.png' alt='neck part' />
-                </Tooltip>.
+                Insert the front part of the <ImagePopover id='assemble-attach-neck-body' text='body' imagePath='./img/body.png' />
+                into the groove in the <ImagePopover id='assemble-attach-neck-neck' text='neck' imagePath='./img/neck.png' />.
                 Depending on the size of the phone to be attached,
                 different holes in the body can be used to screw the neck onto.
                 <br />

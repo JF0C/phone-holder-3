@@ -3,7 +3,7 @@ import { Vector3 } from 'three'
 import { Paths } from '../../constants/Paths'
 import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
 import { StlView } from '../Layouts/StlView'
-import { Tooltip } from '../Tooltip/Tooltip'
+import { ImagePopover } from '../Tooltip/ImagePopover'
 
 export const MountHandlebarV2Holder : FunctionComponent = () => {
     return <ModelAndTextLayout 
@@ -20,12 +20,11 @@ export const MountHandlebarV2Holder : FunctionComponent = () => {
         }
         text={
             <>
-                Put the centering pin onto the <Tooltip tooltipId='mount-handlebar-v2-ring' reference={<>ring</>}>
-                    <img height={200} src='/img/mount-ring.png' alt='ring'/>
-                </Tooltip>.
-                Lay the <Tooltip tooltipId='mount-handlebar-v2-holder' reference={<>phone holder assembly</>}>
-                    <img height={200} src='/img/phoneholder-base-assembly.png' alt='phoneholder' />
-                </Tooltip> onto the ring such that the pin fits into the notch of the holder.
+                Put the centering pin onto the
+                <ImagePopover id='mount-handlebar-v2-ring' text='ring' imagePath='./img/mountRing.png' />.
+                Lay the 
+                <ImagePopover id='mount-handlebar-v2-holder' text='phone holder assembly' imagePath='./img/phoneHolder.png' />
+                onto the ring such that the pin fits into the notch of the holder.
                 If the screw does not fall into the threading right away, wiggle the holed band until it does.
             </>
         }

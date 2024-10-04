@@ -3,8 +3,7 @@ import { Vector3 } from 'three'
 import { Paths } from '../../constants/Paths'
 import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
 import { StlView } from '../Layouts/StlView'
-import { Tooltip } from '../Tooltip/Tooltip'
-
+import { ImagePopover } from '../Tooltip/ImagePopover'
 
 export const MountHandlebarV2Ring : FunctionComponent = () => {
     return <ModelAndTextLayout 
@@ -21,14 +20,15 @@ export const MountHandlebarV2Ring : FunctionComponent = () => {
         }
         text={
             <>
-                Combine both <Tooltip tooltipId='mount-ring-halves' reference={<>halves</>}><img height={200} src='/img/mount-ring.png' alt='clamp halves'/></Tooltip> of the ring 
-                and wrap it around the handlebar.
-                Extend the <Tooltip tooltipId='mount-ring-band' reference={<>band</>}><img alt='band half'/></Tooltip> with the adjustment holes 
+                Combine both 
+                <ImagePopover id='mount-ring-halves' text='halves' imagePath='./img/mount-ring.png' />
+                of the ring and wrap it around the handlebar.
+                Extend the 
+                <ImagePopover id='mount-ring-band' text='band' imagePath='./img/moung-band.png' />
+                with the adjustment holes 
                 so that a gap of around 1 cm is between the two cheeks.
-                A hole in the band should match up with the hole in the &nbsp;
-                <Tooltip tooltipId='mount-ring-adapter' reference={<>phone holder adapter part</>}>
-                    <img height={200} src='/img/phone-holder-ring-adapter.png' alt='ring adapter'/>
-                </Tooltip>.
+                A hole in the band should match up with the hole in the
+                <ImagePopover id='mount-ring-adapter' text='ring adapter' imagePath='/img/phone-holder-ring-adapter.png' />.
             </>
         }
         previousStepPath={Paths.MountPath}

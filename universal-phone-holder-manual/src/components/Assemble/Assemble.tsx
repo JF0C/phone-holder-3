@@ -1,9 +1,9 @@
+import * as icon from '@coreui/icons';
 import { FunctionComponent } from 'react';
 import { Paths } from '../../constants/Paths';
-import { LinkWithSaveState } from '../Navigation/LinkWithSaveState';
-import * as icon from '@coreui/icons';
-import { Tooltip } from '../Tooltip/Tooltip';
 import { TextLayout } from '../Layouts/TextLayout';
+import { LinkWithSaveState } from '../Navigation/LinkWithSaveState';
+import { ImagePopover } from '../Tooltip/ImagePopover';
 
 export const Assemble: FunctionComponent = () => {
     return <TextLayout footerContent={
@@ -23,27 +23,18 @@ export const Assemble: FunctionComponent = () => {
             <li>2 M4 screws of around 18mm shaft length [i]</li>
             <li>1 M4 screw of around 10mm shaft length [i]</li>
             <li>
-                <Tooltip reference={<>2 phone holder feet</>} tooltipId='assemble-feet-li' useIcon>
-                    <img className='w-32' src='./img/foot.png' alt='foot part' />
-                </Tooltip>
-                &nbsp;[i]
+                2 x phone holder <ImagePopover id='feet-popover' text='Foot' imagePath='./img/neck.png' />[i]
             </li>
             <li>
-                <Tooltip reference={<>4 foot carriage</>} tooltipId='assemble-sled-li' useIcon>
-                    <img className='w-32' src='./img/sled.png' alt='sled part'/>
-                </Tooltip>
-                &nbsp;[i]
+                4 x <ImagePopover id='carriage' text='Foot Carriage' imagePath='./img/sled.png' />[i]
             </li>
             <li>
-                <Tooltip reference={<>The phone holder body</>} tooltipId='assemble-body-li' useIcon>
-                    <img className='w-32' src='./img/body.png' alt='phone holder body part' />
-                </Tooltip>&nbsp;[i]
+                The phone holder <ImagePopover id='body' text='Body' imagePath='./img/body.png' />[i]
             </li>
             <li>
-                <Tooltip reference={<>The phone holder neck</>} tooltipId='assemble-neck-li' useIcon>
-                    <img className='w-32' src='./img/neck.png' alt='neck part' />
-                </Tooltip>
-                &nbsp;[i]
+                The phone holder <ImagePopover id='neck-popover' text='Neck' imagePath='./img/neck.png'/>[i]
+            </li>
+            <li>
             </li>
         </ul>
         [i] = included in phone holder set. <br />

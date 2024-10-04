@@ -3,7 +3,7 @@ import { Vector3 } from 'three'
 import { StlView } from '../Layouts/StlView'
 import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
 import { Paths } from '../../constants/Paths'
-import { Tooltip } from '../Tooltip/Tooltip'
+import { ImagePopover } from '../Tooltip/ImagePopover'
 
 export const AssembleInsertFoot: FunctionComponent = () => {
 return <ModelAndTextLayout 
@@ -21,17 +21,14 @@ return <ModelAndTextLayout
         text={
             <>
                 Hold one finger below the foot rails to support the&nbsp;
-                <Tooltip tooltipId='assemble-insert-foot-sled' reference={<>carriages</>} useIcon>
-                    <img height={200} src='/img/sled.png' alt='sled'/>
-                </Tooltip>.
+                <ImagePopover id='assemble-insert-foot-sled' text='carriages' imagePath='./img/sled.png' />.
                 <br />
                 <br />
                 Hold them, so that they align with the bottom surface of the body.
                 <br />
                 <br />
-                Then, insert the <Tooltip tooltipId='assemble-insert-foot-foot' reference={<>foot</>} useIcon>
-                    <img height={200} src='/img/foot.png' alt='foot' />
-                </Tooltip> into the v-shaped opening, formed by the carriages.
+                Then, insert the <ImagePopover id='assemble-insert-foot-foot' text='foot' imagePath='./img/foot.png' />
+                into the v-shaped opening, formed by the carriages.
                 <br />
                 <br />
                 Once the foot is halfway in, push onto the carriages,
