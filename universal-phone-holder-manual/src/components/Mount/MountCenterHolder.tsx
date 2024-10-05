@@ -3,6 +3,7 @@ import { Vector3 } from 'three'
 import { Paths } from '../../constants/Paths'
 import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
 import { StlView } from '../Layouts/StlView'
+import { ImagePopover } from '../Tooltip/ImagePopover'
 
 export const MountCenterHolder : FunctionComponent = () => {
     return <ModelAndTextLayout 
@@ -19,7 +20,10 @@ export const MountCenterHolder : FunctionComponent = () => {
         }
         text={
             <>
-                Screw the phone holder assembly onto the ring.
+                Screw the phone holder 
+                <ImagePopover id='phone-holder-base-assembly' text='assembly' imagePath='./img/base-assembly.png' /> 
+                onto the ring. Different positions are possible by using any of the holes 
+                (including the long hole) of the <ImagePopover id='body' text='Body' imagePath='./img/body.png' />.
             </>
         }
         previousStepPath={Paths.MountCenterRingPath}

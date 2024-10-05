@@ -20,8 +20,8 @@ export const MountCenterRing : FunctionComponent = () => {
         }
         text={
             <>
-                Snap the <ImagePopover id='mount-center-ring-adapter' text='mount adapter' imagePath='./img/mountAdapter.png'/>
-                onto the stem.
+                The <ImagePopover id='mount-center-ring-adapter' text='cent ring adapters' imagePath='./img/center-ring-v1.png'/> come in different sizes.
+                Choose one that fits onto your bike's stem and attach it.
                 Rotate it so that the phone holder adapter part points upwards.
                 Screw the ring tight using a washer.
             </>

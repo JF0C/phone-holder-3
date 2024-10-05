@@ -3,6 +3,7 @@ import { Vector3 } from 'three'
 import { Paths } from '../../constants/Paths'
 import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
 import { StlView } from '../Layouts/StlView'
+import { ImagePopover } from '../Tooltip/ImagePopover'
 
 export const AdjustPushFeetIn: FunctionComponent = () => {
     return <ModelAndTextLayout
@@ -19,9 +20,9 @@ export const AdjustPushFeetIn: FunctionComponent = () => {
         }
         text={
             <>
-                Push the feet towards the edges of the phone until they touch them. 
+                Push the <ImagePopover id='feet-popover' text='Feet' imagePath='./img/foot.png' /> towards the edges of the phone until they touch them. 
                 Make sure, that the top curved edge is concentric with the phone's curvature.
-                Measure the distance of the feet to the end of the rails. 
+                Measure the distance of the feet to the end of the rails of the <ImagePopover id='body' text='Body' imagePath='./img/body.png' />. 
                 Adjust them until they both have the same distance.
                 <br />
                 <br />

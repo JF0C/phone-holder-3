@@ -4,6 +4,7 @@ import { StlView } from '../Layouts/StlView'
 import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
 import { LinkWithSaveState } from '../Navigation/LinkWithSaveState'
 import { Paths } from '../../constants/Paths'
+import { ImagePopover } from '../Tooltip/ImagePopover'
 
 export const AdjustLowerFeet: FunctionComponent = () => {
     return <ModelAndTextLayout
@@ -20,7 +21,7 @@ export const AdjustLowerFeet: FunctionComponent = () => {
         }
         text={
             <>
-                Push the feet down until they contact the phone case.
+                Push the <ImagePopover id='feet-popover' text='Feet' imagePath='./img/foot.png' /> down until they contact the phone case.
                 The phone should not be able to move anymore relative to the holder.
                 <br />
                 <br />

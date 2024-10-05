@@ -3,6 +3,7 @@ import { Vector3 } from "three"
 import { Paths } from "../../constants/Paths"
 import { ModelAndTextLayout } from "../Layouts/ModelAndTextLayout"
 import { StlView } from "../Layouts/StlView"
+import { ImagePopover } from "../Tooltip/ImagePopover"
 
 export const MountAeroHolder : FunctionComponent = () => {
     return <ModelAndTextLayout 
@@ -19,7 +20,9 @@ export const MountAeroHolder : FunctionComponent = () => {
         }
         text={
             <>
-            
+                Use a 20mm to 25mm M4 screw and nut to attach the <ImagePopover id='phone-holder-assembly' text='Phone Hodler Assembly' imagePath='./img/base-assembly.png' />
+                onto the <ImagePopover id='aero-bar' text='Aero Bar' imagePath='./img/aero-bar-v1.png' />.
+                Note that the Aero Bar can be turned around to attach it to either the left of right side of the handlebar.
             </>
         }
         previousStepPath={Paths.MountPath}

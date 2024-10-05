@@ -3,6 +3,7 @@ import { Vector3 } from 'three'
 import { Paths } from '../../constants/Paths'
 import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
 import { StlView } from '../Layouts/StlView'
+import { ImagePopover } from '../Tooltip/ImagePopover'
 
 export const MountCenterComplete : FunctionComponent = () => {
     return <ModelAndTextLayout 
@@ -20,6 +21,10 @@ export const MountCenterComplete : FunctionComponent = () => {
         text={
             <>
                 This is how the assembly on the stem should look like now.
+                Place the phone in it and check that everything is still stable.
+                Remember that if the position is not perfect yet, you can use the different holes in the 
+                <ImagePopover id='body' text='Body' imagePath='./img/body.png' /> reposition the assembly.
+                Also, you can loosen and reposition the adapter ring on the stem.
             </>
         }
         previousStepPath={Paths.MountCenterHolderPath}

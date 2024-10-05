@@ -20,8 +20,9 @@ export const MountHandlebar : FunctionComponent = () => {
         }
         text={
             <>
-                Attach the <ImagePopover id='mount-handlebar-ring' text='ring' imagePath='./img/mountRing.png' /> to the handlebar.
-                It will snap onto it. Lower the <ImagePopover id='mount-handlebar-phoneholder' text='phone holder assembly' imagePath='./img/phohneHolder.png'/> 
+                The <ImagePopover id='mount-handlebar-ring' text='handlebar rings' imagePath='./img/mount-ring-v1.png' /> come in different sizes.
+                Select on that fits onto your handlebar and snap it on. 
+                Next, lower the <ImagePopover id='mount-handlebar-phoneholder' text='phone holder assembly' imagePath='./img/base-assembly.png'/> 
                 onto the ring and screw it on.
             </>
         }

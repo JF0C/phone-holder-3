@@ -19,7 +19,7 @@ export const MountAeroRing : FunctionComponent = () => {
         }
         text={
             <>
-            
+                tset
             </>
         }
         previousStepPath={Paths.MountAeroHolderPath}
