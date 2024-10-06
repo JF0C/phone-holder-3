@@ -3,6 +3,7 @@ import { Vector3 } from 'three'
 import { Paths } from '../../constants/Paths'
 import { ModelAndTextLayout } from '../Layouts/ModelAndTextLayout'
 import { StlView } from '../Layouts/StlView'
+import { ImagePopover } from '../Tooltip/ImagePopover'
 
 export const MountAeroRing : FunctionComponent = () => {
     return <ModelAndTextLayout 
@@ -19,7 +20,8 @@ export const MountAeroRing : FunctionComponent = () => {
         }
         text={
             <>
-                tset
+                Wrap the <ImagePopover text='aero mount ring' id='aero-mount-ring-v1' imagePath='./img/aero-mount-ring-v1.png' />
+                around the handlebar.
             </>
         }
         previousStepPath={Paths.MountAeroHolderPath}
